@@ -9,7 +9,7 @@ class DataBox {
 		}
 		isEmpty=false; 
 		this.data = data;		
-		System.out.println("입력 데이터: "+data);		
+		System.out.println("입력 데이터: "+data);		 
 		notify();
 	}
 	synchronized void outputData() throws InterruptedException {
