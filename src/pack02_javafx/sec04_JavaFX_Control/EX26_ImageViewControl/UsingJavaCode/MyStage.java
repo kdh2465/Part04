@@ -41,7 +41,7 @@ public class MyStage extends Application{
 		
 		String url3 = getClass().getResource("..//resources//icons//icon_b.png").toString();
 		Button btn = new Button("버튼", new ImageView(url3));
-				
+		
 		String url4 = getClass().getResource("..//resources//icons//icon_c.png").toString();
 		Label label = new Label("레이블", new ImageView(url4));
 			

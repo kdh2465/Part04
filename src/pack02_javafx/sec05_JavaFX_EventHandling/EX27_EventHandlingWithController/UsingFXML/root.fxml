@@ -45,7 +45,7 @@
 <?import java.io.FileInputStream?>
 
 <HBox fx:id="root" prefWidth="500" prefHeight="150" 
-  fx:controller="pack04_javafx.sec05_JavaFX_EventHandling.EX27_EventHandlingWithController.UsingFXML.MyController" 
+  fx:controller="pack02_javafx.sec05_JavaFX_EventHandling.EX27_EventHandlingWithController.UsingFXML.MyController" 
   xmlns:fx="http://javafx.com/fxml">
 	<children>
 		<VBox fx:id="vbox1" prefWidth="200" spacing="30" >

@@ -37,7 +37,7 @@
 	<padding> <Insets topRightBottomLeft="10" /> </padding>
 	<children>
 		<DatePicker>
-			<value>
+		    <value>
 				<LocalDate fx:factory="now"/>
 			</value>
 		</DatePicker>

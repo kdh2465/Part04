@@ -47,7 +47,7 @@
 <?import javafx.scene.control.Separator?>
 
 <VBox prefWidth="300" prefHeight="300" spacing="10"
-  fx:controller="pack04_javafx.sec06_javafx_css.EX30_JavaFX_CSS.UsingFXML.MyController"
+  fx:controller="pack02_javafx.sec06_javafx_css.EX30_JavaFX_AdoptingCSS.UsingFXML.MyController"
   stylesheets="@myStyle.css"
   xmlns:fx="http://javafx.com/fxml">
   	<padding>

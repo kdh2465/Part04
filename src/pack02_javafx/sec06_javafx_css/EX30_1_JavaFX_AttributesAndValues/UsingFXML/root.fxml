@@ -46,8 +46,8 @@
 <?import java.io.FileInputStream?>
 <?import javafx.scene.control.Separator?>
 
-<VBox prefWidth="400" prefHeight="350" spacing="10"
-  fx:controller="pack04_javafx.sec06_javafx_css.EX30_1_JavaFX_AttributesAndValues.UsingFXML.MyController"  
+<VBox prefWidth="400" prefHeight="350" spacing="10"  
+  fx:controller="pack02_javafx.sec06_javafx_css.EX30_1_JavaFX_AttributesAndValues.UsingFXML.MyController"  
   xmlns:fx="http://javafx.com/fxml">
 
 	<children>
@@ -65,9 +65,13 @@
 			      style="-fx-background-color:red, green; -fx-background-radius:10,20; -fx-background-insets:10,20" />			
 		</HBox>		
 		
+		<!-- fxml내에서 url은 'file:/+절대경로'만 가능 : 정확히는 file://localhost/절대경로 또는 file:///절대경로(localhost 생략 단 /는 그대로) 또는 file:/+절대경로
 		<VBox fx:id="vbox15" prefWidth="400" prefHeight="100"
-			      style="-fx-background-image:url(coffee_clip.png)" />
-			      
+			      style="-fx-background-image:url('file:///d:/temp/coffee_clip.png');" />
+	     -->
+	    <!-- 여기서는 프로젝트 내에 이미지를 삽입시키기 위해서 controller를 사용하여 처리함 -->
+		<VBox fx:id="vbox15" prefWidth="400" prefHeight="100"/>
+			      	      
 		<HBox>
 			<VBox prefWidth="100" prefHeight="100"
 			      style="-fx-border-color:red, green; -fx-border-width:3" />

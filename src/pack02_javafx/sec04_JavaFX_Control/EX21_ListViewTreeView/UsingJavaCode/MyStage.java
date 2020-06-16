@@ -40,6 +40,7 @@ public class MyStage extends Application{
 		obervableList.add("ListItem3");
 				
 		listView.setItems(obervableList);
+
 		
 		//@TreeView
 		TreeView<String> treeView = new TreeView<>();
