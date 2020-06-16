@@ -20,7 +20,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MyStage extends Application{
-	
+	 
 	boolean stopFlag=true; 
 	boolean laptimeFlag;
 	boolean succeedFlag;
