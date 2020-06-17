@@ -9,9 +9,8 @@ import java.nio.charset.Charset;
 public class EX07_FileInputStream_3 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성
-		File inFile = new File("sec02.files/FileInputStream2.txt ");
-		
-		
+		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream2.txt ");
+				
 		//#2-2. n-byte 단위 읽기 (byte[]의 처음 위치에서 부터 읽은 데이터 저장) 
 		byte[] byteArray1 = new byte[8];
 		InputStream is2 = new FileInputStream(inFile);

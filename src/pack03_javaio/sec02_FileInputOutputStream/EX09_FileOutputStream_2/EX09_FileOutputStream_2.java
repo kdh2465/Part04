@@ -10,12 +10,12 @@ public class EX09_FileOutputStream_2 {
 	public static void main(String[] args) throws IOException {
 		
 		//입력파일 생성
-		File outFile = new File("sec02.files/FileOutputStream2.txt");
+		File outFile = new File("src/pack03_javaio/sec02_files/FileOutputStream2.txt");
 		if(!outFile.exists()) outFile.createNewFile();
 		
 		//#2-2. n-byte 단위 쓰기 (byte[]의 처음 위치에서 부터 끝가지를 출력) 
 		byte[] byteArray1 = "안녕하세요".getBytes(Charset.forName("MS949"));
-		OutputStream os2 = new FileOutputStream(outFile, true);//내용 연결
+		OutputStream os2 = new FileOutputStream(outFile, false);//내용 연결
 		os2.write(byteArray1);
 		os2.write('\n');
 		

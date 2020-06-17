@@ -11,7 +11,7 @@ import java.io.Reader;
 public class EX21_InputStreamReader_1 {
 	public static void main(String[] args) {
 		//#.파일 객체 선언
-		File inputStreamReader = new File("sec05.files/InputStreamReader.txt");
+		File inputStreamReader = new File("src/pack03_javaio/sec05_files/InputStreamReader.txt");
 
 		//#1. FileReader만을 이용하여 읽어오기 (UTF-8 모드 파일(메모장)) : Windows에서 깨짐
 		try(Reader reader = new FileReader(inputStreamReader);){

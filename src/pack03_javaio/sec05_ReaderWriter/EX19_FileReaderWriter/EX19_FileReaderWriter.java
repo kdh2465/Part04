@@ -10,7 +10,7 @@ import java.io.Writer;
 public class EX19_FileReaderWriter {
 	public static void main(String[] args) {
 		//#.파일 객체 선언
-		File readerwriterFile = new File("sec05.files/ReaderWriterFile.txt");
+		File readerwriterFile = new File("src/pack03_javaio/sec05_files/ReaderWriterFile.txt");
 
 		//#1. FileWriter를 이용한 파일 쓰기 (ANSI 모드)
 		try(Writer writer = new FileWriter(readerwriterFile);){
@@ -22,6 +22,7 @@ public class EX19_FileReaderWriter {
 		    writer.flush();
 		}
 		catch(IOException e) {}
+		
 		//#2. FileReader를 이용한 파일 읽기 (ANSI 모드)
 		try(Reader reader = new FileReader(readerwriterFile);){
 		    int data;

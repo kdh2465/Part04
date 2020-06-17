@@ -33,7 +33,7 @@ public class EX04_ByteArrayToFromString {
 		System.out.println(str4); //UTF-8->UTF-8
 		System.out.println(str5); //MS949->UTF-8 (±úÁü)
 		System.out.println(str6); //UTF-8->MS949 (±úÁü)
-		System.out.println(File.pathSeparator +"/" +File.separator);
+		//System.out.println(File.pathSeparator +"/" +File.separator); ;/\
 		
 	}
 }

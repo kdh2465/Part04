@@ -5,10 +5,15 @@ import java.io.IOException;
 
 public class EX01_CreateFileObject {
 	public static void main(String[] args) throws IOException {
+		
+		//#1-0. C 드라이브내에 temp 폴더가 없는 경우 생성
+		File tempDir = new File("C:/temp");
+		if(!tempDir.exists()) tempDir.mkdir();
+		
 		//#1-1. 파일객체 생성
 		File newFile = new File("C:/temp/newFile.txt");
 		//#1-2. 파일이 없는 경우 실제 파일 생성
-		if(!newFile.exists()) newFile.createNewFile();
+		if(!newFile.exists()) newFile.createNewFile(); //temp 폴더가 없는 경우 예외 발생
 		
 		//#2. 파일 구분자
 		File newFile2 = new File("C:\\temp\\newFile.txt");

@@ -11,8 +11,8 @@ import java.io.Writer;
 public class EX23_OutputStreamWriter_1 {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
-		File outputStreamWriter1 = new File("sec05.files/OutputStreamWriter1.txt");
-		if(! outputStreamWriter1.exists()) outputStreamWriter1.createNewFile();
+		File outputStreamWriter1 = new File("src/pack03_javaio/sec05_files/OutputStreamWriter1.txt");
+		if(! outputStreamWriter1.exists()) outputStreamWriter1.createNewFile(); //생략가능
 
 		//#1. FileWriter만을 이용하여 파일쓰기 (디폴트(ANSI))
 		try(Writer writer = new FileWriter(outputStreamWriter1);){
@@ -23,11 +23,10 @@ public class EX23_OutputStreamWriter_1 {
 		    writer.flush();
 		}
 		catch(IOException e) {}
-
 		
 		//#.파일 객체 선언
-		File outputStreamWriter2 = new File("sec05.files/OutputStreamWriter2.txt");
-		if(! outputStreamWriter2.exists()) outputStreamWriter2.createNewFile();
+		File outputStreamWriter2 = new File("src/pack03_javaio/sec05_files/OutputStreamWriter2.txt");
+		if(! outputStreamWriter2.exists()) outputStreamWriter2.createNewFile(); //생략가능
 
 		//#2. FileOutputStream+OutputStreamWriter를 사용하여 파일쓰기(UTF-8 모드 파일(메모장))
 		try(OutputStream os = new FileOutputStream(outputStreamWriter2, false);

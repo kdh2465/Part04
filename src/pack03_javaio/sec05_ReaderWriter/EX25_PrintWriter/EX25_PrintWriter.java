@@ -9,9 +9,9 @@ import java.io.PrintWriter;
 public class EX25_PrintWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
-		File printWriter1 = new File("sec05.files/PrintWriter1.txt");
-		File printWriter2 = new File("sec05.files/PrintWriter2.txt");
-		File printWriter3 = new File("sec05.files/PrintWriter3.txt");
+		File printWriter1 = new File("src/pack03_javaio/sec05_files/PrintWriter1.txt");
+		File printWriter2 = new File("src/pack03_javaio/sec05_files/PrintWriter2.txt");
+		File printWriter3 = new File("src/pack03_javaio/sec05_files/PrintWriter3.txt");
 
 		if(! printWriter1.exists()) printWriter1.createNewFile();
 		if(! printWriter2.exists()) printWriter2.createNewFile();

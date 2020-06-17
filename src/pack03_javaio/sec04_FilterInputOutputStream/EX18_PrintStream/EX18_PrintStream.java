@@ -10,8 +10,8 @@ public class EX18_PrintStream {
 	public static void main(String[] args) throws IOException {
 		
 		//#File 按眉 积己 棺 OutputStream 按眉 积己 (PrintStream)
-		File outFile1 = new File("sec04.files/PrintStream1.txt");
-		File outFile2 = new File("sec04.files/PrintStream2.txt");
+		File outFile1 = new File("src/pack03_javaio/sec04_files/PrintStream1.txt");
+		File outFile2 = new File("src/pack03_javaio/sec04_files/PrintStream2.txt");
 		if(!outFile1.exists()) outFile1.createNewFile();
 		if(!outFile2.exists()) outFile2.createNewFile();
 
