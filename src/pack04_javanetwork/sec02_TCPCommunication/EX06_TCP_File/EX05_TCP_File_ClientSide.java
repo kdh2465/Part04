@@ -23,20 +23,20 @@ public class EX05_TCP_File_ClientSide {
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
 						
-			File file = new File("files/sendImageUsingTCP.jpg");			
+			File file = new File("src/pack04_javanetwork/common_files/sendImageUsingTCP.jpg");			
 			FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			System.out.println("파일전송: "+file.getName());
-			dos.writeUTF(file.getName());
+			dos.writeUTF(file.getName()); //파일이름전송
 			
 			byte[] data = new byte[2048];
 			int len;
 			while((len = bis.read(data))!=-1) {
-				dos.writeInt(len);
-				dos.write(data,0,len);
+				dos.writeInt(len); //전송데이터의 길이
+				dos.write(data,0,len); //전송데이터
 				dos.flush();
 			}
-			dos.writeInt(-1);
+			dos.writeInt(-1); //데이터 전송완료 알림
 			dos.flush();
 			
 			String str = dis.readUTF();			

@@ -23,7 +23,7 @@ public class EX12_ConnectedUDP_File_ClientA {
 		
 		
 		//#2. 파일 로딩
-		File file = new File("files/sendImageUsingUDP.jpg");			
+		File file = new File("src/pack04_javanetwork/common_files/sendImageUsingUDP.jpg");			
 		FileInputStream fis=null;
 		try {
 			fis = new FileInputStream(file);

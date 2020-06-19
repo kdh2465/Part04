@@ -55,9 +55,12 @@ public class MyController implements Initializable{
 		primaryStage=stage;
 		
 		primaryStage.addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, (event)->{
-			user.sendData(ProtocolCode.DELETE_USER, name);
-			user.stopListening=true;
-			System.out.println("\nWindow Closed");});
+			if(user!=null) {
+				user.sendData(ProtocolCode.DELETE_USER, name);
+				user.stopListening=true;
+			}
+			System.out.println("\nWindow Closed");
+		});
 	}
 	
 	void printData(String str) {
@@ -221,7 +224,7 @@ public class MyController implements Initializable{
 								
 									int i=1;
 									while(true) {
-										receivedFile = new File("download/"+user.name+"_"+i+"_"+data);
+										receivedFile = new File("src/pack04_javanetwork/download_files/"+user.name+"_"+i+"_"+data);
 										if(!receivedFile.exists()) {
 											receivedFile.createNewFile();
 											break;

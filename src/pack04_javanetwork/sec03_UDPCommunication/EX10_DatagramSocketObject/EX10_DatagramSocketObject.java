@@ -15,8 +15,9 @@ public class EX10_DatagramSocketObject {
 		DatagramSocket ds1=null, ds2=null, ds3=null, ds4=null;
 		try {
 			//@1-1. port미지정/port만 지정 
-			ds1 = new DatagramSocket(); //현재 호스트의 비워있는 포트로 자동 바인딩			
-			ds2 = new DatagramSocket(10000); //현재 호스트의 비워있는 포트로 자동 바인딩			
+			ds1 = new DatagramSocket(); //현재 호스트의 비워져 있는 포트로 자동 바인딩			
+			ds2 = new DatagramSocket(10000); //10000 포트로 바인딩
+		
 			
 			//@1-2. 바인딩 주소 포함			
 			ds3 = new DatagramSocket(10001, InetAddress.getByName("localhost"));
@@ -36,7 +37,7 @@ public class EX10_DatagramSocketObject {
 		//@2-2. 원격지 주소 정보 (connect()된 경우에만 연결된 원격지 주소 정보)
 		System.out.println("원격지 주소 정보: "+ds4.getInetAddress()+":"+ds4.getPort());		
 		try {
-			ds4.connect(new InetSocketAddress("localhost", 10002));
+			ds4.connect(new InetSocketAddress("localhost", 10002)); //수신지와 송신지의 IP/Port가 모두 동일
 		} catch (SocketException e2) {}
 		System.out.println("원격지 주소 정보: "+ds4.getInetAddress()+":"+ds4.getPort());
 		ds4.disconnect();
@@ -62,18 +63,18 @@ public class EX10_DatagramSocketObject {
 			ds2.connect(new InetSocketAddress("localhost", 10002));
 			ds3.connect(new InetSocketAddress("localhost", 10002));
 			
-			ds1.send(dp1); //가능
-			ds2.send(dp1); //가능
-			ds3.send(dp1); //가능
+			ds1.send(dp1); //가능 : 소켓이 connect된 곳 있음 + 패킷에 수신지 주소 없음
+			ds2.send(dp1); //가능 : 소켓이 connect된 곳 있음 + 패킷에 수신지 주소 없음
+			ds3.send(dp1); //가능 : 소켓이 connect된 곳 있음 + 패킷에 수신지 주소 없음
 			
 			ds1.disconnect();
 			ds2.disconnect();
 			ds3.disconnect();
 			
 			//@2-3-2. 수신지 주소가 있는 패킷 전송 = send();						
-			ds1.send(dp2); //가능
-			ds2.send(dp2); //가능
-			ds3.send(dp2); //가능
+			ds1.send(dp2); //가능 : 소켓이 connect된 곳 없음 + 패킷에 수신지 주소 있음
+			ds2.send(dp2); //가능 : 소켓이 connect된 곳 없음 + 패킷에 수신지 주소 있음
+			ds3.send(dp2); //가능 : 소켓이 connect된 곳 없음 + 패킷에 수신지 주소 있음
 			
 			ds3.connect(new InetSocketAddress("localhost", 10002));
 			ds3.send(dp2); //단, 소켓이 connect()된 경우 패킷 연결된 주소와 패킷의 수신지가 같아야 함 (아닌 경우  IllegalArgumentException)

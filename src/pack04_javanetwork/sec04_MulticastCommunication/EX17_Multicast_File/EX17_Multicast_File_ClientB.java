@@ -33,7 +33,7 @@ public class EX17_Multicast_File_ClientB {
 		} catch (IOException e) {}
 
 		//#4. 파일저장을 위한 파일 출력 스트림 생성
-		File file = new File("files/receivedImageUsingMulticast.jpg");
+		File file = new File("src/pack04_javanetwork/common_files/receivedImageUsingMulticast.jpg");
 		FileOutputStream fos = null;
 		try {
 			fos = new FileOutputStream(file);
