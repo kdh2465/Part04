@@ -12,7 +12,7 @@ import java.io.OutputStream;
 public class EX16_DataInputOutputStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성
-		File dataFile = new File("sec04.files/file.data");
+		File dataFile = new File("src/pack03_javaio/sec04_files/file1.data");
 		if(!dataFile.exists()) dataFile.createNewFile();
 
 		//데이터 쓰기 (FilterStream = DataOutputStream)

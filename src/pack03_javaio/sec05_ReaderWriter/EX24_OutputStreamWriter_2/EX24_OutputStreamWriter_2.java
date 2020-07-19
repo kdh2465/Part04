@@ -10,6 +10,7 @@ import java.io.Writer;
 
 public class EX24_OutputStreamWriter_2 {
 	public static void main(String[] args) throws IOException {
+		
 		//#1.콘솔 출력: OutputStreamWriter를 사용하여 문자단위 콘솔 출력하기 (MS949 타입 출력) Windows 기준
 		try{ //MS949
 		    OutputStreamWriter osw = new OutputStreamWriter(System.out);

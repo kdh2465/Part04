@@ -31,6 +31,8 @@ public class MyController implements Initializable{
 		textField5.textProperty().bindBidirectional(textField6.textProperty());
 		
 		label.rotateProperty().bind(slider.valueProperty());
+		
+		
 	}
 	
 }

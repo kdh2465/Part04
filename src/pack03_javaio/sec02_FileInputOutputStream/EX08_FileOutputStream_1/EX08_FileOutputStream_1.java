@@ -9,7 +9,7 @@ public class EX08_FileOutputStream_1 {
 	public static void main(String[] args) throws IOException {
 		
 		//입력파일 생성
-		File outFile = new File("sec02.files/FileOutputStream1.txt");
+		File outFile = new File("src/pack03_javaio/sec02_files/FileOutputStream1.txt");
 		if(!outFile.exists()) outFile.createNewFile();
 		
 		//#1. 1-byte 단위 쓰기		

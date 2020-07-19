@@ -160,12 +160,12 @@ public class MyController implements Initializable{
 		
 									printData("["+fromName+"] "+data + "파일 송신"); //data=fileName
 		
-									File receivedFile = new File("download/"+data);
+									File receivedFile = new File("src/pack04_javanetwork/download_files/"+data);
 									if(!receivedFile.exists()) receivedFile.createNewFile();
 									else {
 										int i=1;
 										while(true) {
-											receivedFile = new File("download/"+data+"_"+i);
+											receivedFile = new File("src/pack04_javanetwork/download_files/"+data+"_"+i);
 											if(!receivedFile.exists()) {
 												receivedFile.createNewFile();
 												break;

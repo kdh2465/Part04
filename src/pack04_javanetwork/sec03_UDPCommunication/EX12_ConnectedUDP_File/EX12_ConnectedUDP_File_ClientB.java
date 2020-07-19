@@ -22,7 +22,7 @@ public class EX12_ConnectedUDP_File_ClientB {
 		} catch (SocketException e) {}
 		
 		//#2. 파일저장을 위한 파일 출력 스트림 생성
-		File file = new File("files/receivedImageUsingUDP.jpg");			
+		File file = new File("src/pack04_javanetwork/common_files/receivedImageUsingUDP.jpg");			
 		FileOutputStream fos=null;
 		try {
 			fos = new FileOutputStream(file);

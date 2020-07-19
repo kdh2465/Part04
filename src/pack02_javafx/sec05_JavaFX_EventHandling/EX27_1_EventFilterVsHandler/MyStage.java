@@ -45,6 +45,6 @@ public class MyStage extends Application{
 		root.addEventHandler(MouseEvent.MOUSE_CLICKED, (event)->{System.out.println("pane eventHandler"); event.consume();});
 		scene.addEventHandler(MouseEvent.MOUSE_CLICKED, (event)->{System.out.println("scene eventHandler");});
 		primaryStage.addEventHandler(MouseEvent.MOUSE_CLICKED, (event)->{System.out.println("stage eventHandler");});
-		
+
 	}
 }

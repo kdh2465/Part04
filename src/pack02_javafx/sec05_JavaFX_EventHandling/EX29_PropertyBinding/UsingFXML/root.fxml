@@ -47,7 +47,7 @@
 <?import javafx.scene.control.Separator?>
 
 <VBox prefWidth="300" prefHeight="300" spacing="10"
-  fx:controller="pack04_javafx.sec05_JavaFX_EventHandling.EX29_PropertyBinding.UsingFXML.MyController" 
+  fx:controller="pack02_javafx.sec05_JavaFX_EventHandling.EX29_PropertyBinding.UsingFXML.MyController" 
   xmlns:fx="http://javafx.com/fxml">
   	<padding>
   		<Insets topRightBottomLeft="10"/>

@@ -12,7 +12,7 @@ import java.io.Writer;
 public class EX20_BufferedReaderWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
-		File buffredFile = new File("sec05.files/BuffredFile.txt");
+		File buffredFile = new File("src/pack03_javaio/sec05_files/BuffredFile.txt");
 		if(!buffredFile.exists()) buffredFile.createNewFile();
 
 		// #1. FileWriter/BufferedWriter를 이용한 파일 쓰기 (ANSI 모드)

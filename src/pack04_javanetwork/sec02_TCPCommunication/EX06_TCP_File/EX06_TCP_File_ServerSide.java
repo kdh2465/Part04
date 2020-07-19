@@ -31,12 +31,12 @@ public class EX06_TCP_File_ServerSide {
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
 			
-			File file = new File("files/receivedImageUsingTCP.jpg");
+			File file = new File("src/pack04_javanetwork/common_files/receivedImageUsingTCP.jpg");
 			FileOutputStream fos = new FileOutputStream(file);
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 						
 			String str=dis.readUTF();
-			System.out.println("파일수신: "+str + "파일저장" + file.getName());
+			System.out.println("파일수신: "+str + "\n파일저장: " + file.getName());
 			
 			byte[] data = new byte[2048];
 			int len;

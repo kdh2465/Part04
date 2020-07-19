@@ -24,11 +24,11 @@ public class EX17_Multicast_File_ClientA {
 		//#2. 멀티캐스트 소켓 생성 (가상공간의 멀티캐스트주소로 패킷을 전송하기 위해서는 멀티캐스트소켓을 생성하여 send)
 		MulticastSocket mcs = null;
 		try {
-			mcs = new MulticastSocket(multicastPort); //포트 지정이 없어 가용 포트 자동 바인딩
+			mcs = new MulticastSocket(multicastPort); 
 		} catch (IOException e) {}
 		
 		//#3. 파일 로딩
-		File file = new File("files/sendImageUsingMulticast.jpg");
+		File file = new File("src/pack04_javanetwork/common_files/sendImageUsingMulticast.jpg");
 		FileInputStream fis=null;
 		try {
 		  fis = new FileInputStream(file);

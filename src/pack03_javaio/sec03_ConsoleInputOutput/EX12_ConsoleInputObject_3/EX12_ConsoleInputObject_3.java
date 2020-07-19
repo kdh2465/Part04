@@ -21,9 +21,9 @@ public class EX12_ConsoleInputObject_3 {
 		int offset=2;
 		int length=4;
 		byte[] byteArray2 = new byte[100];		
-		int count2 = is.read(byteArray2, offset, length);//offset:3 length:5
+		int count2 = is.read(byteArray2, offset, length);//offset:2 length:4
 		String str2 = new String(byteArray2,0,offset+count2, Charset.defaultCharset());
 		System.out.println(str2);
-
+		
 	}
 }

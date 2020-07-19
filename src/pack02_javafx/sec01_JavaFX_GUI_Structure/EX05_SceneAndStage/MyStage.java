@@ -20,8 +20,8 @@ public class MyStage extends Application {
 		parent.setPrefHeight(100);
 		
 		//#1. Scene 생성자		
-		Scene scene = new Scene(parent,Color.GREEN);
-		//Scene scene = new Scene(parent,300,200,Color.BLUE);
+		//Scene scene = new Scene(parent,Color.GREEN);
+		Scene scene = new Scene(parent,300,200,Color.BLUE);
 		//Scene scene = new Scene(parent,300,200,Color.RED);
 				
 		//#2. Stage 메서드 1

@@ -19,7 +19,7 @@ public class EX16_Multicast_Text_ClientA {
 		//#2. 멀티캐스트 소켓 생성 (가상공간의 멀티캐스트주소로 패킷을 전송하기 위해서는 멀티캐스트소켓을 생성하여 send)
 		MulticastSocket mcs = null;
 		try {
-			mcs = new MulticastSocket(multicastPort); //포트 지정이 없어 가용 포트 자동 바인딩
+			mcs = new MulticastSocket(multicastPort); 
 		} catch (IOException e) {}
 		
 		//#3. 전송 데이터그램패킷 생성 (수신지 주소  멀티캐스트 가상 주소)

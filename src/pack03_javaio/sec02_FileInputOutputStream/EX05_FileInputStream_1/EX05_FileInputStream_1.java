@@ -9,7 +9,7 @@ import java.io.InputStream;
 public class EX05_FileInputStream_1 {
 	public static void main(String[] args) throws IOException {
 		//涝仿颇老 积己
-		File inFile = new File("sec02.files/FileInputStream1.txt");
+		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream1.txt");
 
 		//InputStream 积己 
 		InputStream is = new FileInputStream(inFile);

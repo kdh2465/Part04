@@ -14,7 +14,7 @@ import java.io.OutputStream;
 public class EX17_CombineFilterStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성
-		File dataFile = new File("sec04.files/file.data");
+		File dataFile = new File("src/pack03_javaio/sec04_files/file2.data");
 		if(!dataFile.exists()) dataFile.createNewFile();
 
 		//데이터 쓰기 (FilterStream = BufferedOutputStream + DataOutputStream)
@@ -25,6 +25,7 @@ public class EX17_CombineFilterStream {
 		        dos.writeInt(35);
 		        dos.writeDouble(5.8);
 		        dos.writeChar('A');
+		        
 		        dos.writeUTF("안녕하세요");
 		        dos.flush();
 

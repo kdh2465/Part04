@@ -26,7 +26,7 @@ public class MyStage extends Application{
 		
 		Button btn1 = new Button("btn1");				
 		HBox.setMargin(btn1, new Insets(10));
-		btn1.setMaxHeight(Double.MAX_VALUE); //android fill-parent
+		btn1.setMaxHeight(Double.MAX_VALUE); //fillHeight: true
 		
 		Button btn2 = new Button("btn2");
 		HBox.setHgrow(btn2, Priority.ALWAYS);
