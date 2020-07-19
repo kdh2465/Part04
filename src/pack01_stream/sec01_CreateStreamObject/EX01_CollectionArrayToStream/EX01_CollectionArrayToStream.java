@@ -1,4 +1,4 @@
-package pack05_stream.sec01_CreateStreamObject.EX01_CollectionArrayToStream;
+package pack01_stream.sec01_CreateStreamObject.EX01_CollectionArrayToStream;
 
 import java.io.IOException;
 import java.util.Arrays;

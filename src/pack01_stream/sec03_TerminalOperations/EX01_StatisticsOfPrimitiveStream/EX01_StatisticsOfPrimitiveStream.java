@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
+package pack01_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
 
 import java.util.OptionalDouble;
 import java.util.OptionalInt;

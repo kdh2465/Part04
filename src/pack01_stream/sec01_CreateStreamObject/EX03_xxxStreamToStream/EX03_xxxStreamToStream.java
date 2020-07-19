@@ -1,4 +1,4 @@
-package pack05_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
+package pack01_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;

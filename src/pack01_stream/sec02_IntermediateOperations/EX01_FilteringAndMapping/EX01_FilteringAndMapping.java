@@ -1,4 +1,4 @@
-package pack05_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
+package pack01_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;

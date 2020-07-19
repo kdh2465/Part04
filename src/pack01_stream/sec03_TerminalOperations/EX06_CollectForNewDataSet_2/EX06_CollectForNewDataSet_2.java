@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
+package pack01_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;

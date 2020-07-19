@@ -1,4 +1,4 @@
-package pack05_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
+package pack01_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package pack05_stream.EX01_IteratorVsStream;
+package pack01_stream.EX01_IteratorVsStream;
 
 import java.util.Arrays;
 import java.util.Iterator;

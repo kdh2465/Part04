@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
+package pack01_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;

@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
+package pack01_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
 
 import java.util.List;
 import java.util.Map;

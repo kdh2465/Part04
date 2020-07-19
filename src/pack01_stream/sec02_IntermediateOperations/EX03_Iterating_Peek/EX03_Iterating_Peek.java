@@ -1,4 +1,4 @@
-package pack05_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
+package pack01_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
 
 import java.util.stream.IntStream;
 

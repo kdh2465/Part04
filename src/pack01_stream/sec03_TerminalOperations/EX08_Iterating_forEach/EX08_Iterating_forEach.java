@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX08_Iterating_forEach;
+package pack01_stream.sec03_TerminalOperations.EX08_Iterating_forEach;
 
 import java.util.stream.Stream;
 

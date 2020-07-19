@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
+package pack01_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
 
 import java.util.stream.Stream;
 

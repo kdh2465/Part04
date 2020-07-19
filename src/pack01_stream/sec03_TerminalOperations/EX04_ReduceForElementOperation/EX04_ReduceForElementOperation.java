@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX04_ReduceForElementOperation;
+package pack01_stream.sec03_TerminalOperations.EX04_ReduceForElementOperation;
 
 import java.util.Arrays;
 import java.util.Optional;

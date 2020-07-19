@@ -1,4 +1,4 @@
-package pack05_stream.sec02_IntermediateOperations.EX02_Sorting;
+package pack01_stream.sec02_IntermediateOperations.EX02_Sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;

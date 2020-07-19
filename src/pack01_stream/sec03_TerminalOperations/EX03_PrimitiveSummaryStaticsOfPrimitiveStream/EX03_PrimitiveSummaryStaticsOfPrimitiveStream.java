@@ -1,4 +1,4 @@
-package pack05_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
+package pack01_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;

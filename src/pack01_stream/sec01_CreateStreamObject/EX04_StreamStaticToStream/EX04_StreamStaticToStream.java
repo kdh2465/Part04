@@ -1,4 +1,4 @@
-package pack05_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
+package pack01_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
