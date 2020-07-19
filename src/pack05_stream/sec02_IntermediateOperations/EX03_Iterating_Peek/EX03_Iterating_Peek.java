@@ -1,6 +1,8 @@
-package pack02_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
+package pack05_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
 
 import java.util.stream.IntStream;
+
+/*반복하여 데이터값 읽기 (peek)*/
 
 public class EX03_Iterating_Peek {
 	public static void main(String[] args) {

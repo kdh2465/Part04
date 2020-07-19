@@ -1,11 +1,12 @@
-package pack02_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
+package pack05_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+/*스트림으로부터의 새로운 수집(collect) 조합 구성 : collect() #1*/
 
 public class EX05_CollectForNewDataSet_1 {
 	public static void main(String[] args) {

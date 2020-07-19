@@ -1,10 +1,12 @@
-package pack02_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
+package pack05_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
 
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
+
+/*기본자료형 스트림의 기본 통계 데이터 개별 추출*/
 
 public class EX01_StatisticsOfPrimitiveStream {
 	public static void main(String[] args) {

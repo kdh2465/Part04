@@ -1,9 +1,11 @@
-package pack02_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
+package pack05_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
+
+/*기본자료형 스트림의 기본 통계 데이터 일괄 추출*/
 
 public class EX03_PrimitiveSummaryStaticsOfPrimitiveStream {
 	public static void main(String[] args) {

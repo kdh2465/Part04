@@ -1,9 +1,11 @@
-package pack02_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
+package pack05_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
+
+/*필터링(filtering)과 맵핑(Mapping) 및 필터링/매핑 연속 호출*/
 
 public class EX01_FilteringAndMapping {
 	public static void main(String[] args) {

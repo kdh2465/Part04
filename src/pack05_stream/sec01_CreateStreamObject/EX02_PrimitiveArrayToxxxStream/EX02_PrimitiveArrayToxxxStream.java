@@ -1,9 +1,11 @@
-package pack02_stream.sec01_CreateStreamObject.EX02_PrimitiveArrayToxxxStream;
+package pack05_stream.sec01_CreateStreamObject.EX02_PrimitiveArrayToxxxStream;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
+
+/*기본자료형 배열로부터 기본자료형스트림(Int/Long/DoubleStream) 생성*/
 
 public class EX02_PrimitiveArrayToxxxStream {
 	public static void main(String[] args) {

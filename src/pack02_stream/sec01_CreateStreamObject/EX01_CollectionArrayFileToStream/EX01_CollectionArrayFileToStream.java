@@ -1,4 +1,4 @@
-package pack01_stream.sec01_CreateStreamObject.EX01_CollectionArrayFileToStream;
+package pack02_stream.sec01_CreateStreamObject.EX01_CollectionArrayFileToStream;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

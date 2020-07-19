@@ -1,9 +1,11 @@
-package pack02_stream.sec02_IntermediateOperations.EX02_Sorting;
+package pack05_stream.sec02_IntermediateOperations.EX02_Sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
+
+/*대소비교 기준 제공 및 이를 이용한 오름/내림차순 정렬(sorting)*/
 
 class Member1 implements Comparable<Member1> {
 	private int age;

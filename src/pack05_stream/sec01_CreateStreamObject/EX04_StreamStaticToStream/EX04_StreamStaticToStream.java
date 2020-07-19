@@ -1,9 +1,11 @@
-package pack02_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
+package pack05_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
+
+/*Stream 클래스의 정적메서드를 활용한 Stream<E> 객체 생성*/
 
 public class EX04_StreamStaticToStream {
 	public static void main(String[] args) {

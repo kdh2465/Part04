@@ -1,9 +1,11 @@
-package pack02_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
+package pack05_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+/*병렬스트림(ParallelStream) 생성*/
 
 public class EX05_CreateParallelStream {
 	public static void main(String[] args) {

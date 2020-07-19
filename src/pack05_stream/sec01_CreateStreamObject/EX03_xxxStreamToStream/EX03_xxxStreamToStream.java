@@ -1,10 +1,12 @@
-package pack02_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
+package pack05_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
+
+/*기본자료형스트림(Int/Long/DoubleStream)으로부터 Stream<E> 객체 생성*/
 
 public class EX03_xxxStreamToStream {
 	public static void main(String[] args) {

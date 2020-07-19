@@ -1,6 +1,8 @@
-package pack02_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
+package pack05_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
 
 import java.util.stream.Stream;
+
+/*스트림 요소 값의 매칭(Matching)여부 확인 : any/all/none+Match()*/
 
 public class EX07_AnyAllNoneMatching {
 	public static void main(String[] args) {

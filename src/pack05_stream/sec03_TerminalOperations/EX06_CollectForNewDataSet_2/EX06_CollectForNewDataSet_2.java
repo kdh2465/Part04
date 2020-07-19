@@ -1,4 +1,4 @@
-package pack02_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
+package pack05_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;
@@ -7,6 +7,8 @@ import java.util.LongSummaryStatistics;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+/*스트림으로부터의 새로운 수집(collect) 조합 구성 : collect() #2*/
 
 public class EX06_CollectForNewDataSet_2 {
 	public static void main(String[] args) {

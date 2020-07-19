@@ -1,8 +1,10 @@
-package pack02_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
+package pack05_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
+
+/*Optional+XXX 클래스의 주요 메서드*/
 
 public class EX02_OptionalPrimitiveMethods {
 	public static void main(String[] args) {
