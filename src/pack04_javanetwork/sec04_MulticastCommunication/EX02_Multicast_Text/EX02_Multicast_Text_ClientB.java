@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX16_Multicast_Text;
+package pack04_javanetwork.sec04_MulticastCommunication.EX02_Multicast_Text;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -6,7 +6,7 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
 
-public class EX16_Multicast_Text_ClientB {
+public class EX02_Multicast_Text_ClientB {
 	public static void main(String[] args) {
 		
 		System.out.println("<<ClientB>> - Text");		

@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec05_RMIComminication.EX19_ServerSide;
+package pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
@@ -22,7 +22,7 @@ import java.rmi.registry.Registry;
 		//중요 package: java.rmi, java.rmi.registry, java.rmi.server (이외 java.rmi.dgc(distribute gabage collection): 분산환경에서 쓰레기 수집기
 		//Registry Interface (객체 바인딩)
 
-public class EX19_ServerSide {
+public class EX01_ServerSide {
 	public static void main(String[] args) {
 		//#1. 공통 인터페이스 생성
 		//@1-1. public + Remote 인터페이스 상속 (Remote Interface는 Mark용 인터페이스(내부에 추상 메서드 없음))	

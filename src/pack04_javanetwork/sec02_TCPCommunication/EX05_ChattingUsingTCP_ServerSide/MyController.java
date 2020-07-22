@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX07_ChattingUsingTCP_ServerSide;
+package pack04_javanetwork.sec02_TCPCommunication.EX05_ChattingUsingTCP_ServerSide;
 
 
 import java.io.DataInputStream;

@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX04_ServerSocketObject;
+package pack04_javanetwork.sec02_TCPCommunication.EX02_ServerSocketObject;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-public class EX04_ServerSocketObject {
+public class EX02_ServerSocketObject {
 	public static void main(String[] args) {
 		
 		//#1. ServerSocket °´Ã¼ »ý¼º

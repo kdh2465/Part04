@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX17_Multicast_File;
+package pack04_javanetwork.sec04_MulticastCommunication.EX03_Multicast_File;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
 
-public class EX17_Multicast_File_ClientB {
+public class EX03_Multicast_File_ClientB {
 	public static void main(String[] args) {
 		
 		System.out.println("<<ClientB>> - File");

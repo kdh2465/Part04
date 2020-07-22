@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX11_NonConnectedUDP_Text;
+package pack04_javanetwork.sec03_UDPCommunication.EX03_NonConnectedUDP_Text;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -6,7 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
-public class EX11_NonConnectedUDP_Text_ClientA {
+public class EX03_NonConnectedUDP_Text_ClientA {
 	public static void main(String[] args) {
 		System.out.println("<<ClientA>> - Text");
 		

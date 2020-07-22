@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX08_ChattingUsingTCP_ClientSide;
+package pack04_javanetwork.sec02_TCPCommunication.EX06_ChattingUsingTCP_ClientSide;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

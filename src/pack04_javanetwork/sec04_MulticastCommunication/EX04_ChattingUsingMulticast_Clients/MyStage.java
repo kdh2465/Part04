@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX18_ChattingUsingMulticast_Clients;
+package pack04_javanetwork.sec04_MulticastCommunication.EX04_ChattingUsingMulticast_Clients;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

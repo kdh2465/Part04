@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX12_ConnectedUDP_File;
+package pack04_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
-public class EX12_ConnectedUDP_File_ClientB {
+public class EX04_ConnectedUDP_File_ClientB {
 	public static void main(String[] args) {
 		System.out.println("<<ClientB>> - File");
 		

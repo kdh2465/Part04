@@ -1,13 +1,13 @@
-package pack04_javanetwork.sec05_RMIComminication.EX20_ClientSide;
+package pack04_javanetwork.sec05_RMIComminication.EX02_ClientSide;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import pack04_javanetwork.sec05_RMIComminication.EX19_ServerSide.MyRemote;
+import pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide.MyRemote;
 
-public class EX20_ClientSide {
+public class EX02_ClientSide {
 	public static void main(String[] args) {
 		//#1. 서버에서 생성한 2개의 파일 복사
 		//@1-1. 공통인터페이스.class

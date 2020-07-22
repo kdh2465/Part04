@@ -1,7 +1,9 @@
-package pack04_javanetwork.sec05_RMIComminication.EX19_ServerSide;
+package pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+
+import pack04_javanetwork.sec05_RMIComminication.EX19_ServerSide.MyRemote;
 
 //#2. 공통인터페이스 구현 클래스 생성하기
 //@2-1. public + 공통인터페이스 구현(implements) + UnicastRemoteObject 상속

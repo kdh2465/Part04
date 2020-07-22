@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX06_TCP_File;
+package pack04_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class EX06_TCP_File_ServerSide {
+public class EX04_TCP_File_ServerSide {
 	public static void main(String[] args) {
 		System.out.print("<<Server>>");
 		ServerSocket serverSocket = null;

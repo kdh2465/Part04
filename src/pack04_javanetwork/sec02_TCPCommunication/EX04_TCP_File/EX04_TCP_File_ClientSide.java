@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX06_TCP_File;
+package pack04_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,7 +11,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class EX05_TCP_File_ClientSide {
+public class EX04_TCP_File_ClientSide {
 	public static void main(String[] args) {
 		System.out.println("<<Client>>");
 		Socket socket=null;

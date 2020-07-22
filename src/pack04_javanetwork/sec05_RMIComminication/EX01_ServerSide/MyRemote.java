@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec05_RMIComminication.EX19_ServerSide;
+package pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

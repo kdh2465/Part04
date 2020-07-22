@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX03_SocketObject;
+package pack04_javanetwork.sec02_TCPCommunication.EX01_SocketObject;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-public class EX03_SocketObject {
+public class EX01_SocketObject {
 	public static void main(String[] args) {
 		//#1. Socket °´Ã¼ »ý¼º 
 		Socket socket1 = new Socket();

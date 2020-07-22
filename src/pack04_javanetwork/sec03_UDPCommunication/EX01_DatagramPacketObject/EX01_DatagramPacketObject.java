@@ -1,11 +1,11 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX09_DatagramPacketObject;
+package pack04_javanetwork.sec03_UDPCommunication.EX01_DatagramPacketObject;
 
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-public class EX09_DatagramPacketObject {
+public class EX01_DatagramPacketObject {
 	public static void main(String[] args) {
 		
 		//#0. 송신데이터: 최대바이트수 65508 byte (64Kbyte) : ipv4 (65536-20(IP header)-8(UDP header)=65505)

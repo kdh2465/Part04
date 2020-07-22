@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX10_DatagramSocketObject;
+package pack04_javanetwork.sec03_UDPCommunication.EX02_DatagramSocketObject;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -8,7 +8,7 @@ import java.net.InetSocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-public class EX10_DatagramSocketObject {
+public class EX02_DatagramSocketObject {
 	public static void main(String[] args) {
 		
 		//#1. DatagramSocket °´Ã¼ »ý¼º

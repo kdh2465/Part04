@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX13_ChattingUsingUDP_ServerSide;
+package pack04_javanetwork.sec03_UDPCommunication.EX05_ChattingUsingUDP_ServerSide;
 
 public class ProtocolCode {
 	

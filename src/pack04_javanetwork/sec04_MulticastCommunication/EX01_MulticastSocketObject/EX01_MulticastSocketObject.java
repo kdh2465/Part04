@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX15_MulticastSocketObject;
+package pack04_javanetwork.sec04_MulticastCommunication.EX01_MulticastSocketObject;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -8,7 +8,7 @@ import java.net.MulticastSocket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-public class EX15_MulticastSocketObject {
+public class EX01_MulticastSocketObject {
 	public static void main(String[] args) {
 		//# 멀티캐스트 (224.0.0.0~239.255.255.255) : multicastSocket 클래스
 		
