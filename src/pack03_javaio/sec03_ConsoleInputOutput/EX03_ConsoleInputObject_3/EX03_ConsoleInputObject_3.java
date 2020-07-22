@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
+/*read(.) 메서드를 이용한 콘솔(Console)로 부터 데이터 읽기 (한글입력 읽기)*/
+
 public class EX03_ConsoleInputObject_3 {
 	public static void main(String[] args) throws IOException {
 		

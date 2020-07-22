@@ -1,10 +1,11 @@
 package pack03_javaio.sec02_FileInputOutputStream.EX04_FileOutputStream_1;
 
 import java.io.File;
-import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
+/*FileOutputStream의 write(.) 메서드를 이용한 데이터 쓰기 (영문파일 쓰기)*/
 
 public class EX04_FileOutputStream_1 {
 	public static void main(String[] args) throws IOException {

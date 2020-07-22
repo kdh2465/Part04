@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/*PrintWriter 객체생성 및 활용 (File, OutputStream, Writer, 콘솔 출력)*/
+
 public class EX07_PrintWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언

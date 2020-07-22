@@ -3,6 +3,8 @@ package pack03_javaio.sec01_FileAndCharset.EX03_Charset;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
+/*자바의 문자셋 (EUC-KR vs. MS949, UTF-16 vs. UTF-8, Charset 객체 생성)*/
+
 public class EX03_Charset {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		

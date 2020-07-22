@@ -3,6 +3,8 @@ package pack03_javaio.sec01_FileAndCharset.EX04_ByteArrayToFromString;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
+/*String ¡æ byte[]¿Í byte[]¡æString º¯È¯ */
+
 public class EX04_ByteArrayToFromString {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		

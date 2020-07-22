@@ -3,6 +3,8 @@ package pack03_javaio.sec01_FileAndCharset.EX01_CreateFileObject;
 import java.io.File;
 import java.io.IOException;
 
+/*파일객체 생성과 파일구분자 및 절대경로와 상대경로*/
+
 public class EX01_CreateFileObject {
 	public static void main(String[] args) throws IOException {
 		

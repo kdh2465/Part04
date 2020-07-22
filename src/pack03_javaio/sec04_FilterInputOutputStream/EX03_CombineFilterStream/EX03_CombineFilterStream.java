@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/*Buffered(Input/Output)Stream과 Data(Input/Output)Stream의 조합*/
+
 public class EX03_CombineFilterStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성

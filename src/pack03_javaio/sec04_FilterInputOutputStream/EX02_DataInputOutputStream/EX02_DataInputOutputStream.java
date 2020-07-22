@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/*Data(Input/Output)Stream 클래스를 활용한 다양한 타입의 입출력 구현*/
+
 public class EX02_DataInputOutputStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성

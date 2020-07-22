@@ -3,6 +3,8 @@ package pack03_javaio.sec03_ConsoleInputOutput.EX04_ConsoleOutputObject_1;
 import java.io.IOException;
 import java.io.OutputStream;
 
+/*write(.) 메서드를 이용한 콘솔(Console)로 데이터 출력하기(영문데이터 출력)*/
+
 public class EX04_ConsoleOutputObject_1 {
 	public static void main(String[] args) throws IOException {
 

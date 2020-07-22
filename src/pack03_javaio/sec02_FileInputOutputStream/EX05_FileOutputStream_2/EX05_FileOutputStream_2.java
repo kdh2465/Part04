@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
+/*FileOutputStream의 write(.) 메서드를 이용한 데이터 쓰기 (한글파일 쓰기)*/
+
 public class EX05_FileOutputStream_2 {
 	public static void main(String[] args) throws IOException {
 		

@@ -3,6 +3,8 @@ package pack03_javaio.sec05_ReaderWriter.EX04_InputStreamReader_2;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*콘솔입력된 문자열을 MS949 문자셋과 UTF-8 문자셋으로 각각 읽어오기*/
+
 public class EX04_InputStreamReader_2 {
 	public static void main(String[] args) {
 		

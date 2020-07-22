@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
+/*write(.) 메서드를 이용한 콘솔(Console)로 데이터 출력하기(한글데이터 출력)*/
+
 public class EX05_ConsoleOutputObject_2 {
 	public static void main(String[] args) throws IOException {
 

@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
+/*Buffered(Reader/Writer) 클래스를 활용한 입출력 속도 개선*/
+
 public class EX02_BufferedReaderWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언

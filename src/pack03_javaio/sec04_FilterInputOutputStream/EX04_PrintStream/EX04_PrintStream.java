@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+/*PrintStream 객체생성 및 활용 (File 출력, OutputStream 출력, 콘솔 출력)*/
+
 public class EX04_PrintStream {
 	public static void main(String[] args) throws IOException {
 		

@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
+/*FileReader와 FileWriter를 이용한 char 단위의 파일입출력 구현*/
+
 public class EX01_FileReaderWriter {
 	public static void main(String[] args) {
 		//#.파일 객체 선언

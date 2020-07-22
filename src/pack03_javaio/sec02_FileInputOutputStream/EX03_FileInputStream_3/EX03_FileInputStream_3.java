@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
+/*FileInputStream의 read(.) 메서드를 이용한 데이터 읽기 (한글파일 읽기)*/
+
 public class EX03_FileInputStream_3 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성

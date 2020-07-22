@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
+/*UTF-8 인코딩 파일을 FileReader와 FileInputStreamReader로 각각 읽어오기*/
+
 public class EX03_InputStreamReader_1 {
 	public static void main(String[] args) {
 		//#.파일 객체 선언

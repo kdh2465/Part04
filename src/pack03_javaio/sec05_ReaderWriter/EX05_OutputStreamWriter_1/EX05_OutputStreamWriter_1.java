@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+/*FileWriter와 OutputStreamWriter를 이용하여 각각 파일 쓰기*/
+
 public class EX05_OutputStreamWriter_1 {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언

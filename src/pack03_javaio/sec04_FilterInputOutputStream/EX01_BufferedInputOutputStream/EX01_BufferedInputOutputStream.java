@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/*Buffered(Input/Output)Stream 클래스를 활용한 입출력 속도 개선*/
+
 public class EX01_BufferedInputOutputStream {
 	public static void main(String[] args) throws IOException {
 		//#파일 생성

@@ -3,6 +3,8 @@ package pack03_javaio.sec03_ConsoleInputOutput.EX02_ConsoleInputObject_2;
 import java.io.IOException;
 import java.io.InputStream;
 
+/*read(.) 메서드를 이용한 콘솔(Console)로 부터 데이터 읽기 (영문입력 읽기)*/
+
 public class EX02_ConsoleInputObject_2 {
 	public static void main(String[] args) throws IOException {
 		

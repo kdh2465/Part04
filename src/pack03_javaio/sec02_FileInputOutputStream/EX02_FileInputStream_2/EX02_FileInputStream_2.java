@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+/*FileInputStream의 read(.) 메서드를 이용한 데이터 읽기 (영문파일 읽기)*/
+
 public class EX02_FileInputStream_2 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성

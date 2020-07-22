@@ -1,12 +1,9 @@
 package pack03_javaio.sec05_ReaderWriter.EX06_OutputStreamWriter_2;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.Writer;
+
+/*MS949 문자셋과 UTF-8문자셋을 이용하여 콘솔(console)에 각각 출력하기*/
 
 public class EX06_OutputStreamWriter_2 {
 	public static void main(String[] args) throws IOException {

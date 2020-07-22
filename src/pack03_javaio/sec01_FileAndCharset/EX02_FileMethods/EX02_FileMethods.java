@@ -2,6 +2,8 @@ package pack03_javaio.sec01_FileAndCharset.EX02_FileMethods;
 
 import java.io.File;
 
+/*파일 클래스의 주요 메서드*/
+
 public class EX02_FileMethods {
 	public static void main(String[] args) {
 		//#. C 드라이브내에 temp 폴더가 없는 경우 생성
