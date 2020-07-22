@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX27_EventHandlingWithController.UsingJavacode;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX02_EventHandlingWithController.UsingJavacode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

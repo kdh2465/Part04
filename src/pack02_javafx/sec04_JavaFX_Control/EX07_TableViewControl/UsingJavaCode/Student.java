@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX07_TableViewControl.UsingJavaCode;
 
 import javafx.beans.NamedArg;
 

@@ -1,6 +1,6 @@
-package pack02_javafx.sec07_JavaFX_UIThread.EX32_Async_Task.UsingFXML;
+package pack02_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingFXML;
 
-public class EX32_Async_Task_UsingFXML {
+public class EX02_Async_Task_UsingFXML {
 	public static void main(String[] args) {
 		MyStage.launch(MyStage.class, args);
 	}

@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX17_AnchorPane_Layout.UsingJavaCode;
+package pack02_javafx.sec03_JavaFX_Layout.EX09_AnchorPane_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

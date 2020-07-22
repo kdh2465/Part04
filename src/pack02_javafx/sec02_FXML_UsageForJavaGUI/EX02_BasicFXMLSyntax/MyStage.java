@@ -1,4 +1,4 @@
-package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX07_BasicFXMLSyntax;
+package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX02_BasicFXMLSyntax;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

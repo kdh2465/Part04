@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX27_FileChooserDirectoryChooser.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX12_FileChooserDirectoryChooser.UsingFXML;
 
 import java.io.File;
 import java.net.URL;

@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX14_BorderPane_Layout.UsingJavaCode;
+package pack02_javafx.sec03_JavaFX_Layout.EX05_BorderPane_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

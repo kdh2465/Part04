@@ -1,4 +1,4 @@
-package pack02_javafx.sec07_JavaFX_UIThread.EX32_Async_Task.UsingFXML;
+package pack02_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package pack02_javafx.sec07_JavaFX_UIThread.EX31_PlatformRunLater.UsingFXML;
+package pack02_javafx.sec07_JavaFX_UIThread.EX01_PlatformRunLater.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX16_TilePane_Layout.UsingJavaCode;
+package pack02_javafx.sec03_JavaFX_Layout.EX08_TilePane_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

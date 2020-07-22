@@ -1,4 +1,4 @@
-package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX09_SetPropertiesUsingFXML;
+package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX04_SetPropertiesUsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

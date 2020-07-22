@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX19_2_TextInputControl.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX04_TextInputControl.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

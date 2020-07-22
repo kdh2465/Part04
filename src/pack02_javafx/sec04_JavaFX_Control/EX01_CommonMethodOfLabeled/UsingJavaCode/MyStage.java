@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX18_1_CommonMethodOfLabeled.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX01_CommonMethodOfLabeled.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

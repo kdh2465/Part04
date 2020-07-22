@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX25_MenuBarContextMenu.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX10_MenuBarContextMenu.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

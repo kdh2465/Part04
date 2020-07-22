@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX24_DatePickerColorPicker.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX09_DatePickerColorPicker.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

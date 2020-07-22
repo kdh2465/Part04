@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX12_FlowPane_Layout.UsingFXML;
+package pack02_javafx.sec03_JavaFX_Layout.EX03_FlowPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

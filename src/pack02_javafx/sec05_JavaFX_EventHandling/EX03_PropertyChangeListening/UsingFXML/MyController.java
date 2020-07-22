@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX28_PropertyChangeListening.UsingFXML;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;

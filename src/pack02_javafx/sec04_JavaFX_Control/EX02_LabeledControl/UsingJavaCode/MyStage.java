@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX18_2_LabeledControl.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

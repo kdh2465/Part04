@@ -1,4 +1,4 @@
-package pack02_javafx.sec06_javafx_css.EX30_JavaFX_AdoptingCSS.UsingFXML;
+package pack02_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

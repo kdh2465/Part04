@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX23_ChoiceBoxAndComboBox.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX08_ChoiceBoxAndComboBox.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;

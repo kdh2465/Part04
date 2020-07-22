@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX11_VBox_Layout.UsingJavaCode;
+package pack02_javafx.sec03_JavaFX_Layout.EX02_VBox_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

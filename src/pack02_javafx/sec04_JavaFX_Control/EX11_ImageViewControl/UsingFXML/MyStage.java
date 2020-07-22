@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX26_ImageViewControl.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX11_ImageViewControl.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package pack02_javafx.sec06_javafx_css.EX30_1_JavaFX_AttributesAndValues.UsingJavaCode;
+package pack02_javafx.sec06_javafx_css.EX01_JavaFX_AttributesAndValues.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

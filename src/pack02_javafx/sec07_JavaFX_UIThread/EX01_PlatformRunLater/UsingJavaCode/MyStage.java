@@ -1,4 +1,4 @@
-package pack02_javafx.sec07_JavaFX_UIThread.EX31_PlatformRunLater.UsingJavaCode;
+package pack02_javafx.sec07_JavaFX_UIThread.EX01_PlatformRunLater.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.application.Platform;

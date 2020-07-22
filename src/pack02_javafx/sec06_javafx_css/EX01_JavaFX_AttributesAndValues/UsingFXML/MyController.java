@@ -1,4 +1,4 @@
-package pack02_javafx.sec06_javafx_css.EX30_1_JavaFX_AttributesAndValues.UsingFXML;
+package pack02_javafx.sec06_javafx_css.EX01_JavaFX_AttributesAndValues.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;

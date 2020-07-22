@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX29_PropertyBinding.UsingFXML;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

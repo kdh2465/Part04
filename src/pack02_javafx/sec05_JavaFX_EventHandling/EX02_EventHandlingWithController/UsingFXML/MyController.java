@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX27_EventHandlingWithController.UsingFXML;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX02_EventHandlingWithController.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;

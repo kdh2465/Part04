@@ -1,4 +1,4 @@
-package pack02_javafx.sec07_JavaFX_UIThread.EX32_Async_Task.UsingJavaCode;
+package pack02_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;

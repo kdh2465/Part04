@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX26_ImageViewControl.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX11_ImageViewControl.UsingJavaCode;
 
 import java.io.File;
 import java.io.FileInputStream;

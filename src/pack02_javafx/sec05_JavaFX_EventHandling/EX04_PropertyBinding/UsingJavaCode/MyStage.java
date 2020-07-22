@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX29_PropertyBinding.UsingJavaCode;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

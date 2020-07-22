@@ -1,4 +1,4 @@
-package pack02_javafx.sec06_javafx_css.EX30_JavaFX_AdoptingCSS.UsingJavaCode;
+package pack02_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

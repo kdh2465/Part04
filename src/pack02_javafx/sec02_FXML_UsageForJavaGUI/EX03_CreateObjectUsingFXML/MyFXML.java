@@ -1,4 +1,4 @@
-package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX08_CreateObjectUsingFXML;
+package pack02_javafx.sec02_FXML_UsageForJavaGUI.EX03_CreateObjectUsingFXML;
 
 import javafx.beans.NamedArg;
 

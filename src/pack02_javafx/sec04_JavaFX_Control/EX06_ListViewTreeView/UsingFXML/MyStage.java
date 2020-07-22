@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX21_ListViewTreeView.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX06_ListViewTreeView.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

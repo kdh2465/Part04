@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX27_1_EventFilterVsHandler;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX01_EventFilterVsHandler;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;

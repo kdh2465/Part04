@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX27_FileChooserDirectoryChooser.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX12_FileChooserDirectoryChooser.UsingJavaCode;
 
 import java.io.File;
 

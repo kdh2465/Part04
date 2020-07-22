@@ -1,4 +1,4 @@
-package pack02_javafx.sec05_JavaFX_EventHandling.EX28_PropertyChangeListening.UsingJavaCode;
+package pack02_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;

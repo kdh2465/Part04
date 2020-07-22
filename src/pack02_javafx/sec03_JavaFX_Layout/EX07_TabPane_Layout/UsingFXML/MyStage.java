@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX15_2_TabPane_Layout.UsingFXML;
+package pack02_javafx.sec03_JavaFX_Layout.EX07_TabPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

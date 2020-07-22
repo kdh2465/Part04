@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX14_BorderPane_Layout.UsingFXML;
+package pack02_javafx.sec03_JavaFX_Layout.EX05_BorderPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

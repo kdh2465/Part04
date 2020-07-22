@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX20_SliderAndProgress.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX05_SliderAndProgress.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

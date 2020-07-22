@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX25_MenuBarContextMenu.UsingFXML;
+package pack02_javafx.sec04_JavaFX_Control.EX10_MenuBarContextMenu.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX13_GridPane_Layout.UsingFXML;
+package pack02_javafx.sec03_JavaFX_Layout.EX04_GridPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

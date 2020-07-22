@@ -1,4 +1,4 @@
-package pack02_javafx.sec03_JavaFX_Layout.EX15_1_StackPane_Layout.UsingFXML;
+package pack02_javafx.sec03_JavaFX_Layout.EX06_StackPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

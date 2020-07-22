@@ -1,4 +1,4 @@
-package pack02_javafx.sec04_JavaFX_Control.EX19_2_TextInputControl.UsingJavaCode;
+package pack02_javafx.sec04_JavaFX_Control.EX04_TextInputControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
