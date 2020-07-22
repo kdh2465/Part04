@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX23_OutputStreamWriter_1;
+package pack03_javaio.sec05_ReaderWriter.EX05_OutputStreamWriter_1;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-public class EX23_OutputStreamWriter_1 {
+public class EX05_OutputStreamWriter_1 {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
 		File outputStreamWriter1 = new File("src/pack03_javaio/sec05_files/OutputStreamWriter1.txt");

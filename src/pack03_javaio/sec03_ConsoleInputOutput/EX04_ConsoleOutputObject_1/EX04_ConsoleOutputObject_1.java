@@ -1,9 +1,9 @@
-package pack03_javaio.sec03_ConsoleInputOutput.EX13_ConsoleOutputObject_1;
+package pack03_javaio.sec03_ConsoleInputOutput.EX04_ConsoleOutputObject_1;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class EX13_ConsoleOutputObject_1 {
+public class EX04_ConsoleOutputObject_1 {
 	public static void main(String[] args) throws IOException {
 
 		//# OutputStream 생성(콘솔)

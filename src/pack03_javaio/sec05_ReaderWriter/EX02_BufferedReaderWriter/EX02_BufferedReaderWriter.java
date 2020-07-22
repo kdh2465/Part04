@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX20_BufferedReaderWriter;
+package pack03_javaio.sec05_ReaderWriter.EX02_BufferedReaderWriter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
-public class EX20_BufferedReaderWriter {
+public class EX02_BufferedReaderWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
 		File buffredFile = new File("src/pack03_javaio/sec05_files/BuffredFile.txt");

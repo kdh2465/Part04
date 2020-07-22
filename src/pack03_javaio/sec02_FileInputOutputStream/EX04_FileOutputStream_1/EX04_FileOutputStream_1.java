@@ -1,16 +1,17 @@
-package pack03_javaio.sec02_FileInputOutputStream.EX08_FileOutputStream_1;
+package pack03_javaio.sec02_FileInputOutputStream.EX04_FileOutputStream_1;
 
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class EX08_FileOutputStream_1 {
+public class EX04_FileOutputStream_1 {
 	public static void main(String[] args) throws IOException {
-		
+				
 		//입력파일 생성
 		File outFile = new File("src/pack03_javaio/sec02_files/FileOutputStream1.txt");
-		if(!outFile.exists()) outFile.createNewFile();
+		if(!outFile.exists()) outFile.createNewFile(); //파일을 쓰는 경우에는 생략가능 (자동 생성)
 		
 		//#1. 1-byte 단위 쓰기		
 		OutputStream os1 = new FileOutputStream(outFile);

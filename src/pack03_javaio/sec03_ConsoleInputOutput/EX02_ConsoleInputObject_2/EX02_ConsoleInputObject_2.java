@@ -1,9 +1,9 @@
-package pack03_javaio.sec03_ConsoleInputOutput.EX11_ConsoleInputObject_2;
+package pack03_javaio.sec03_ConsoleInputOutput.EX02_ConsoleInputObject_2;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-public class EX11_ConsoleInputObject_2 {
+public class EX02_ConsoleInputObject_2 {
 	public static void main(String[] args) throws IOException {
 		
 		//InputStream °´Ã¼ »ý¼º

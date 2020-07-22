@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX16_DataInputOutputStream;
+package pack03_javaio.sec04_FilterInputOutputStream.EX02_DataInputOutputStream;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class EX16_DataInputOutputStream {
+public class EX02_DataInputOutputStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성
 		File dataFile = new File("src/pack03_javaio/sec04_files/file1.data");

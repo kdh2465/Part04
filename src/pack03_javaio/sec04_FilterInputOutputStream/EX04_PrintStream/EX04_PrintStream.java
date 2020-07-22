@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX18_PrintStream;
+package pack03_javaio.sec04_FilterInputOutputStream.EX04_PrintStream;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class EX18_PrintStream {
+public class EX04_PrintStream {
 	public static void main(String[] args) throws IOException {
 		
 		//#File 按眉 积己 棺 OutputStream 按眉 积己 (PrintStream)

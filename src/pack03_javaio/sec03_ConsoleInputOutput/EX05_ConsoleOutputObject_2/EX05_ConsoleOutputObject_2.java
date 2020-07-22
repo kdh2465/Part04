@@ -1,10 +1,10 @@
-package pack03_javaio.sec03_ConsoleInputOutput.EX14_ConsoleOutputObject_2;
+package pack03_javaio.sec03_ConsoleInputOutput.EX05_ConsoleOutputObject_2;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
-public class EX14_ConsoleOutputObject_2 {
+public class EX05_ConsoleOutputObject_2 {
 	public static void main(String[] args) throws IOException {
 
 		//# OutputStream 생성(콘솔)

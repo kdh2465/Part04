@@ -1,4 +1,4 @@
-package pack03_javaio.sec02_FileInputOutputStream.EX07_FileInputStream_3;
+package pack03_javaio.sec02_FileInputOutputStream.EX03_FileInputStream_3;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-public class EX07_FileInputStream_3 {
+public class EX03_FileInputStream_3 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성
 		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream2.txt ");

@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX15_BufferedInputOutputStream;
+package pack03_javaio.sec04_FilterInputOutputStream.EX01_BufferedInputOutputStream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,14 +9,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class EX15_BufferedInputOutputStream {
+public class EX01_BufferedInputOutputStream {
 	public static void main(String[] args) throws IOException {
 		//#파일 생성
 		File orgfile = new File("src/pack03_javaio/sec04_files/mycat_origin.jpg");
 		File copyfile1 = new File("src/pack03_javaio/sec04_files/mycat_copy1.jpg");
 		File copyfile2 = new File("src/pack03_javaio/sec04_files/mycat_copy2.jpg");
-		if(!copyfile1.exists()) copyfile1.createNewFile(); //outputstream으로 파일을 쓰는 경우는 생략가능
-		if(!copyfile2.exists()) copyfile2.createNewFile(); //파일이 없으면 생성하여 작성 FileOutputStream
+		//if(!copyfile1.exists()) copyfile1.createNewFile(); //outputstream으로 파일을 쓰는 경우는 생략가능
+		//if(!copyfile2.exists()) copyfile2.createNewFile(); //파일이 없으면 생성하여 작성 FileOutputStream
 		
 		//#BufferedXXXStream을 사용하지 않은 경우
 		long start, end, time1, time2;

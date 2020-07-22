@@ -1,10 +1,10 @@
-package pack03_javaio.sec03_ConsoleInputOutput.EX12_ConsoleInputObject_3;
+package pack03_javaio.sec03_ConsoleInputOutput.EX03_ConsoleInputObject_3;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-public class EX12_ConsoleInputObject_3 {
+public class EX03_ConsoleInputObject_3 {
 	public static void main(String[] args) throws IOException {
 		
 		//InputStream °´Ã¼ »ý¼º

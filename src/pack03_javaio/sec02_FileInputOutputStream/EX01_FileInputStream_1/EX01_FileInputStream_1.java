@@ -1,4 +1,4 @@
-package pack03_javaio.sec02_FileInputOutputStream.EX05_FileInputStream_1;
+package pack03_javaio.sec02_FileInputOutputStream.EX01_FileInputStream_1;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class EX05_FileInputStream_1 {
+public class EX01_FileInputStream_1 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성
 		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream1.txt");

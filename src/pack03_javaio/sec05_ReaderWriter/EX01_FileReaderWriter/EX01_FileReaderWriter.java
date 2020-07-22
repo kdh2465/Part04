@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX19_FileReaderWriter;
+package pack03_javaio.sec05_ReaderWriter.EX01_FileReaderWriter;
 
 import java.io.File;
 import java.io.FileReader;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
-public class EX19_FileReaderWriter {
+public class EX01_FileReaderWriter {
 	public static void main(String[] args) {
 		//#.파일 객체 선언
 		File readerwriterFile = new File("src/pack03_javaio/sec05_files/ReaderWriterFile.txt");

@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX25_PrintWriter;
+package pack03_javaio.sec05_ReaderWriter.EX07_PrintWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class EX25_PrintWriter {
+public class EX07_PrintWriter {
 	public static void main(String[] args) throws IOException {
 		//#.파일 객체 선언
 		File printWriter1 = new File("src/pack03_javaio/sec05_files/PrintWriter1.txt");

@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX17_CombineFilterStream;
+package pack03_javaio.sec04_FilterInputOutputStream.EX03_CombineFilterStream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class EX17_CombineFilterStream {
+public class EX03_CombineFilterStream {
 	public static void main(String[] args) throws IOException {
 		//파일 생성
 		File dataFile = new File("src/pack03_javaio/sec04_files/file2.data");

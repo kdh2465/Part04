@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX21_InputStreamReader_1;
+package pack03_javaio.sec05_ReaderWriter.EX03_InputStreamReader_1;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-public class EX21_InputStreamReader_1 {
+public class EX03_InputStreamReader_1 {
 	public static void main(String[] args) {
 		//#.파일 객체 선언
 		File inputStreamReader = new File("src/pack03_javaio/sec05_files/InputStreamReader.txt");

@@ -1,4 +1,4 @@
-package pack03_javaio.sec02_FileInputOutputStream.EX09_FileOutputStream_2;
+package pack03_javaio.sec02_FileInputOutputStream.EX05_FileOutputStream_2;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
-public class EX09_FileOutputStream_2 {
+public class EX05_FileOutputStream_2 {
 	public static void main(String[] args) throws IOException {
 		
 		//입력파일 생성
