@@ -1,12 +1,13 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX01_MulticastSocketObject;
+package pack03_javanetwork.sec04_MulticastCommunication.EX01_MulticastSocketObject;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.MulticastSocket;
-import java.net.SocketException;
 import java.net.UnknownHostException;
+
+/*Multicast 통신을 위한 MulticastSocket 클래스의 활용*/
 
 public class EX01_MulticastSocketObject {
 	public static void main(String[] args) {

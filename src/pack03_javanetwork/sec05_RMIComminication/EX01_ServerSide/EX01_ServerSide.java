@@ -1,12 +1,14 @@
-package pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide;
+package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.net.MalformedURLException;
-import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-		//RMI (Remote Method Invocation) : 디폴트 포트 1099 (분산환경)
+
+/*RMI 통신예제 : RMI 원격서버 객체의 메서드 호출 [ServerSide]*/
+
+        //RMI (Remote Method Invocation) : 디폴트 포트 1099 (분산환경)
 		//rmi registry를 사용하지 않고 java의 LocateRegistry.class, Registry.class를 사용
 		//설치 배포
 		//서버의 구현 클래스를 rmic 컴파일러로 컴파일하면 스켈레톤클래스(서버), 스텁클래스(클라이언트) 생성 (스텁클래스는 클라이언트에게 제공)
@@ -47,7 +49,7 @@ public class EX01_ServerSide {
 		//@5-1. 구현클래스의 객체 생성 (RemoteException 처리) 
 		//@5-2. 구현클래스 객체를 Naming 클래스의 bind() 메서드를 이용해 바인딩
 	
-		MyRemoteImpl mri = null;
+		MyRemoteImpl mri = null; 
 		try {			
 			
 			mri = new MyRemoteImpl();						

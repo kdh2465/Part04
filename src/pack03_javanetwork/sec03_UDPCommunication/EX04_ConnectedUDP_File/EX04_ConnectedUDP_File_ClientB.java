@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
+package pack03_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -9,6 +9,8 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
+
+/*UDP 통신예제 2 : 클라이언트간 텍스트(file) 전송 (연결통신) [Client B]*/
 
 public class EX04_ConnectedUDP_File_ClientB {
 	public static void main(String[] args) {

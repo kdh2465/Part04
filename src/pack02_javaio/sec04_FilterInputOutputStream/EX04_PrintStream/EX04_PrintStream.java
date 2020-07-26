@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX04_PrintStream;
+package pack02_javaio.sec04_FilterInputOutputStream.EX04_PrintStream;
 
 import java.io.File;
 import java.io.FileOutputStream;

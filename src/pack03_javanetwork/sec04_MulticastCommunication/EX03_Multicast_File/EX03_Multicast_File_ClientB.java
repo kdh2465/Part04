@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX03_Multicast_File;
+package pack03_javanetwork.sec04_MulticastCommunication.EX03_Multicast_File;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -9,6 +9,8 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
+
+/*Multicast 통신예제 2 : 클라이언트간의 파일(file) 전송 [Client B]*/
 
 public class EX03_Multicast_File_ClientB {
 	public static void main(String[] args) {

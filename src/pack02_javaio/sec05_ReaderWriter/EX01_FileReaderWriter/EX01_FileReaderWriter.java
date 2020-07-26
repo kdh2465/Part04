@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX01_FileReaderWriter;
+package pack02_javaio.sec05_ReaderWriter.EX01_FileReaderWriter;
 
 import java.io.File;
 import java.io.FileReader;

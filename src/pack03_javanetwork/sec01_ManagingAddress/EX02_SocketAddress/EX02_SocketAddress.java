@@ -1,9 +1,11 @@
-package pack04_javanetwork.sec01_ManagingAddress.EX02_SocketAddress;
+package pack03_javanetwork.sec01_ManagingAddress.EX02_SocketAddress;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
+
+/*SocketAddress 클래스를 이용한 IP주소(호스트이름)와 포트의 저장 및 관리*/
 
 public class EX02_SocketAddress {
 	public static void main(String[] args) throws UnknownHostException {

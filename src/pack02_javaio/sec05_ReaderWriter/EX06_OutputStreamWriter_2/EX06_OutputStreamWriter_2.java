@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX06_OutputStreamWriter_2;
+package pack02_javaio.sec05_ReaderWriter.EX06_OutputStreamWriter_2;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;

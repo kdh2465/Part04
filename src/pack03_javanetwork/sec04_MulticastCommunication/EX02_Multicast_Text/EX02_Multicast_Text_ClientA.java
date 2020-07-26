@@ -1,10 +1,12 @@
-package pack04_javanetwork.sec04_MulticastCommunication.EX02_Multicast_Text;
+package pack03_javanetwork.sec04_MulticastCommunication.EX02_Multicast_Text;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
+
+/*Multicast 통신예제 1 : 클라이언트간의 텍스트(text) 전송 [Client A]*/
 
 public class EX02_Multicast_Text_ClientA {
 	public static void main(String[] args) {

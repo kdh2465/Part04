@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX04_InputStreamReader_2;
+package pack02_javaio.sec05_ReaderWriter.EX04_InputStreamReader_2;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

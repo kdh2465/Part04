@@ -1,4 +1,4 @@
-package pack03_javaio.sec01_FileAndCharset.EX02_FileMethods;
+package pack02_javaio.sec01_FileAndCharset.EX02_FileMethods;
 
 import java.io.File;
 

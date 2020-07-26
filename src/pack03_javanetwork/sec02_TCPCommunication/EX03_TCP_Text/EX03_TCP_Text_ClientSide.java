@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
+package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+/*TCP 통신예제 1 : 클라이언트와 서버간의 텍스트(text) 전송 [ClientSide]*/
 
 public class EX03_TCP_Text_ClientSide {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX01_SocketObject;
+package pack03_javanetwork.sec02_TCPCommunication.EX01_SocketObject;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -6,6 +6,8 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+
+/*TCP 통신을 위한 Socket 클래스의 활용*/
 
 public class EX01_SocketObject {
 	public static void main(String[] args) {

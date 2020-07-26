@@ -1,8 +1,10 @@
-package pack04_javanetwork.sec01_ManagingAddress.EX01_InetAddress;
+package pack03_javanetwork.sec01_ManagingAddress.EX01_InetAddress;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.util.Arrays;
+
+/*InetAddress 클래스를 이용한 IP주소(호스트이름)의 저장 및 관리*/
 
 public class EX01_InetAddress {
 	public static void main(String[] args) throws IOException {
@@ -12,6 +14,7 @@ public class EX01_InetAddress {
 		//#1. InetAddress 객체 생성 =================================
 		//@1-1. 원격지 IP 
 		InetAddress ia1 = InetAddress.getByName("www.google.com"); //www.google.com/172.217.26.132
+		//InetAddress ia1 = InetAddress.getByName("www.naver.com"); //www.google.com/172.217.26.132
 		InetAddress ia2 = InetAddress.getByAddress(new byte[] {(byte)172,(byte)217,(byte)26,(byte)132}); //172.217.161.132
 		InetAddress ia3 = InetAddress.getByAddress("www.google.com", new byte[] {(byte)172,(byte)217,(byte)26,(byte)132}); //www.google.com/172.217.161.132 : 호스트이름을 바꾸어도 그대로 저장
 		System.out.println(ia1);

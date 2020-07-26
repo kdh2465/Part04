@@ -1,4 +1,4 @@
-package pack03_javaio.sec02_FileInputOutputStream.EX05_FileOutputStream_2;
+package pack02_javaio.sec02_FileInputOutputStream.EX05_FileOutputStream_2;
 
 import java.io.File;
 import java.io.FileOutputStream;

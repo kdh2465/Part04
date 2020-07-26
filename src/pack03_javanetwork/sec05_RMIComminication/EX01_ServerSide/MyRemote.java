@@ -1,7 +1,9 @@
-package pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide;
+package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+
+/*RMI 통신예제 : RMI 원격서버 객체의 메서드 호출 [ServerSide]*/
 
 //#1. 공통 인터페이스 생성
 //@1-1. public + Remote 인터페이스 상속 (Remote Interface는 Mark용 인터페이스(내부에 추상 메서드 없음))	

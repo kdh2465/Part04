@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX02_DataInputOutputStream;
+package pack02_javaio.sec04_FilterInputOutputStream.EX02_DataInputOutputStream;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

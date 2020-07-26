@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX02_BufferedReaderWriter;
+package pack02_javaio.sec05_ReaderWriter.EX02_BufferedReaderWriter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

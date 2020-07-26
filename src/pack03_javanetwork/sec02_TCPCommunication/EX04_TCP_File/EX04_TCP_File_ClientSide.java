@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
+package pack03_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+/*TCP 통신예제 2 : 클라이언트와 서버간의 파일(file) 전송 [ClientSide]*/
 
 public class EX04_TCP_File_ClientSide {
 	public static void main(String[] args) {

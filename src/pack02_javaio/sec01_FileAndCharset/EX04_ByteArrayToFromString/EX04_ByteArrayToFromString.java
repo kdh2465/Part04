@@ -1,4 +1,4 @@
-package pack03_javaio.sec01_FileAndCharset.EX04_ByteArrayToFromString;
+package pack02_javaio.sec01_FileAndCharset.EX04_ByteArrayToFromString;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;

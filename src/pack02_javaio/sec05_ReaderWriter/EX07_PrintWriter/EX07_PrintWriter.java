@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX07_PrintWriter;
+package pack02_javaio.sec05_ReaderWriter.EX07_PrintWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;

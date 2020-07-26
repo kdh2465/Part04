@@ -1,4 +1,4 @@
-package pack03_javaio.sec01_FileAndCharset.EX01_CreateFileObject;
+package pack02_javaio.sec01_FileAndCharset.EX01_CreateFileObject;
 
 import java.io.File;
 import java.io.IOException;

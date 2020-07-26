@@ -1,4 +1,4 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
+package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/*TCP 통신예제 1 : 클라이언트와 서버간의 텍스트(text) 전송 [ServerSide]*/
+
 public class EX03_TCP_Text_ServerSide {
 	public static void main(String[] args) {
-		System.out.print("<<Server>>");
+		System.out.println("<<Server>>");
 		ServerSocket serverSocket = null;
 		try {
 			serverSocket = new ServerSocket(10000);
@@ -19,7 +21,7 @@ public class EX03_TCP_Text_ServerSide {
 			System.exit(0);
 		}
 		
-		System.out.println(" - Client 접속 대기...");
+		System.out.println("Client 접속 대기...");
 		try {
 			Socket socket = serverSocket.accept();
 

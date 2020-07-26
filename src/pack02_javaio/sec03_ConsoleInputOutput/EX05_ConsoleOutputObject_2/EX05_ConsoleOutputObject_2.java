@@ -1,4 +1,4 @@
-package pack03_javaio.sec03_ConsoleInputOutput.EX05_ConsoleOutputObject_2;
+package pack02_javaio.sec03_ConsoleInputOutput.EX05_ConsoleOutputObject_2;
 
 import java.io.IOException;
 import java.io.OutputStream;

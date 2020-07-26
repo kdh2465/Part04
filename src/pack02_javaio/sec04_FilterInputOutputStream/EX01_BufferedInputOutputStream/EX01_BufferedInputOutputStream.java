@@ -1,4 +1,4 @@
-package pack03_javaio.sec04_FilterInputOutputStream.EX01_BufferedInputOutputStream;
+package pack02_javaio.sec04_FilterInputOutputStream.EX01_BufferedInputOutputStream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

@@ -1,4 +1,4 @@
-package pack03_javaio.sec05_ReaderWriter.EX03_InputStreamReader_1;
+package pack02_javaio.sec05_ReaderWriter.EX03_InputStreamReader_1;
 
 import java.io.File;
 import java.io.FileInputStream;

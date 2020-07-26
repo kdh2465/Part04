@@ -1,10 +1,12 @@
-package pack04_javanetwork.sec02_TCPCommunication.EX02_ServerSocketObject;
+package pack03_javanetwork.sec02_TCPCommunication.EX02_ServerSocketObject;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+
+/*TCP 통신을 위한 ServerSocket 클래스의 활용*/
 
 public class EX02_ServerSocketObject {
 	public static void main(String[] args) {

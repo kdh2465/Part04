@@ -1,11 +1,13 @@
-package pack04_javanetwork.sec05_RMIComminication.EX02_ClientSide;
+package pack03_javanetwork.sec05_RMIComminication.EX02_ClientSide;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide.MyRemote;
+import pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide.MyRemote;
+
+/*RMI 통신예제 : RMI 원격서버 객체의 메서드 호출 [ClientSide]*/
 
 public class EX02_ClientSide {
 	public static void main(String[] args) {

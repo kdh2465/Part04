@@ -1,9 +1,11 @@
-package pack04_javanetwork.sec03_UDPCommunication.EX01_DatagramPacketObject;
+package pack03_javanetwork.sec03_UDPCommunication.EX01_DatagramPacketObject;
 
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
+
+/*UDP 통신을 위한 DatagramPacket 클래스의 활용*/
 
 public class EX01_DatagramPacketObject {
 	public static void main(String[] args) {
