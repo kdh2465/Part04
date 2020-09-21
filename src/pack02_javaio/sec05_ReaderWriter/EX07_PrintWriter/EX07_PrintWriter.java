@@ -1,4 +1,4 @@
-package pack02_javaio.sec05_ReaderWriter.EX07_PrintWriter;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX07_PrintWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,11 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/*PrintWriter °´Ã¼»ı¼º ¹× È°¿ë (File, OutputStream, Writer, ÄÜ¼Ö Ãâ·Â)*/
+/*PrintWriter ê°ì²´ìƒì„± ë° í™œìš© (File, OutputStream, Writer, ì½˜ì†” ì¶œë ¥)*/
 
 public class EX07_PrintWriter {
 	public static void main(String[] args) throws IOException {
-		//#.ÆÄÀÏ °´Ã¼ ¼±¾ğ
+		//#.íŒŒì¼ ê°ì²´ ì„ ì–¸
 		File printWriter1 = new File("src/pack03_javaio/sec05_files/PrintWriter1.txt");
 		File printWriter2 = new File("src/pack03_javaio/sec05_files/PrintWriter2.txt");
 		File printWriter3 = new File("src/pack03_javaio/sec05_files/PrintWriter3.txt");
@@ -19,47 +19,47 @@ public class EX07_PrintWriter {
 		if(! printWriter2.exists()) printWriter2.createNewFile();
 		if(! printWriter3.exists()) printWriter3.createNewFile();
 
-		//#1. PrintWriter(File file) »ı¼ºÀÚ
+		//#1. PrintWriter(File file) ìƒì„±ì
 		try(PrintWriter pw = new PrintWriter(printWriter1);){
-		    pw.println("PrintWriter ¿¹Á¦#1");
+		    pw.println("PrintWriter ì˜ˆì œ#1");
 		    pw.println(13); 
 		    pw.println(5.8);
-		    pw.print("¾È³çÇÏ¼¼¿ä! ");
-		    pw.println("¹İ°©½À´Ï´Ù.");
-		    pw.printf("%d",7).printf("%S %f", "°¨»ç", 3.7);
+		    pw.print("ì•ˆë…•í•˜ì„¸ìš”! ");
+		    pw.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+		    pw.printf("%d",7).printf("%S %f", "ê°ì‚¬", 3.7);
 		}
 		catch(IOException e) {}
 		
-		//#2. PrintWriter(OutputStream os) »ı¼ºÀÚ
+		//#2. PrintWriter(OutputStream os) ìƒì„±ì
 		try(PrintWriter pw = new PrintWriter(new FileOutputStream(printWriter2));){
-		    pw.println("PrintWriter ¿¹Á¦#2");
+		    pw.println("PrintWriter ì˜ˆì œ#2");
 		    pw.println(13); 
 		    pw.println(5.8);
-		    pw.print("¾È³çÇÏ¼¼¿ä! ");
-		    pw.println("¹İ°©½À´Ï´Ù.");
-		    pw.printf("%d",7).printf("%S %f", "°¨»ç", 3.7);
+		    pw.print("ì•ˆë…•í•˜ì„¸ìš”! ");
+		    pw.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+		    pw.printf("%d",7).printf("%S %f", "ê°ì‚¬", 3.7);
 		}
 		catch(IOException e) {}
 
-		//#3. PrintWriter(Writer w) »ı¼ºÀÚ
+		//#3. PrintWriter(Writer w) ìƒì„±ì
 		try(PrintWriter pw = new PrintWriter(new FileWriter(printWriter3));){
-		    pw.println("PrintWriter ¿¹Á¦#3");
+		    pw.println("PrintWriter ì˜ˆì œ#3");
 		    pw.println(13); 
 		    pw.println(5.8);
-		    pw.print("¾È³çÇÏ¼¼¿ä! ");
-		    pw.println("¹İ°©½À´Ï´Ù.");
-		    pw.printf("%d",7).printf("%S %f", "°¨»ç", 3.7);
+		    pw.print("ì•ˆë…•í•˜ì„¸ìš”! ");
+		    pw.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+		    pw.printf("%d",7).printf("%S %f", "ê°ì‚¬", 3.7);
 		}
 		catch(IOException e) {}
 		
-		//#4. PrintWriter(System.out) »ı¼ºÀÚ : ÄÜ¼ÖÃâ·Â		
+		//#4. PrintWriter(System.out) ìƒì„±ì : ì½˜ì†”ì¶œë ¥		
 		PrintWriter pw = new PrintWriter(System.out, true);
-	    pw.println("PrintWriter ¿¹Á¦#4");
+	    pw.println("PrintWriter ì˜ˆì œ#4");
 	    pw.println(13); 
 	    pw.println(5.8);
-	    pw.print("¾È³çÇÏ¼¼¿ä! ");
-	    pw.println("¹İ°©½À´Ï´Ù.");
-	    pw.printf("%d",7).printf("%S %f", "°¨»ç", 3.7);
+	    pw.print("ì•ˆë…•í•˜ì„¸ìš”! ");
+	    pw.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+	    pw.printf("%d",7).printf("%S %f", "ê°ì‚¬", 3.7);
 	    
 	}
 }

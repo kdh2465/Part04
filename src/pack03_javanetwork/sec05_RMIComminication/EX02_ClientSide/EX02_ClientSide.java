@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec05_RMIComminication.EX02_ClientSide;
+ï»¿package pack03_javanetwork.sec05_RMIComminication.EX02_ClientSide;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -7,23 +7,23 @@ import java.rmi.RemoteException;
 
 import pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide.MyRemote;
 
-/*RMI Åë½Å¿¹Á¦ : RMI ¿ø°İ¼­¹ö °´Ã¼ÀÇ ¸Ş¼­µå È£Ãâ [ClientSide]*/
+/*RMI í†µì‹ ì˜ˆì œ : RMI ì›ê²©ì„œë²„ ê°ì²´ì˜ ë©”ì„œë“œ í˜¸ì¶œ [ClientSide]*/
 
 public class EX02_ClientSide {
 	public static void main(String[] args) {
-		//#1. ¼­¹ö¿¡¼­ »ı¼ºÇÑ 2°³ÀÇ ÆÄÀÏ º¹»ç
-		//@1-1. °øÅëÀÎÅÍÆäÀÌ½º.class
-		//@1-2. ±¸ÇöÅ¬·¡½º_stub.class
+		//#1. ì„œë²„ì—ì„œ ìƒì„±í•œ 2ê°œì˜ íŒŒì¼ ë³µì‚¬
+		//@1-1. ê³µí†µì¸í„°í˜ì´ìŠ¤.class
+		//@1-2. êµ¬í˜„í´ë˜ìŠ¤_stub.class
 		
-		//#2. ¼­¹ö¿¡ ¹ÙÀÎµù µÇ¾î ÀÖ´Â °´Ã¼ º¹»çº» °¡Á®¿À±â 
-		//@2-1.  ¹ÙÀÎµù µÇ¾î ÀÖ´Â ÀÌ¸§À¸·Î °´Ã¼ º¹»çº» °¡Á®¿À±â (Naming Å¬·¡½ºÀÇ lookup() ¸Ş¼­µå »ç¿ë)
+		//#2. ì„œë²„ì— ë°”ì¸ë”© ë˜ì–´ ìˆëŠ” ê°ì²´ ë³µì‚¬ë³¸ ê°€ì ¸ì˜¤ê¸° 
+		//@2-1.  ë°”ì¸ë”© ë˜ì–´ ìˆëŠ” ì´ë¦„ìœ¼ë¡œ ê°ì²´ ë³µì‚¬ë³¸ ê°€ì ¸ì˜¤ê¸° (Naming í´ë˜ìŠ¤ì˜ lookup() ë©”ì„œë“œ ì‚¬ìš©)
 		
-		//#3. °¡Á®¿Â °´Ã¼ÀÇ ¸Ş¼­µå »ç¿ë
-		//@3-1. ¸Ş¼­µå ½ÇÇà½Ã ½ÇÁ¦ ½ÇÇàÀº ¿ø°İÁö¿¡¼­ ÀÏ¾î³² (¿ø°İ ½Ã½ºÅÛ)
+		//#3. ê°€ì ¸ì˜¨ ê°ì²´ì˜ ë©”ì„œë“œ ì‚¬ìš©
+		//@3-1. ë©”ì„œë“œ ì‹¤í–‰ì‹œ ì‹¤ì œ ì‹¤í–‰ì€ ì›ê²©ì§€ì—ì„œ ì¼ì–´ë‚¨ (ì›ê²© ì‹œìŠ¤í…œ)
 
 		try {
-			MyRemote mr = (MyRemote)Naming.lookup("rmi://127.0.0.1:1099/myBindingObject"); //"rmi://¼­¹öÁÖ¼Ò/¹ÙÀÎµùÀÌ¸§"
-			String str = mr.myRemoteMethod("¾È³çÇÏ¼¼¿ä!");
+			MyRemote mr = (MyRemote)Naming.lookup("rmi://127.0.0.1:1099/myBindingObject"); //"rmi://ì„œë²„ì£¼ì†Œ/ë°”ì¸ë”©ì´ë¦„"
+			String str = mr.myRemoteMethod("ì•ˆë…•í•˜ì„¸ìš”!");
 			System.out.println(str);			
 		} 
 		catch (MalformedURLException e) {} 

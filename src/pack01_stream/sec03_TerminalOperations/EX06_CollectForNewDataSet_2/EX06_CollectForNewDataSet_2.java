@@ -1,4 +1,4 @@
-package pack01_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX06_CollectForNewDataSet_2;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;
@@ -8,12 +8,12 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/*½ºÆ®¸²À¸·ÎºÎÅÍÀÇ »õ·Î¿î ¼öÁı(collect) Á¶ÇÕ ±¸¼º : collect() #2*/
+/*ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œë¶€í„°ì˜ ìƒˆë¡œìš´ ìˆ˜ì§‘(collect) ì¡°í•© êµ¬ì„± : collect() #2*/
 
 public class EX06_CollectForNewDataSet_2 {
 	public static void main(String[] args) {
 		
-		//Case#4. XXXSummaryStatics Å¸ÀÔÀ¸·Î ±âº»¿¬»ê ÀüÃ¼ °á°ú ¼öÁı Á¶ÇÕ (getCount(), getSum(), getAverage(), getMax(), getMin()
+		//Case#4. XXXSummaryStatics íƒ€ì…ìœ¼ë¡œ ê¸°ë³¸ì—°ì‚° ì „ì²´ ê²°ê³¼ ìˆ˜ì§‘ ì¡°í•© (getCount(), getSum(), getAverage(), getMax(), getMin()
 		//@4-1. Int/Long/DoubleSummaryStatistics
 		IntSummaryStatistics  iss = Stream.of(1,2,3,4).collect(Collectors.summarizingInt(s->s));
 		LongSummaryStatistics  lss = Stream.of(5L,6L,7L,8L).collect(Collectors.summarizingLong(s->s));
@@ -27,17 +27,17 @@ public class EX06_CollectForNewDataSet_2 {
 		System.out.println(iss.getMin()+", "+lss.getMin()+", "+dss.getMin());
 		
 		
-		//Case#5. ±âÁØ Key°ªÀ¸·Î Groupº°·Î ºĞ¸®ÇÏ¿© Map<K, List<T>> ¼öÁı Á¶ÇÕ
+		//Case#5. ê¸°ì¤€ Keyê°’ìœ¼ë¡œ Groupë³„ë¡œ ë¶„ë¦¬í•˜ì—¬ Map<K, List<T>> ìˆ˜ì§‘ ì¡°í•©
 		Map<Integer, List<Integer>> groupBy = Stream.of(1,2,3,4).collect(Collectors.groupingBy(s->s%3));
 		System.out.println(groupBy);
 
 		
-		//Case#6. ±âÁØ Á¶°ÇÀÇ ¸¸Á·¿©ºÎ¿¡ µû¸¥ Groupº°·Î ºĞ¸®ÇÏ¿© Map<Boolean, List<T>> ¼öÁı Á¶ÇÕ
+		//Case#6. ê¸°ì¤€ ì¡°ê±´ì˜ ë§Œì¡±ì—¬ë¶€ì— ë”°ë¥¸ Groupë³„ë¡œ ë¶„ë¦¬í•˜ì—¬ Map<Boolean, List<T>> ìˆ˜ì§‘ ì¡°í•©
 		Map<Boolean, List<Integer>> partitioningBy = Stream.of(18,16,20,60,14,30).collect(Collectors.partitioningBy(s->s>20));
 		System.out.println(partitioningBy);
 		
 		
-		//Case#7. ¼öÁı Á¶ÇÕ ±¸¼º(collector) ÀÌÈÄ Ãß°¡ ¼öÇà»çÇ× ÁöÁ¤
+		//Case#7. ìˆ˜ì§‘ ì¡°í•© êµ¬ì„±(collector) ì´í›„ ì¶”ê°€ ìˆ˜í–‰ì‚¬í•­ ì§€ì •
 		List<Integer> list = Stream.of(1,2,3,4).collect(Collectors.collectingAndThen(Collectors.toList(), s->s.subList(1,3)));
 		System.out.println(list);//[2,3]
 

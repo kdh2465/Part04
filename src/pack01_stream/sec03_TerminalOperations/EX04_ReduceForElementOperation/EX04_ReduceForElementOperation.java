@@ -1,4 +1,4 @@
-package pack01_stream.sec03_TerminalOperations.EX04_ReduceForElementOperation;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX04_ReduceForElementOperation;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -6,14 +6,14 @@ import java.util.OptionalInt;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-/*½ºÆ®¸² ¿ä¼Ò°£ÀÇ ÀÓÀÇ ¿¬»ê : reduce()*/
+/*ìŠ¤íŠ¸ë¦¼ ìš”ì†Œê°„ì˜ ì„ì˜ ì—°ì‚° : reduce()*/
 
 public class EX04_ReduceForElementOperation {
 	public static void main(String[] args) {
 		
 		//CASE#1 
 		//@1-1. BinaryOperator<T> acuumulator
-		Optional<String> reduce1 = Stream.of("¾È³ç","¹æ°¡","°¨»ç")
+		Optional<String> reduce1 = Stream.of("ì•ˆë…•","ë°©ê°€","ê°ì‚¬")
 				.reduce((a,b)->a+b);
 		System.out.println(reduce1.get());
 
@@ -25,7 +25,7 @@ public class EX04_ReduceForElementOperation {
 		
 		//CASE#2 
 		//@2-1. T identity, BinaryOperator<T> acuumulator
-		String reduce3 = Stream.of("¾È³ç","¹æ°¡","°¨»ç")
+		String reduce3 = Stream.of("ì•ˆë…•","ë°©ê°€","ê°ì‚¬")
 				.reduce("#", (a,b)->a+b);
 		System.out.println(reduce3);
 
@@ -36,21 +36,21 @@ public class EX04_ReduceForElementOperation {
 		
 		
 		//CASE#3
-		//@3-1. ¼øÂ÷½ºÆ®¸² (sequential stream)
+		//@3-1. ìˆœì°¨ìŠ¤íŠ¸ë¦¼ (sequential stream)
 		Integer reduce5 = Arrays.asList(1,2,3).stream()
 				.reduce(
 						5,
-						(a,b)->{System.out.println("accumulate È£Ãâ"); return a+b;},
-						(a,b)->{System.out.println("combine È£Ãâ"); return a+b;}
+						(a,b)->{System.out.println("accumulate í˜¸ì¶œ"); return a+b;},
+						(a,b)->{System.out.println("combine í˜¸ì¶œ"); return a+b;}
 						);
 		System.out.println(reduce5);
 		
-		//@3-2. º´·Ä½ºÆ®¸² (parallel stream)
+		//@3-2. ë³‘ë ¬ìŠ¤íŠ¸ë¦¼ (parallel stream)
 		Integer reduce6 = Arrays.asList(1,2,3).parallelStream()
 				.reduce(
 						5,
-						(a,b)->{System.out.println("accumulate È£Ãâ");return a+b;},
-						(a,b)->{System.out.println("combine È£Ãâ");return a+b;}
+						(a,b)->{System.out.println("accumulate í˜¸ì¶œ");return a+b;},
+						(a,b)->{System.out.println("combine í˜¸ì¶œ");return a+b;}
 						);
 		System.out.println(reduce6);
 		

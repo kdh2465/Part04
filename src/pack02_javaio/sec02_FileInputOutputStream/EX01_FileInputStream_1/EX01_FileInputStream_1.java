@@ -1,25 +1,25 @@
-package pack02_javaio.sec02_FileInputOutputStream.EX01_FileInputStream_1;
+ï»¿package pack02_javaio.sec02_FileInputOutputStream.EX01_FileInputStream_1;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/*FileInputStreamÀÇ °´Ã¼ »ı¼º°ú available(), close() ¸Ş¼­µåÀÇ È°¿ë*/
+/*FileInputStreamì˜ ê°ì²´ ìƒì„±ê³¼ available(), close() ë©”ì„œë“œì˜ í™œìš©*/
 
 public class EX01_FileInputStream_1 {
 	public static void main(String[] args) throws IOException {
-		//ÀÔ·ÂÆÄÀÏ »ı¼º
+		//ì…ë ¥íŒŒì¼ ìƒì„±
 		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream1.txt");
 
-		//InputStream »ı¼º 
+		//InputStream ìƒì„± 
 		InputStream is = new FileInputStream(inFile);
 		int data;
 		while((data=is.read())!=-1) {
-		  System.out.println("ÀĞÀº µ¥ÀÌÅÍ : "+ (char)data + " ³²Àº ¹ÙÀÌÆ®¼ö: "+ is.available());
+		  System.out.println("ì½ì€ ë°ì´í„° : "+ (char)data + " ë‚¨ì€ ë°”ì´íŠ¸ìˆ˜: "+ is.available());
 		}
 
-		//InputStream ÀÚ¿ø¹İ³³
+		//InputStream ìì›ë°˜ë‚©
 		is.close();
 
 	}

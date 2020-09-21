@@ -1,25 +1,25 @@
-package pack02_javaio.sec03_ConsoleInputOutput.EX03_ConsoleInputObject_3;
+ï»¿package pack02_javaio.sec03_ConsoleInputOutput.EX03_ConsoleInputObject_3;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-/*read(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ÄÜ¼Ö(Console)·Î ºÎÅÍ µ¥ÀÌÅÍ ÀĞ±â (ÇÑ±ÛÀÔ·Â ÀĞ±â)*/
+/*read(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ì½˜ì†”(Console)ë¡œ ë¶€í„° ë°ì´í„° ì½ê¸° (í•œê¸€ì…ë ¥ ì½ê¸°)*/
 
 public class EX03_ConsoleInputObject_3 {
 	public static void main(String[] args) throws IOException {
 		
-		//InputStream °´Ã¼ »ı¼º
+		//InputStream ê°ì²´ ìƒì„±
 		InputStream is = System.in;
 
-		//#2-2. n-byte ´ÜÀ§ ÀĞ±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ÀĞÀº µ¥ÀÌÅÍ ÀúÀå)
+		//#2-2. n-byte ë‹¨ìœ„ ì½ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ì½ì€ ë°ì´í„° ì €ì¥)
 		byte[] byteArray1 = new byte[100];
 		int count1 = is.read(byteArray1);
 		
 		String str1 = new String(byteArray1,0,count1, Charset.forName("MS949"));
 		System.out.println(str1);
 
-		//#3-1. n-byte ´ÜÀ§ ÀÔ·Â (length¸¸Å­ÀÇ ±æÀÌ¸¦ ÀĞ¾î¿Í byte[]ÀÇ offset À§Ä¡¿¡¼­ ºÎÅÍ ÀúÀå)
+		//#3-1. n-byte ë‹¨ìœ„ ì…ë ¥ (lengthë§Œí¼ì˜ ê¸¸ì´ë¥¼ ì½ì–´ì™€ byte[]ì˜ offset ìœ„ì¹˜ì—ì„œ ë¶€í„° ì €ì¥)
 		int offset=2;
 		int length=4;
 		byte[] byteArray2 = new byte[100];		

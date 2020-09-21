@@ -1,11 +1,11 @@
-package pack01_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
+ï»¿package pack01_stream.sec02_IntermediateOperations.EX01_FilteringAndMapping;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-/*ÇÊÅÍ¸µ(filtering)°ú ¸ÊÇÎ(Mapping) ¹× ÇÊÅÍ¸µ/¸ÅÇÎ ¿¬¼Ó È£Ãâ*/
+/*í•„í„°ë§(filtering)ê³¼ ë§µí•‘(Mapping) ë° í•„í„°ë§/ë§¤í•‘ ì—°ì† í˜¸ì¶œ*/
 
 public class EX01_FilteringAndMapping {
 	public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class EX01_FilteringAndMapping {
 		System.out.println();
 		
 		
-		//#3. filtering + mapping : Integer->Â¦¼ö-->String
+		//#3. filtering + mapping : Integer->ì§ìˆ˜-->String
 		Stream<String> stream6 = Stream.of(1, 2, 3, 4, 5, 6)
 			.filter(s->(s%2)==0)
 			.map(s->String.valueOf(s));

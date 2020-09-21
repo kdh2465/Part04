@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec03_UDPCommunication.EX02_DatagramSocketObject;
+ï»¿package pack03_javanetwork.sec03_UDPCommunication.EX02_DatagramSocketObject;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -8,78 +8,78 @@ import java.net.InetSocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-/*UDP Åë½ÅÀ» À§ÇÑ DatagramSocket Å¬·¡½ºÀÇ È°¿ë*/
+/*UDP í†µì‹ ì„ ìœ„í•œ DatagramSocket í´ë˜ìŠ¤ì˜ í™œìš©*/
 
 public class EX02_DatagramSocketObject {
 	public static void main(String[] args) {
 		
-		//#1. DatagramSocket °´Ã¼ »ı¼º
+		//#1. DatagramSocket ê°ì²´ ìƒì„±
 		DatagramSocket ds1=null, ds2=null, ds3=null, ds4=null;
 		try {
-			//@1-1. port¹ÌÁöÁ¤/port¸¸ ÁöÁ¤ 
-			ds1 = new DatagramSocket(); //ÇöÀç È£½ºÆ®ÀÇ ºñ¿öÁ® ÀÖ´Â Æ÷Æ®·Î ÀÚµ¿ ¹ÙÀÎµù			
-			ds2 = new DatagramSocket(10000); //10000 Æ÷Æ®·Î ¹ÙÀÎµù
+			//@1-1. portë¯¸ì§€ì •/portë§Œ ì§€ì • 
+			ds1 = new DatagramSocket(); //í˜„ì¬ í˜¸ìŠ¤íŠ¸ì˜ ë¹„ì›Œì ¸ ìˆëŠ” í¬íŠ¸ë¡œ ìë™ ë°”ì¸ë”©			
+			ds2 = new DatagramSocket(10000); //10000 í¬íŠ¸ë¡œ ë°”ì¸ë”©
 		
 			
-			//@1-2. ¹ÙÀÎµù ÁÖ¼Ò Æ÷ÇÔ			
+			//@1-2. ë°”ì¸ë”© ì£¼ì†Œ í¬í•¨			
 			ds3 = new DatagramSocket(10001, InetAddress.getByName("localhost"));
 			ds4 = new DatagramSocket(new InetSocketAddress("localhost", 10002));
 			
 		} catch (SocketException | UnknownHostException e) {e.printStackTrace();}
 		
-		//#2. DatagramSocket ¸Ş¼­µå
+		//#2. DatagramSocket ë©”ì„œë“œ
 		
-		//@2-1. ¼ÒÄÏÀÇ ¹ÙÀÎµù ÁÖ¼Ò Á¤º¸
-		System.out.println("ds1 ¹ÙÀÎµù Á¤º¸ : "+ds1.getLocalAddress()+":"+ds1.getLocalPort());
-		System.out.println("ds2 ¹ÙÀÎµù Á¤º¸ : "+ds2.getLocalAddress()+":"+ds2.getLocalPort());
-		System.out.println("ds3 ¹ÙÀÎµù Á¤º¸ : "+ds3.getLocalAddress()+":"+ds3.getLocalPort());
-		System.out.println("ds4 ¹ÙÀÎµù Á¤º¸ : "+ds4.getLocalAddress()+":"+ds4.getLocalPort());
+		//@2-1. ì†Œì¼“ì˜ ë°”ì¸ë”© ì£¼ì†Œ ì •ë³´
+		System.out.println("ds1 ë°”ì¸ë”© ì •ë³´ : "+ds1.getLocalAddress()+":"+ds1.getLocalPort());
+		System.out.println("ds2 ë°”ì¸ë”© ì •ë³´ : "+ds2.getLocalAddress()+":"+ds2.getLocalPort());
+		System.out.println("ds3 ë°”ì¸ë”© ì •ë³´ : "+ds3.getLocalAddress()+":"+ds3.getLocalPort());
+		System.out.println("ds4 ë°”ì¸ë”© ì •ë³´ : "+ds4.getLocalAddress()+":"+ds4.getLocalPort());
 		System.out.println();
 		
-		//@2-2. ¿ø°İÁö ÁÖ¼Ò Á¤º¸ (connect()µÈ °æ¿ì¿¡¸¸ ¿¬°áµÈ ¿ø°İÁö ÁÖ¼Ò Á¤º¸)
-		System.out.println("¿ø°İÁö ÁÖ¼Ò Á¤º¸: "+ds4.getInetAddress()+":"+ds4.getPort());		
+		//@2-2. ì›ê²©ì§€ ì£¼ì†Œ ì •ë³´ (connect()ëœ ê²½ìš°ì—ë§Œ ì—°ê²°ëœ ì›ê²©ì§€ ì£¼ì†Œ ì •ë³´)
+		System.out.println("ì›ê²©ì§€ ì£¼ì†Œ ì •ë³´: "+ds4.getInetAddress()+":"+ds4.getPort());		
 		try {
-			ds4.connect(new InetSocketAddress("localhost", 10002)); //¼ö½ÅÁö¿Í ¼Û½ÅÁöÀÇ IP/Port°¡ ¸ğµÎ µ¿ÀÏ
+			ds4.connect(new InetSocketAddress("localhost", 10002)); //ìˆ˜ì‹ ì§€ì™€ ì†¡ì‹ ì§€ì˜ IP/Portê°€ ëª¨ë‘ ë™ì¼
 		} catch (SocketException e2) {}
-		System.out.println("¿ø°İÁö ÁÖ¼Ò Á¤º¸: "+ds4.getInetAddress()+":"+ds4.getPort());
+		System.out.println("ì›ê²©ì§€ ì£¼ì†Œ ì •ë³´: "+ds4.getInetAddress()+":"+ds4.getPort());
 		ds4.disconnect();
 		System.out.println();		
 		
 		//@2-3. send(), connect(), disconnect();
 		
-		//@2-3-0. Àü¼ÛÆĞÅ¶ 2°³ (¼ö½ÅÁö ÁÖ¼Ò°¡ ¾ø´Â ÆĞÅ¶ + ¼ö½ÅÁö ÁÖ¼Ò°¡ ÀÖ´Â ÆĞÅ¶)
-		byte[] data1 = "¼ö½ÅÁö ÁÖ¼Ò°¡ ¾ø´Â µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶".getBytes();
-		byte[] data2 = "¼ö½ÅÁö ÁÖ¼Ò°¡ ÀÖ´Â µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶".getBytes();
+		//@2-3-0. ì „ì†¡íŒ¨í‚· 2ê°œ (ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ì—†ëŠ” íŒ¨í‚· + ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ìˆëŠ” íŒ¨í‚·)
+		byte[] data1 = "ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ì—†ëŠ” ë°ì´í„°ê·¸ë¨ íŒ¨í‚·".getBytes();
+		byte[] data2 = "ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ìˆëŠ” ë°ì´í„°ê·¸ë¨ íŒ¨í‚·".getBytes();
 		DatagramPacket dp1 = new DatagramPacket(data1, data1.length);
 		DatagramPacket dp2 = new DatagramPacket(data2, data2.length, new InetSocketAddress("localhost", 10002));
 
 
 		try {
-			//@2-3-1. ¼ö½ÅÁö ÁÖ¼Ò°¡ ¾ø´Â ÆĞÅ¶ Àü¼Û = connect() + send() + disconnect();
+			//@2-3-1. ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ì—†ëŠ” íŒ¨í‚· ì „ì†¡ = connect() + send() + disconnect();
 			
-			//ds1.send(dp1); //ºÒ°¡´É: ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½ (NullPointerException)
-			//ds2.send(dp1); //ºÒ°¡´É: ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½ (NullPointerException)
-			//ds3.send(dp1); //ºÒ°¡´É: ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½ (NullPointerException)
+			//ds1.send(dp1); //ë¶ˆê°€ëŠ¥: ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ (NullPointerException)
+			//ds2.send(dp1); //ë¶ˆê°€ëŠ¥: ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ (NullPointerException)
+			//ds3.send(dp1); //ë¶ˆê°€ëŠ¥: ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ (NullPointerException)
 						
 			ds1.connect(new InetSocketAddress("localhost", 10002));
 			ds2.connect(new InetSocketAddress("localhost", 10002));
 			ds3.connect(new InetSocketAddress("localhost", 10002));
 			
-			ds1.send(dp1); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ÀÖÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½
-			ds2.send(dp1); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ÀÖÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½
-			ds3.send(dp1); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ÀÖÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ¾øÀ½
+			ds1.send(dp1); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ìˆìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ
+			ds2.send(dp1); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ìˆìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ
+			ds3.send(dp1); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ìˆìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ì—†ìŒ
 			
 			ds1.disconnect();
 			ds2.disconnect();
 			ds3.disconnect();
 			
-			//@2-3-2. ¼ö½ÅÁö ÁÖ¼Ò°¡ ÀÖ´Â ÆĞÅ¶ Àü¼Û = send();						
-			ds1.send(dp2); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ÀÖÀ½
-			ds2.send(dp2); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ÀÖÀ½
-			ds3.send(dp2); //°¡´É : ¼ÒÄÏÀÌ connectµÈ °÷ ¾øÀ½ + ÆĞÅ¶¿¡ ¼ö½ÅÁö ÁÖ¼Ò ÀÖÀ½
+			//@2-3-2. ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ìˆëŠ” íŒ¨í‚· ì „ì†¡ = send();						
+			ds1.send(dp2); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ìˆìŒ
+			ds2.send(dp2); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ìˆìŒ
+			ds3.send(dp2); //ê°€ëŠ¥ : ì†Œì¼“ì´ connectëœ ê³³ ì—†ìŒ + íŒ¨í‚·ì— ìˆ˜ì‹ ì§€ ì£¼ì†Œ ìˆìŒ
 			
 			ds3.connect(new InetSocketAddress("localhost", 10002));
-			ds3.send(dp2); //´Ü, ¼ÒÄÏÀÌ connect()µÈ °æ¿ì ÆĞÅ¶ ¿¬°áµÈ ÁÖ¼Ò¿Í ÆĞÅ¶ÀÇ ¼ö½ÅÁö°¡ °°¾Æ¾ß ÇÔ (¾Æ´Ñ °æ¿ì  IllegalArgumentException)
+			ds3.send(dp2); //ë‹¨, ì†Œì¼“ì´ connect()ëœ ê²½ìš° íŒ¨í‚· ì—°ê²°ëœ ì£¼ì†Œì™€ íŒ¨í‚·ì˜ ìˆ˜ì‹ ì§€ê°€ ê°™ì•„ì•¼ í•¨ (ì•„ë‹Œ ê²½ìš°  IllegalArgumentException)
 			ds3.disconnect();
 			
 		} catch (IOException e2) {}
@@ -90,14 +90,14 @@ public class EX02_DatagramSocketObject {
 		try {
 			for(int i=0; i<7; i++) {
 				ds4.receive(dp);
-				System.out.println("¼Û½ÅÀÚ Á¤º¸ "+dp.getAddress()+":"+dp.getPort()+" -> "+	new String(dp.getData()).trim());				
+				System.out.println("ì†¡ì‹ ì ì •ë³´ "+dp.getAddress()+":"+dp.getPort()+" -> "+	new String(dp.getData()).trim());				
 			}			
 		} catch (IOException e2) {}
 		System.out.println();
 	
-		//@2-5. ¼Û½Å ¹× ¼ö½Å ¹öÆÛ Å©±â
+		//@2-5. ì†¡ì‹  ë° ìˆ˜ì‹  ë²„í¼ í¬ê¸°
 		try {
-			System.out.println("¼Û½Å¹öÆÛÅ©±â"+ds1.getSendBufferSize()+", ¼ö½Å¹öÆÛÅ©±â"+ds1.getReceiveBufferSize());
+			System.out.println("ì†¡ì‹ ë²„í¼í¬ê¸°"+ds1.getSendBufferSize()+", ìˆ˜ì‹ ë²„í¼í¬ê¸°"+ds1.getReceiveBufferSize());
 		} catch (SocketException e) {}		
 		
 	}

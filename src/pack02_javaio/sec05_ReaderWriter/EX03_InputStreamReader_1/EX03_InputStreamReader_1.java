@@ -1,4 +1,4 @@
-package pack02_javaio.sec05_ReaderWriter.EX03_InputStreamReader_1;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX03_InputStreamReader_1;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,21 +8,21 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-/*UTF-8 ÀÎÄÚµù ÆÄÀÏÀ» FileReader¿Í FileInputStreamReader·Î °¢°¢ ÀĞ¾î¿À±â*/
+/*UTF-8 ì¸ì½”ë”© íŒŒì¼ì„ FileReaderì™€ FileInputStreamReaderë¡œ ê°ê° ì½ì–´ì˜¤ê¸°*/
 
 public class EX03_InputStreamReader_1 {
 	public static void main(String[] args) {
-		//#.ÆÄÀÏ °´Ã¼ ¼±¾ğ
+		//#.íŒŒì¼ ê°ì²´ ì„ ì–¸
 		File inputStreamReader = new File("src/pack03_javaio/sec05_files/InputStreamReader.txt");
 
-		//#1. FileReader¸¸À» ÀÌ¿ëÇÏ¿© ÀĞ¾î¿À±â (UTF-8 ¸ğµå ÆÄÀÏ(¸Ş¸ğÀå)) : Windows¿¡¼­ ±úÁü
+		//#1. FileReaderë§Œì„ ì´ìš©í•˜ì—¬ ì½ì–´ì˜¤ê¸° (UTF-8 ëª¨ë“œ íŒŒì¼(ë©”ëª¨ì¥)) : Windowsì—ì„œ ê¹¨ì§
 		try(Reader reader = new FileReader(inputStreamReader);){
 		    int data;
 		    while((data=reader.read())!=-1) {System.out.print((char)data); }
 		} catch(IOException e) {}
 		System.out.println(); System.out.println();
 
-		//#2. FileInputStream+InputStreamReader¸¦ »ç¿ëÇÏ¿© ÀĞ¾î¿À±â(UTF-8 ¸ğµå ÆÄÀÏ(¸Ş¸ğÀå))
+		//#2. FileInputStream+InputStreamReaderë¥¼ ì‚¬ìš©í•˜ì—¬ ì½ì–´ì˜¤ê¸°(UTF-8 ëª¨ë“œ íŒŒì¼(ë©”ëª¨ì¥))
 		try(InputStream is = new FileInputStream(inputStreamReader);
 		    InputStreamReader isr = new InputStreamReader(is, "UTF-8")){ //MS949
 		        int data;

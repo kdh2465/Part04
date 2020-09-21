@@ -1,17 +1,17 @@
-package pack02_javaio.sec03_ConsoleInputOutput.EX02_ConsoleInputObject_2;
+ï»¿package pack02_javaio.sec03_ConsoleInputOutput.EX02_ConsoleInputObject_2;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-/*read(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ÄÜ¼Ö(Console)·Î ºÎÅÍ µ¥ÀÌÅÍ ÀĞ±â (¿µ¹®ÀÔ·Â ÀĞ±â)*/
+/*read(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ì½˜ì†”(Console)ë¡œ ë¶€í„° ë°ì´í„° ì½ê¸° (ì˜ë¬¸ì…ë ¥ ì½ê¸°)*/
 
 public class EX02_ConsoleInputObject_2 {
 	public static void main(String[] args) throws IOException {
 		
-		//InputStream °´Ã¼ »ı¼º
+		//InputStream ê°ì²´ ìƒì„±
 		InputStream is = System.in;
 
-		//#1. 1-byte ´ÜÀ§ ÀĞ±â
+		//#1. 1-byte ë‹¨ìœ„ ì½ê¸°
 		int data;
 		while((data=is.read())!='\r') {  
 		  System.out.print((char)data);
@@ -20,7 +20,7 @@ public class EX02_ConsoleInputObject_2 {
 		System.out.println();
 		System.out.println();
 	
-		//#2-1. n-byte ´ÜÀ§ ÀĞ±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ÀĞÀº µ¥ÀÌÅÍ ÀúÀå)
+		//#2-1. n-byte ë‹¨ìœ„ ì½ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ì½ì€ ë°ì´í„° ì €ì¥)
 		byte[] byteArray1 = new byte[100];
 		int count1 = is.read(byteArray1);
 
@@ -30,7 +30,7 @@ public class EX02_ConsoleInputObject_2 {
 
 		System.out.println();
 		
-		//#3-1. n-byte ´ÜÀ§ ÀÔ·Â (length¸¸Å­ÀÇ ±æÀÌ¸¦ ÀĞ¾î¿Í byte[]ÀÇ offset À§Ä¡¿¡¼­ ºÎÅÍ ÀúÀå)
+		//#3-1. n-byte ë‹¨ìœ„ ì…ë ¥ (lengthë§Œí¼ì˜ ê¸¸ì´ë¥¼ ì½ì–´ì™€ byte[]ì˜ offset ìœ„ì¹˜ì—ì„œ ë¶€í„° ì €ì¥)
 		byte[] byteArray2 = new byte[100];
 		int offset=3;
 		int length=5;

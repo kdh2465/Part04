@@ -1,20 +1,20 @@
-package pack02_javaio.sec02_FileInputOutputStream.EX04_FileOutputStream_1;
+ï»¿package pack02_javaio.sec02_FileInputOutputStream.EX04_FileOutputStream_1;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/*FileOutputStreamÀÇ write(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ ¾²±â (¿µ¹®ÆÄÀÏ ¾²±â)*/
+/*FileOutputStreamì˜ write(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ë°ì´í„° ì“°ê¸° (ì˜ë¬¸íŒŒì¼ ì“°ê¸°)*/
 
 public class EX04_FileOutputStream_1 {
 	public static void main(String[] args) throws IOException {
 				
-		//ÀÔ·ÂÆÄÀÏ »ı¼º
+		//ì…ë ¥íŒŒì¼ ìƒì„±
 		File outFile = new File("src/pack03_javaio/sec02_files/FileOutputStream1.txt");
-		if(!outFile.exists()) outFile.createNewFile(); //ÆÄÀÏÀ» ¾²´Â °æ¿ì¿¡´Â »ı·«°¡´É (ÀÚµ¿ »ı¼º)
+		if(!outFile.exists()) outFile.createNewFile(); //íŒŒì¼ì„ ì“°ëŠ” ê²½ìš°ì—ëŠ” ìƒëµê°€ëŠ¥ (ìë™ ìƒì„±)
 		
-		//#1. 1-byte ´ÜÀ§ ¾²±â		
+		//#1. 1-byte ë‹¨ìœ„ ì“°ê¸°		
 		OutputStream os1 = new FileOutputStream(outFile);
 		os1.write('J');
 		os1.write('A');
@@ -26,18 +26,18 @@ public class EX04_FileOutputStream_1 {
 		os1.flush();
 		os1.close();
 		
-		//#2. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ³¡°¡Áö¸¦ Ãâ·Â) 
+		//#2. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ëê°€ì§€ë¥¼ ì¶œë ¥) 
 		byte[] byteArray1 = "Hello!".getBytes();
-		OutputStream os2 = new FileOutputStream(outFile, true);//³»¿ë ¿¬°á
+		OutputStream os2 = new FileOutputStream(outFile, true);//ë‚´ìš© ì—°ê²°
 		os2.write(byteArray1);
 		os2.write('\n');
 		
 		os2.flush();
 		os2.close();
 		
-		//#3. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ offset À§Ä¡¿¡¼­ºÎÅÍ length°³¼ö¸¦ ÀĞ¾î¿Í Ãâ·Â) 
+		//#3. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ offset ìœ„ì¹˜ì—ì„œë¶€í„° lengthê°œìˆ˜ë¥¼ ì½ì–´ì™€ ì¶œë ¥) 
 		byte[] byteArray2 = "Better the last smile than the first laughter.".getBytes();
-		OutputStream os3 = new FileOutputStream(outFile, true); //³»¿ë ¿¬°á
+		OutputStream os3 = new FileOutputStream(outFile, true); //ë‚´ìš© ì—°ê²°
 		os3.write(byteArray2, 7, 8);
 
 		os3.flush();

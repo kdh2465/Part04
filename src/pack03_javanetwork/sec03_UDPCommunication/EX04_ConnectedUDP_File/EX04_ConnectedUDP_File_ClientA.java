@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
+ï»¿package pack03_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -10,13 +10,13 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
-/*UDP Åë½Å¿¹Á¦ 2 : Å¬¶óÀÌ¾ğÆ®°£ ÅØ½ºÆ®(file) Àü¼Û (¿¬°áÅë½Å) [Client A]*/
+/*UDP í†µì‹ ì˜ˆì œ 2 : í´ë¼ì´ì–¸íŠ¸ê°„ í…ìŠ¤íŠ¸(file) ì „ì†¡ (ì—°ê²°í†µì‹ ) [Client A]*/
 
 public class EX04_ConnectedUDP_File_ClientA {
 	public static void main(String[] args) {
 		System.out.println("<<ClientA>> - File");
 		
-		//#1. DatagramSocket »ı¼º(binding Æ÷ÇÔ) + ¼ÒÄÏ°£ ¿¬°á
+		//#1. DatagramSocket ìƒì„±(binding í¬í•¨) + ì†Œì¼“ê°„ ì—°ê²°
 		DatagramSocket ds = null;
 		try {
 			ds = new DatagramSocket(10000);
@@ -24,7 +24,7 @@ public class EX04_ConnectedUDP_File_ClientA {
 		} catch (SocketException e) {}
 		
 		
-		//#2. ÆÄÀÏ ·Îµù
+		//#2. íŒŒì¼ ë¡œë”©
 		File file = new File("src/pack04_javanetwork/common_files/sendImageUsingUDP.jpg");			
 		FileInputStream fis=null;
 		try {
@@ -32,18 +32,18 @@ public class EX04_ConnectedUDP_File_ClientA {
 		} catch (FileNotFoundException e1) {		}
 		BufferedInputStream bis = new BufferedInputStream(fis);		
 		
-		//#3. 2048 »çÀÌÁî·Î ³ª´©¾î µ¥ÀÌÅÍ±×·¥ÆĞÅ¶ ¿¬¼Ó Àü¼Û
-		//@3-1. ÆÄÀÏÀü¼Û ½ÃÀÛ »çÀÎ Àü¼Û
-		System.out.println(file.getName() + " ÆÄÀÏ Àü¼Û ½ÃÀÛ");
+		//#3. 2048 ì‚¬ì´ì¦ˆë¡œ ë‚˜ëˆ„ì–´ ë°ì´í„°ê·¸ë¨íŒ¨í‚· ì—°ì† ì „ì†¡
+		//@3-1. íŒŒì¼ì „ì†¡ ì‹œì‘ ì‚¬ì¸ ì „ì†¡
+		System.out.println(file.getName() + " íŒŒì¼ ì „ì†¡ ì‹œì‘");
 		String startSign = "/start";
 		DatagramPacket sendPacket = new DatagramPacket(startSign.getBytes(), startSign.length());		
 		try {
 			ds.send(sendPacket);
 		} catch (IOException e1) {}
 		
-		//@3-2. ½ÇÁ¦ ÆÄÀÏ µ¥ÀÌÅÍ Àü¼Û
+		//@3-2. ì‹¤ì œ íŒŒì¼ ë°ì´í„° ì „ì†¡
 		int len;
-		byte[] filedata = new byte[2048]; //ÃÖ´ë´Â 65508byteÀÌÁö¸¸ ¾ÈÁ¤Àû ³×Æ®¿öÅ© Åë½ÅÀ» À§ÇØ¼­ 2048byte¾¿ Àß¶ó¼­ Àü¼Û
+		byte[] filedata = new byte[2048]; //ìµœëŒ€ëŠ” 65508byteì´ì§€ë§Œ ì•ˆì •ì  ë„¤íŠ¸ì›Œí¬ í†µì‹ ì„ ìœ„í•´ì„œ 2048byteì”© ì˜ë¼ì„œ ì „ì†¡
 		try {
 			while((len = bis.read(filedata)) != -1) {
 				sendPacket = new DatagramPacket(filedata, len);
@@ -51,20 +51,20 @@ public class EX04_ConnectedUDP_File_ClientA {
 			}
 		} catch (IOException e) {}
 		
-		//@3-3. ÆÄÀÏÀü¼Û Á¾·á »çÀÎ Àü¼Û
+		//@3-3. íŒŒì¼ì „ì†¡ ì¢…ë£Œ ì‚¬ì¸ ì „ì†¡
 		String endSign = "/end";
 		sendPacket = new DatagramPacket(endSign.getBytes(), endSign.length());
 		try {
 			ds.send(sendPacket);
 		} catch (IOException e1) {}
 				
-		//#4. µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶ ¼ö½Å
+		//#4. ë°ì´í„°ê·¸ë¨ íŒ¨í‚· ìˆ˜ì‹ 
 		byte[] receivedData = new byte[65508];
 		DatagramPacket receivedPacket = new DatagramPacket(receivedData, receivedData.length); 
 		try {
 			ds.receive(receivedPacket);
 		} catch (IOException e) {}
-		System.out.println("¼ö½Åµ¥ÀÌÅÍ : " + new String(receivedPacket.getData()).trim());
+		System.out.println("ìˆ˜ì‹ ë°ì´í„° : " + new String(receivedPacket.getData()).trim());
 		
 	}
 }

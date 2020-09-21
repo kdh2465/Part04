@@ -1,4 +1,4 @@
-package pack02_javaio.sec05_ReaderWriter.EX01_FileReaderWriter;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX01_FileReaderWriter;
 
 import java.io.File;
 import java.io.FileReader;
@@ -7,25 +7,25 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
-/*FileReader¿Í FileWriter¸¦ ÀÌ¿ëÇÑ char ´ÜÀ§ÀÇ ÆÄÀÏÀÔÃâ·Â ±¸Çö*/
+/*FileReaderì™€ FileWriterë¥¼ ì´ìš©í•œ char ë‹¨ìœ„ì˜ íŒŒì¼ì…ì¶œë ¥ êµ¬í˜„*/
 
 public class EX01_FileReaderWriter {
 	public static void main(String[] args) {
-		//#.ÆÄÀÏ °´Ã¼ ¼±¾ğ
+		//#.íŒŒì¼ ê°ì²´ ì„ ì–¸
 		File readerwriterFile = new File("src/pack03_javaio/sec05_files/ReaderWriterFile.txt");
 
-		//#1. FileWriter¸¦ ÀÌ¿ëÇÑ ÆÄÀÏ ¾²±â (ANSI ¸ğµå)
+		//#1. FileWriterë¥¼ ì´ìš©í•œ íŒŒì¼ ì“°ê¸° (ANSI ëª¨ë“œ)
 		try(Writer writer = new FileWriter(readerwriterFile);){
-		    writer.write("¾È³çÇÏ¼¼¿ä\n".toCharArray());
+		    writer.write("ì•ˆë…•í•˜ì„¸ìš”\n".toCharArray());
 		    writer.write("Hello");
 		    writer.write('\r');
 		    writer.write('\n');
-		    writer.write("¹İ°©½À´Ï´Ù", 2, 3);
+		    writer.write("ë°˜ê°‘ìŠµë‹ˆë‹¤", 2, 3);
 		    writer.flush();
 		}
 		catch(IOException e) {}
 		
-		//#2. FileReader¸¦ ÀÌ¿ëÇÑ ÆÄÀÏ ÀĞ±â (ANSI ¸ğµå)
+		//#2. FileReaderë¥¼ ì´ìš©í•œ íŒŒì¼ ì½ê¸° (ANSI ëª¨ë“œ)
 		try(Reader reader = new FileReader(readerwriterFile);){
 		    int data;
 		    while((data=reader.read())!=-1) {

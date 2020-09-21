@@ -1,16 +1,16 @@
-package pack03_javanetwork.sec01_ManagingAddress.EX02_SocketAddress;
+ï»¿package pack03_javanetwork.sec01_ManagingAddress.EX02_SocketAddress;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-/*SocketAddress Å¬·¡½º¸¦ ÀÌ¿ëÇÑ IPÁÖ¼Ò(È£½ºÆ®ÀÌ¸§)¿Í Æ÷Æ®ÀÇ ÀúÀå ¹× °ü¸®*/
+/*SocketAddress í´ë˜ìŠ¤ë¥¼ ì´ìš©í•œ IPì£¼ì†Œ(í˜¸ìŠ¤íŠ¸ì´ë¦„)ì™€ í¬íŠ¸ì˜ ì €ì¥ ë° ê´€ë¦¬*/
 
 public class EX02_SocketAddress {
 	public static void main(String[] args) throws UnknownHostException {
 		
-		//#1. InetSocketAddress °´Ã¼ »ı¼º
+		//#1. InetSocketAddress ê°ì²´ ìƒì„±
 		InetAddress ia = InetAddress.getByName("www.google.com");
 		int port = 10000;
 		
@@ -23,7 +23,7 @@ public class EX02_SocketAddress {
 		System.out.println(isa3); //www.google.com/216.58.220.196:10000
 		System.out.println();
 		
-		//#2. InetSocketAddress ¸Ş¼­µå
+		//#2. InetSocketAddress ë©”ì„œë“œ
 		System.out.println(isa2.getAddress()); //www.google.com/216.58.220.196
 		System.out.println(isa2.getHostName()); //www.google.com
 		System.out.println(isa2.getPort()); //10000

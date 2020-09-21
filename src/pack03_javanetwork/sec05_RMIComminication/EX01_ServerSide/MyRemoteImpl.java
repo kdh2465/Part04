@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
+ï»¿package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -6,17 +6,17 @@ import java.rmi.server.UnicastRemoteObject;
 import pack04_javanetwork.sec05_RMIComminication.EX01_ServerSide.MyRemote;
 
  
-/*RMI Åë½Å¿¹Á¦ : RMI ¿ø°İ¼­¹ö °´Ã¼ÀÇ ¸Ş¼­µå È£Ãâ [ServerSide]*/
+/*RMI í†µì‹ ì˜ˆì œ : RMI ì›ê²©ì„œë²„ ê°ì²´ì˜ ë©”ì„œë“œ í˜¸ì¶œ [ServerSide]*/
 
-//#2. °øÅëÀÎÅÍÆäÀÌ½º ±¸Çö Å¬·¡½º »ı¼ºÇÏ±â
-//@2-1. public + °øÅëÀÎÅÍÆäÀÌ½º ±¸Çö(implements) + UnicastRemoteObject »ó¼Ó
-//@2-2. ¿¹¿Ü Àü°¡ ÀÛ¼º (throws RemoteException)¸¦ °¡Áø »ı¼ºÀÚ ÇÏ³ª ÀÌ»ó ÀÛ¼º
-//@2-3. ±¸Çö ¸Ş¼­µå´Â ³Ñ¾î¿Â ¿¹¿Ü¿¡ ´ëÇÑ ¿¹¿Ü Àü°¡ ÀÛ¼º (throws RemoteException)
-//@2-4. Á÷·ÄÈ­(serializable) °¡´ÉÇÑ ¸Å°³º¯¼ö¸¸À» »ç¿ë
+//#2. ê³µí†µì¸í„°í˜ì´ìŠ¤ êµ¬í˜„ í´ë˜ìŠ¤ ìƒì„±í•˜ê¸°
+//@2-1. public + ê³µí†µì¸í„°í˜ì´ìŠ¤ êµ¬í˜„(implements) + UnicastRemoteObject ìƒì†
+//@2-2. ì˜ˆì™¸ ì „ê°€ ì‘ì„± (throws RemoteException)ë¥¼ ê°€ì§„ ìƒì„±ì í•˜ë‚˜ ì´ìƒ ì‘ì„±
+//@2-3. êµ¬í˜„ ë©”ì„œë“œëŠ” ë„˜ì–´ì˜¨ ì˜ˆì™¸ì— ëŒ€í•œ ì˜ˆì™¸ ì „ê°€ ì‘ì„± (throws RemoteException)
+//@2-4. ì§ë ¬í™”(serializable) ê°€ëŠ¥í•œ ë§¤ê°œë³€ìˆ˜ë§Œì„ ì‚¬ìš©
 
 public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
 
-	//private static final long serialVersionUID = 1L; //Remote¸¦ ±¸ÇöÇÏ¿© SerializableÀÌ ÇÊ¼ö»çÇ×ÀÎ °æ¿ì serial ¹öÀüÀ» ÀÔ·Â (»ı·«½Ã °æ°í)
+	//private static final long serialVersionUID = 1L; //Remoteë¥¼ êµ¬í˜„í•˜ì—¬ Serializableì´ í•„ìˆ˜ì‚¬í•­ì¸ ê²½ìš° serial ë²„ì „ì„ ì…ë ¥ (ìƒëµì‹œ ê²½ê³ )
 
 	protected MyRemoteImpl() throws RemoteException {
 		super(); 
@@ -24,8 +24,8 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
 
 	@Override
 	public String myRemoteMethod(String str) throws RemoteException {
-		System.out.println("¿ø°İ¸Ş¼­µå: myRemoteMethod()"); //¿ø°İ¼­¹ö¿¡¼­ ½ÇÇà (¿ø°İ¼­¹ö¿¡¼­ Ãâ·Â)
-		return "¿ø°İ¸Ş¼­µå: Àü´Ş¹ŞÀº ¹®ÀÚ¿­ = " + str; //Client¿¡°Ô Àü´ŞµÇ´Â ³»¿ë
+		System.out.println("ì›ê²©ë©”ì„œë“œ: myRemoteMethod()"); //ì›ê²©ì„œë²„ì—ì„œ ì‹¤í–‰ (ì›ê²©ì„œë²„ì—ì„œ ì¶œë ¥)
+		return "ì›ê²©ë©”ì„œë“œ: ì „ë‹¬ë°›ì€ ë¬¸ìì—´ = " + str; //Clientì—ê²Œ ì „ë‹¬ë˜ëŠ” ë‚´ìš©
 	}
 	
 }

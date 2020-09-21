@@ -1,4 +1,4 @@
-package pack02_javaio.sec04_FilterInputOutputStream.EX03_CombineFilterStream;
+ï»¿package pack02_javaio.sec04_FilterInputOutputStream.EX03_CombineFilterStream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,15 +11,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*Buffered(Input/Output)Stream°ú Data(Input/Output)StreamÀÇ Á¶ÇÕ*/
+/*Buffered(Input/Output)Streamê³¼ Data(Input/Output)Streamì˜ ì¡°í•©*/
 
 public class EX03_CombineFilterStream {
 	public static void main(String[] args) throws IOException {
-		//ÆÄÀÏ »ý¼º
+		//íŒŒì¼ ìƒì„±
 		File dataFile = new File("src/pack03_javaio/sec04_files/file2.data");
 		if(!dataFile.exists()) dataFile.createNewFile();
 
-		//µ¥ÀÌÅÍ ¾²±â (FilterStream = BufferedOutputStream + DataOutputStream)
+		//ë°ì´í„° ì“°ê¸° (FilterStream = BufferedOutputStream + DataOutputStream)
 		try(OutputStream os = new FileOutputStream(dataFile);
 		     BufferedOutputStream bos = new BufferedOutputStream(os);
 		     DataOutputStream dos = new DataOutputStream(bos);) {
@@ -28,13 +28,13 @@ public class EX03_CombineFilterStream {
 		        dos.writeDouble(5.8);
 		        dos.writeChar('A');
 		        
-		        dos.writeUTF("¾È³çÇÏ¼¼¿ä");
+		        dos.writeUTF("ì•ˆë…•í•˜ì„¸ìš”");
 		        dos.flush();
 
 		}catch(IOException e) {}
 		
 		
-		//µ¥ÀÌÅÍ ÀÐ±â (FilterStream = BufferedInputStream + DataInputStream)
+		//ë°ì´í„° ì½ê¸° (FilterStream = BufferedInputStream + DataInputStream)
 		try(InputStream is = new FileInputStream(dataFile);
 		    BufferedInputStream bis = new BufferedInputStream(is);
 		    DataInputStream dis = new DataInputStream(bis);){
@@ -42,7 +42,7 @@ public class EX03_CombineFilterStream {
 		        System.out.println(dis.readInt()); //->35
 		        System.out.println(dis.readDouble()); //->5.8
 		        System.out.println(dis.readChar()); //->A
-		        System.out.println(dis.readUTF()); //->¾È³çÇÏ¼¼¿ä
+		        System.out.println(dis.readUTF()); //->ì•ˆë…•í•˜ì„¸ìš”
 
 		}catch(IOException e) {}
 		

@@ -1,42 +1,42 @@
-package pack01_stream.sec01_CreateStreamObject.EX02_PrimitiveArrayToxxxStream;
+ï»¿package pack01_stream.sec01_CreateStreamObject.EX02_PrimitiveArrayToxxxStream;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
-/*±âº»ÀÚ·áÇü ¹è¿­·ÎºÎÅÍ ±âº»ÀÚ·áÇü½ºÆ®¸²(Int/Long/DoubleStream) »ý¼º*/
+/*ê¸°ë³¸ìžë£Œí˜• ë°°ì—´ë¡œë¶€í„° ê¸°ë³¸ìžë£Œí˜•ìŠ¤íŠ¸ë¦¼(Int/Long/DoubleStream) ìƒì„±*/
 
 public class EX02_PrimitiveArrayToxxxStream {
 	public static void main(String[] args) {
-		//#1-1.int[] --> ½ºÆ®¸²
+		//#1-1.int[] --> ìŠ¤íŠ¸ë¦¼
 		int[] intArray = {1,2,3,4,5};
 		IntStream stream1 = Arrays.stream(intArray);
 		stream1.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#1-2.int[] --> ½ºÆ®¸² (µ¿ÀÏÇ¥Çö) : ¿¬°á(chaining) È£Ãâ
+		//#1-2.int[] --> ìŠ¤íŠ¸ë¦¼ (ë™ì¼í‘œí˜„) : ì—°ê²°(chaining) í˜¸ì¶œ
 		Arrays.stream(intArray).forEach(s->System.out.print(s+" "));
 		System.out.println();
 
 		
-		//#2-1.long[] --> ½ºÆ®¸²
+		//#2-1.long[] --> ìŠ¤íŠ¸ë¦¼
 		long[] longArray = {3L,4L,5L,6L,7L};
 		LongStream stream2 = Arrays.stream(longArray);
 		stream2.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#2-2.long[] --> ½ºÆ®¸² (µ¿ÀÏ Ç¥Çö)
+		//#2-2.long[] --> ìŠ¤íŠ¸ë¦¼ (ë™ì¼ í‘œí˜„)
 		Arrays.stream(longArray).forEach(s->System.out.print(s+" "));
 		System.out.println();
 		
-		//#3-1.double[] --> ½ºÆ®¸²
+		//#3-1.double[] --> ìŠ¤íŠ¸ë¦¼
 		double[] doubleArray = {5.5,6.6,7.7,8.8,9.9};
 		DoubleStream stream3 = Arrays.stream(doubleArray);
 		stream3.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#3-2.double[] --> ½ºÆ®¸²
+		//#3-2.double[] --> ìŠ¤íŠ¸ë¦¼
 		Arrays.stream(doubleArray).forEach(s->System.out.print(s+" "));
 		System.out.println();
 

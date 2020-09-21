@@ -1,23 +1,23 @@
-package pack02_javaio.sec01_FileAndCharset.EX01_CreateFileObject;
+ï»¿package pack02_javaio.sec01_FileAndCharset.EX01_CreateFileObject;
 
 import java.io.File;
 import java.io.IOException;
 
-/*ÆÄÀÏ°´Ã¼ »ı¼º°ú ÆÄÀÏ±¸ºĞÀÚ ¹× Àı´ë°æ·Î¿Í »ó´ë°æ·Î*/
+/*íŒŒì¼ê°ì²´ ìƒì„±ê³¼ íŒŒì¼êµ¬ë¶„ì ë° ì ˆëŒ€ê²½ë¡œì™€ ìƒëŒ€ê²½ë¡œ*/
 
 public class EX01_CreateFileObject {
 	public static void main(String[] args) throws IOException {
 		
-		//#1-0. C µå¶óÀÌºê³»¿¡ temp Æú´õ°¡ ¾ø´Â °æ¿ì »ı¼º
+		//#1-0. C ë“œë¼ì´ë¸Œë‚´ì— temp í´ë”ê°€ ì—†ëŠ” ê²½ìš° ìƒì„±
 		File tempDir = new File("C:/temp");
 		if(!tempDir.exists()) tempDir.mkdir();
 		
-		//#1-1. ÆÄÀÏ°´Ã¼ »ı¼º
+		//#1-1. íŒŒì¼ê°ì²´ ìƒì„±
 		File newFile = new File("C:/temp/newFile.txt");
-		//#1-2. ÆÄÀÏÀÌ ¾ø´Â °æ¿ì ½ÇÁ¦ ÆÄÀÏ »ı¼º
-		if(!newFile.exists()) newFile.createNewFile(); //temp Æú´õ°¡ ¾ø´Â °æ¿ì ¿¹¿Ü ¹ß»ı
+		//#1-2. íŒŒì¼ì´ ì—†ëŠ” ê²½ìš° ì‹¤ì œ íŒŒì¼ ìƒì„±
+		if(!newFile.exists()) newFile.createNewFile(); //temp í´ë”ê°€ ì—†ëŠ” ê²½ìš° ì˜ˆì™¸ ë°œìƒ
 		
-		//#2. ÆÄÀÏ ±¸ºĞÀÚ
+		//#2. íŒŒì¼ êµ¬ë¶„ì
 		File newFile2 = new File("C:\\temp\\newFile.txt");
 		File newFile3 = new File("C:"+File.separator+"temp"+File.separator+"newFile.txt");
 		File newFile4 = new File("C:/temp/newFile.txt");
@@ -25,14 +25,14 @@ public class EX01_CreateFileObject {
 		System.out.println(newFile3.exists());
 		System.out.println(newFile4.exists());
 		
-		//#3-1. Àı´ë°æ·Î
+		//#3-1. ì ˆëŒ€ê²½ë¡œ
 		File newFile5 = new File("C:/abc/newFile.txt");
 		File newFile6 = new File("C:/abc/bcd/newFile.txt");
 		System.out.println(newFile5.getAbsolutePath());	
 		System.out.println(newFile6.getAbsolutePath());	
 		
-		//#3-2. »ó´ë°æ·Î
-		System.out.println(System.getProperty("user.dir")); //ÇöÀç ÀÛ¾÷ À§Ä¡
+		//#3-2. ìƒëŒ€ê²½ë¡œ
+		System.out.println(System.getProperty("user.dir")); //í˜„ì¬ ì‘ì—… ìœ„ì¹˜
 		File newFile7 = new File("newFile1.txt");
 		File newFile8 = new File("bcd/newFile2.txt");
 		System.out.println(newFile7.getAbsolutePath());

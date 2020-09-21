@@ -1,8 +1,8 @@
-package pack01_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
+ï»¿package pack01_stream.sec02_IntermediateOperations.EX03_Iterating_Peek;
 
 import java.util.stream.IntStream;
 
-/*¹İº¹ÇÏ¿© µ¥ÀÌÅÍ°ª ÀĞ±â (peek)*/
+/*ë°˜ë³µí•˜ì—¬ ë°ì´í„°ê°’ ì½ê¸° (peek)*/
 
 public class EX03_Iterating_Peek {
 	public static void main(String[] args) {
@@ -11,8 +11,8 @@ public class EX03_Iterating_Peek {
 		int sum = IntStream.of(1,2,3,4,5).peek(s->System.out.println(s)).sum();
 		System.out.println(sum);
 
-		//ÁÖÀÇ ÃÖÁ¾´Ü°è ¾øÀÌ´Â Áß°£´Ü°è´Â µ¿ÀÛÇÏÁö ¾ÊÀ½
-		IntStream.of(1,2,3,4,5).peek(s->System.out.println(s));//µ¿ÀÛÇÏÁö ¾ÊÀ½
+		//ì£¼ì˜ ìµœì¢…ë‹¨ê³„ ì—†ì´ëŠ” ì¤‘ê°„ë‹¨ê³„ëŠ” ë™ì‘í•˜ì§€ ì•ŠìŒ
+		IntStream.of(1,2,3,4,5).peek(s->System.out.println(s));//ë™ì‘í•˜ì§€ ì•ŠìŒ
 
 	}
 }

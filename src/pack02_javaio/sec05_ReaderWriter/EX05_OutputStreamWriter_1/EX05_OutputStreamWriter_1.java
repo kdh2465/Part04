@@ -1,4 +1,4 @@
-package pack02_javaio.sec05_ReaderWriter.EX05_OutputStreamWriter_1;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX05_OutputStreamWriter_1;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,33 +8,33 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-/*FileWriter¿Í OutputStreamWriter¸¦ ÀÌ¿ëÇÏ¿© °¢°¢ ÆÄÀÏ ¾²±â*/
+/*FileWriterì™€ OutputStreamWriterë¥¼ ì´ìš©í•˜ì—¬ ê°ê° íŒŒì¼ ì“°ê¸°*/
 
 public class EX05_OutputStreamWriter_1 {
 	public static void main(String[] args) throws IOException {
-		//#.ÆÄÀÏ °´Ã¼ ¼±¾ğ
+		//#.íŒŒì¼ ê°ì²´ ì„ ì–¸
 		File outputStreamWriter1 = new File("src/pack03_javaio/sec05_files/OutputStreamWriter1.txt");
-		if(! outputStreamWriter1.exists()) outputStreamWriter1.createNewFile(); //»ı·«°¡´É
+		if(! outputStreamWriter1.exists()) outputStreamWriter1.createNewFile(); //ìƒëµê°€ëŠ¥
 
-		//#1. FileWriter¸¸À» ÀÌ¿ëÇÏ¿© ÆÄÀÏ¾²±â (µğÆúÆ®(ANSI))
+		//#1. FileWriterë§Œì„ ì´ìš©í•˜ì—¬ íŒŒì¼ì“°ê¸° (ë””í´íŠ¸(ANSI))
 		try(Writer writer = new FileWriter(outputStreamWriter1);){
-		    writer.write("OutputStreamWriter1 ¿¹Á¦ÆÄÀÏÀÔ´Ï´Ù.\n".toCharArray());
-		    writer.write("ÇÑ±Û°ú ¿µ¹®ÀÌ ¸ğµÎ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+		    writer.write("OutputStreamWriter1 ì˜ˆì œíŒŒì¼ì…ë‹ˆë‹¤.\n".toCharArray());
+		    writer.write("í•œê¸€ê³¼ ì˜ë¬¸ì´ ëª¨ë‘ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		    writer.write('\n');
 		    writer.write("Good Bye!!!\n\n");
 		    writer.flush();
 		}
 		catch(IOException e) {}
 		
-		//#.ÆÄÀÏ °´Ã¼ ¼±¾ğ
+		//#.íŒŒì¼ ê°ì²´ ì„ ì–¸
 		File outputStreamWriter2 = new File("src/pack03_javaio/sec05_files/OutputStreamWriter2.txt");
-		if(! outputStreamWriter2.exists()) outputStreamWriter2.createNewFile(); //»ı·«°¡´É
+		if(! outputStreamWriter2.exists()) outputStreamWriter2.createNewFile(); //ìƒëµê°€ëŠ¥
 
-		//#2. FileOutputStream+OutputStreamWriter¸¦ »ç¿ëÇÏ¿© ÆÄÀÏ¾²±â(UTF-8 ¸ğµå ÆÄÀÏ(¸Ş¸ğÀå))
+		//#2. FileOutputStream+OutputStreamWriterë¥¼ ì‚¬ìš©í•˜ì—¬ íŒŒì¼ì“°ê¸°(UTF-8 ëª¨ë“œ íŒŒì¼(ë©”ëª¨ì¥))
 		try(OutputStream os = new FileOutputStream(outputStreamWriter2, false);
 		        OutputStreamWriter isr = new OutputStreamWriter(os, "UTF-8")){
-		    isr.write("OutputStreamWriter2 ¿¹Á¦ÆÄÀÏÀÔ´Ï´Ù.\n".toCharArray());
-		    isr.write("ÇÑ±Û°ú ¿µ¹®ÀÌ ¸ğµÎ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+		    isr.write("OutputStreamWriter2 ì˜ˆì œíŒŒì¼ì…ë‹ˆë‹¤.\n".toCharArray());
+		    isr.write("í•œê¸€ê³¼ ì˜ë¬¸ì´ ëª¨ë‘ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		    isr.write('\n');
 		    isr.write("Good Bye!!!\n");
 		    isr.flush();

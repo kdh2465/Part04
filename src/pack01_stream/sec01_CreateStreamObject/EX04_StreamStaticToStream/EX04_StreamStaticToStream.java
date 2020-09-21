@@ -1,26 +1,26 @@
-package pack01_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
+ï»¿package pack01_stream.sec01_CreateStreamObject.EX04_StreamStaticToStream;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-/*Stream Å¬·¡½ºÀÇ Á¤Àû¸Ş¼­µå¸¦ È°¿ëÇÑ Stream<E> °´Ã¼ »ı¼º*/
+/*Stream í´ë˜ìŠ¤ì˜ ì •ì ë©”ì„œë“œë¥¼ í™œìš©í•œ Stream<E> ê°ì²´ ìƒì„±*/
 
 public class EX04_StreamStaticToStream {
 	public static void main(String[] args) {
 		
-		//#1.ºó Stream °´Ã¼ »ı¼º empty()
+		//#1.ë¹ˆ Stream ê°ì²´ ìƒì„± empty()
 		Stream<String> stream1 = Stream.<String>empty();
 		stream1.forEach(s->System.out.print(s+" "));
 		
-		//#2.builder(), add(), build¸¦ ÀÌ¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ °¡Áø steam ¸¸µé±â
-		Stream<String> stream2 = Stream.<String>builder().add("¶¯Å¥").add("º£¸®").add("°¨»ç").build();
+		//#2.builder(), add(), buildë¥¼ ì´ìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ê°€ì§„ steam ë§Œë“¤ê¸°
+		Stream<String> stream2 = Stream.<String>builder().add("ë•¡í").add("ë² ë¦¬").add("ê°ì‚¬").build();
 		stream2.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#3. T... valuesÀÇ ÇüÅÂ·Î ³Ñ°ÜÁØ µ¥ÀÌÅÍ¸¦ °¡Áö´Â Stream °´Ã¼ »ı¼º of()
-		Stream<String> stream3 = Stream.of("¾È³ç", "¹æ°¡", "Àß°¡");
+		//#3. T... valuesì˜ í˜•íƒœë¡œ ë„˜ê²¨ì¤€ ë°ì´í„°ë¥¼ ê°€ì§€ëŠ” Stream ê°ì²´ ìƒì„± of()
+		Stream<String> stream3 = Stream.of("ì•ˆë…•", "ë°©ê°€", "ì˜ê°€");
 		stream3.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
@@ -36,19 +36,19 @@ public class EX04_StreamStaticToStream {
 		stream6.forEach(s->System.out.print(s+" "));
 		System.out.println();
 		
-		//#4.µ¿ÀÏÇÑ °ª(ÃÊ±â°ª)À» °¡Áö´Â Stream°´Ã¼ »ı¼º generate()
+		//#4.ë™ì¼í•œ ê°’(ì´ˆê¸°ê°’)ì„ ê°€ì§€ëŠ” Streamê°ì²´ ìƒì„± generate()
 		Stream<Integer> stream7 = Stream.generate(()->-1).limit(5);
 		stream7.forEach(s->System.out.print(s+" "));
 		System.out.println();
 		
-		//#5.ÃÊ±â°ªºÎÅÍ ¿¬»ê°á°ú¸¦ ÀúÀåÇÏ´Â Stream °´Ã¼ »ı¼º iterate()
+		//#5.ì´ˆê¸°ê°’ë¶€í„° ì—°ì‚°ê²°ê³¼ë¥¼ ì €ì¥í•˜ëŠ” Stream ê°ì²´ ìƒì„± iterate()
 		Stream<Integer> stream8 = Stream.iterate(0, n->(n+1)).limit(5);
 		stream8.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#6. µÎ °³ÀÇ ½ºÆ®¸² ¿¬°áÇÏ¿© »õ·Î¿î Stream °´Ã¼ »ı¼º concat()
-		Stream<String> stream9_1 = Stream.of("¾È³ç", "¹æ°¡", "Àß°¡");
-		Stream<String> stream9_2 = Stream.of("¶¯Å¥", "º£¸®", "°¨»ç");
+		//#6. ë‘ ê°œì˜ ìŠ¤íŠ¸ë¦¼ ì—°ê²°í•˜ì—¬ ìƒˆë¡œìš´ Stream ê°ì²´ ìƒì„± concat()
+		Stream<String> stream9_1 = Stream.of("ì•ˆë…•", "ë°©ê°€", "ì˜ê°€");
+		Stream<String> stream9_2 = Stream.of("ë•¡í", "ë² ë¦¬", "ê°ì‚¬");
 		Stream<String> stream9 = Stream.concat(stream9_1, stream9_2);
 		stream9.forEach(s->System.out.print(s+" "));
 		

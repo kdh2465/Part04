@@ -1,33 +1,33 @@
-package pack01_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
+ï»¿package pack01_stream.sec01_CreateStreamObject.EX05_CreateParallelStream;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-/*º´·Ä½ºÆ®¸²(ParallelStream) »ý¼º*/
+/*ë³‘ë ¬ìŠ¤íŠ¸ë¦¼(ParallelStream) ìƒì„±*/
 
 public class EX05_CreateParallelStream {
 	public static void main(String[] args) {
-		//#1.ÄÃ·º¼Ç --> º´·Ä(Parallel) ½ºÆ®¸²
-		List<String> list = Arrays.asList("°¡","³ª","´Ù");
+		//#1.ì»¬ë ‰ì…˜ --> ë³‘ë ¬(Parallel) ìŠ¤íŠ¸ë¦¼
+		List<String> list = Arrays.asList("ê°€","ë‚˜","ë‹¤");
 		Stream<String> stream1 = list.parallelStream();
-		System.out.println("º´·Ä¿©ºÎ: "+stream1.isParallel());//º´·Ä¿©ºÎÈ®ÀÎ
+		System.out.println("ë³‘ë ¬ì—¬ë¶€: "+stream1.isParallel());//ë³‘ë ¬ì—¬ë¶€í™•ì¸
 		stream1.forEach(s->System.out.print(s+" "));
-		//stream1.forEach(s->System.out.print(s+" " + ": "+Thread.currentThread().getName()+"\n")); //¼ø¼­°¡ ¹Ù²ð¼ö ÀÖÀ½
+		//stream1.forEach(s->System.out.print(s+" " + ": "+Thread.currentThread().getName()+"\n")); //ìˆœì„œê°€ ë°”ë€”ìˆ˜ ìžˆìŒ
 		System.out.println();
 		
-		//#2. °´Ã¼ ¹è¿­ -> Stream<T> -> º´·Ä(Parallel) ½ºÆ®¸²
+		//#2. ê°ì²´ ë°°ì—´ -> Stream<T> -> ë³‘ë ¬(Parallel) ìŠ¤íŠ¸ë¦¼
 		Integer[] array = {1,2,3,4,5};
 		Stream<Integer> stream2 = Arrays.stream(array).parallel();
-		System.out.println("º´·Ä¿©ºÎ: "+stream2.isParallel());//º´·Ä¿©ºÎÈ®ÀÎ
+		System.out.println("ë³‘ë ¬ì—¬ë¶€: "+stream2.isParallel());//ë³‘ë ¬ì—¬ë¶€í™•ì¸
 		stream2.forEach(s->System.out.print(s+" "));
 		System.out.println();
 		
-		//#3. ±âº»ÀÚ·áÇü¹è¿­ -> xxxStream -> º´·Ä(Parallel) ½ºÆ®¸² (Long, Double µ¿ÀÏ)
+		//#3. ê¸°ë³¸ìžë£Œí˜•ë°°ì—´ -> xxxStream -> ë³‘ë ¬(Parallel) ìŠ¤íŠ¸ë¦¼ (Long, Double ë™ì¼)
 		int[] intArray = {6,7,8,9,10};
 		IntStream stream3 = Arrays.stream(intArray).parallel();
-		System.out.println("º´·Ä¿©ºÎ: "+stream3.isParallel());//º´·Ä¿©ºÎÈ®ÀÎ
+		System.out.println("ë³‘ë ¬ì—¬ë¶€: "+stream3.isParallel());//ë³‘ë ¬ì—¬ë¶€í™•ì¸
 		stream3.forEach(s->System.out.print(s+" "));
 		System.out.println(); 
 	}

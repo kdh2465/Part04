@@ -1,4 +1,4 @@
-package pack02_javaio.sec04_FilterInputOutputStream.EX01_BufferedInputOutputStream;
+ï»¿package pack02_javaio.sec04_FilterInputOutputStream.EX01_BufferedInputOutputStream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,18 +9,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*Buffered(Input/Output)Stream Å¬·¡½º¸¦ È°¿ëÇÑ ÀÔÃâ·Â ¼Óµµ °³¼±*/
+/*Buffered(Input/Output)Stream í´ë˜ìŠ¤ë¥¼ í™œìš©í•œ ì…ì¶œë ¥ ì†ë„ ê°œì„ */
 
 public class EX01_BufferedInputOutputStream {
 	public static void main(String[] args) throws IOException {
-		//#ÆÄÀÏ »ı¼º
+		//#íŒŒì¼ ìƒì„±
 		File orgfile = new File("src/pack03_javaio/sec04_files/mycat_origin.jpg");
 		File copyfile1 = new File("src/pack03_javaio/sec04_files/mycat_copy1.jpg");
 		File copyfile2 = new File("src/pack03_javaio/sec04_files/mycat_copy2.jpg");
-		//if(!copyfile1.exists()) copyfile1.createNewFile(); //outputstreamÀ¸·Î ÆÄÀÏÀ» ¾²´Â °æ¿ì´Â »ı·«°¡´É
-		//if(!copyfile2.exists()) copyfile2.createNewFile(); //ÆÄÀÏÀÌ ¾øÀ¸¸é »ı¼ºÇÏ¿© ÀÛ¼º FileOutputStream
+		//if(!copyfile1.exists()) copyfile1.createNewFile(); //outputstreamìœ¼ë¡œ íŒŒì¼ì„ ì“°ëŠ” ê²½ìš°ëŠ” ìƒëµê°€ëŠ¥
+		//if(!copyfile2.exists()) copyfile2.createNewFile(); //íŒŒì¼ì´ ì—†ìœ¼ë©´ ìƒì„±í•˜ì—¬ ì‘ì„± FileOutputStream
 		
-		//#BufferedXXXStreamÀ» »ç¿ëÇÏÁö ¾ÊÀº °æ¿ì
+		//#BufferedXXXStreamì„ ì‚¬ìš©í•˜ì§€ ì•Šì€ ê²½ìš°
 		long start, end, time1, time2;
 		start = System.nanoTime();
 		try(InputStream is = new FileInputStream(orgfile);
@@ -33,7 +33,7 @@ public class EX01_BufferedInputOutputStream {
 		time1 = end-start;
 		System.out.println("Without BufferedXXXStream : " + (time1));
 		
-		//#BufferedXXXStreamÀ» »ç¿ëÇÑ °æ¿ì
+		//#BufferedXXXStreamì„ ì‚¬ìš©í•œ ê²½ìš°
 		start = System.nanoTime();
 		try(InputStream is = new FileInputStream(orgfile);
 		    BufferedInputStream bis = new BufferedInputStream(is);
@@ -48,7 +48,7 @@ public class EX01_BufferedInputOutputStream {
 		time2 = end-start;
 		System.out.println("With BufferedXXXStream : " + (time2));
 
-		//»ç¿ëÇÑ°æ¿ì¿Í »ç¿ëÇÏÁö ¾ÊÀº °æ¿ìÀÇ ºñ
+		//ì‚¬ìš©í•œê²½ìš°ì™€ ì‚¬ìš©í•˜ì§€ ì•Šì€ ê²½ìš°ì˜ ë¹„
 		System.out.println("Ratio of with and without : " + (time1/time2));
 
 	}

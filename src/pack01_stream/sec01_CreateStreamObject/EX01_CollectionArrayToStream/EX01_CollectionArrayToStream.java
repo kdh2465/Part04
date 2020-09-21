@@ -1,33 +1,33 @@
-package pack01_stream.sec01_CreateStreamObject.EX01_CollectionArrayToStream;
+ï»¿package pack01_stream.sec01_CreateStreamObject.EX01_CollectionArrayToStream;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-/*ÄÃ·º¼Ç ¹× ¹è¿­·ÎºÎÅÍ Stream<E> °´Ã¼ »ı¼º*/
+/*ì»¬ë ‰ì…˜ ë° ë°°ì—´ë¡œë¶€í„° Stream<E> ê°ì²´ ìƒì„±*/
 
 public class EX01_CollectionArrayToStream {
 	public static void main(String[] args) throws IOException {
 		
-		//#1-1.ÄÃ·º¼Ç --> ½ºÆ®¸²
-		List<String> list = Arrays.asList("°¡","³ª","´Ù");
+		//#1-1.ì»¬ë ‰ì…˜ --> ìŠ¤íŠ¸ë¦¼
+		List<String> list = Arrays.asList("ê°€","ë‚˜","ë‹¤");
 		Stream<String> stream1 = list.stream();
 		stream1.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#1-2.ÄÃ·º¼Ç --> ½ºÆ®¸² (µ¿ÀÏÇÑ Ç¥Çö) : ¿¬°á(chaining) È£Ãâ
-		Arrays.asList("°¡","³ª","´Ù").stream().forEach(s->System.out.print(s+" "));
+		//#1-2.ì»¬ë ‰ì…˜ --> ìŠ¤íŠ¸ë¦¼ (ë™ì¼í•œ í‘œí˜„) : ì—°ê²°(chaining) í˜¸ì¶œ
+		Arrays.asList("ê°€","ë‚˜","ë‹¤").stream().forEach(s->System.out.print(s+" "));
 		System.out.println();
 		
 		
-		//#2-1. °´Ã¼ ¹è¿­ --> ½ºÆ®¸²
+		//#2-1. ê°ì²´ ë°°ì—´ --> ìŠ¤íŠ¸ë¦¼
 		Integer[] array = {1,2,3,4,5};
 		Stream<Integer> stream2 = Arrays.stream(array);
 		stream2.forEach(s->System.out.print(s+" "));
 		System.out.println();
 
-		//#2-2. °´Ã¼ ¹è¿­ --> ½ºÆ®¸² (µ¿ÀÏÇÑ Ç¥Çö) : ¿¬°á(chaining) È£Ãâ
+		//#2-2. ê°ì²´ ë°°ì—´ --> ìŠ¤íŠ¸ë¦¼ (ë™ì¼í•œ í‘œí˜„) : ì—°ê²°(chaining) í˜¸ì¶œ
 		Arrays.stream(array).forEach(s->System.out.print(s+" "));
 		System.out.println();
 	

@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec03_UDPCommunication.EX03_NonConnectedUDP_Text;
+ï»¿package pack03_javanetwork.sec03_UDPCommunication.EX03_NonConnectedUDP_Text;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -6,35 +6,35 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
-/*UDP Åë½Å¿¹Á¦ 1 : Å¬¶óÀÌ¾ğÆ®°£ ÅØ½ºÆ®(text) Àü¼Û (ºñ¿¬°áÅë½Å) [Client A]*/
+/*UDP í†µì‹ ì˜ˆì œ 1 : í´ë¼ì´ì–¸íŠ¸ê°„ í…ìŠ¤íŠ¸(text) ì „ì†¡ (ë¹„ì—°ê²°í†µì‹ ) [Client A]*/
 
 public class EX03_NonConnectedUDP_Text_ClientA {
 	public static void main(String[] args) {
 		System.out.println("<<ClientA>> - Text");
 		
-		//#1. DatagramSocket »ı¼º(binding Æ÷ÇÔ)
+		//#1. DatagramSocket ìƒì„±(binding í¬í•¨)
 		DatagramSocket ds = null;
 		try {
 			ds = new DatagramSocket(10000);
 		} catch (SocketException e) {}
 		
-		//#2. Àü¼Ûµ¥ÀÌÅÍ »ı¼º + Datagrampacket »ı¼º(¼ö½ÅÁö ÁÖ¼Ò Æ÷ÇÔ)		
-		byte[] sendData = "¾È³çÇÏ¼¼¿ä".getBytes();
+		//#2. ì „ì†¡ë°ì´í„° ìƒì„± + Datagrampacket ìƒì„±(ìˆ˜ì‹ ì§€ ì£¼ì†Œ í¬í•¨)		
+		byte[] sendData = "ì•ˆë…•í•˜ì„¸ìš”".getBytes();
 		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, new InetSocketAddress("127.0.0.1", 20000));
 		
-		//#3. µ¥ÀÌÅÍ±×·¥ÆĞÅ¶ Àü¼Û
+		//#3. ë°ì´í„°ê·¸ë¨íŒ¨í‚· ì „ì†¡
 		try {
-			System.out.println("¼Û½Åµ¥ÀÌÅÍ : " + new String(sendPacket.getData()).trim());
+			System.out.println("ì†¡ì‹ ë°ì´í„° : " + new String(sendPacket.getData()).trim());
 			ds.send(sendPacket);
 		} catch (IOException e) {}
 		
-		//#4. µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶ ¼ö½Å
+		//#4. ë°ì´í„°ê·¸ë¨ íŒ¨í‚· ìˆ˜ì‹ 
 		byte[] receivedData = new byte[65508];
 		DatagramPacket receivedPacket = new DatagramPacket(receivedData, receivedData.length); 
 		try {
 			ds.receive(receivedPacket);
 		} catch (IOException e) {}
-		System.out.println("¼ö½Åµ¥ÀÌÅÍ : " + new String(receivedPacket.getData()).trim());
+		System.out.println("ìˆ˜ì‹ ë°ì´í„° : " + new String(receivedPacket.getData()).trim());
 		
 	}
 }

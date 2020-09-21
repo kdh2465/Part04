@@ -1,54 +1,54 @@
-package pack03_javanetwork.sec03_UDPCommunication.EX01_DatagramPacketObject;
+ï»¿package pack03_javanetwork.sec03_UDPCommunication.EX01_DatagramPacketObject;
 
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-/*UDP Åë½ÅÀ» À§ÇÑ DatagramPacket Å¬·¡½ºÀÇ È°¿ë*/
+/*UDP í†µì‹ ì„ ìœ„í•œ DatagramPacket í´ë˜ìŠ¤ì˜ í™œìš©*/
 
 public class EX01_DatagramPacketObject {
 	public static void main(String[] args) {
 		
-		//#0. ¼Û½Åµ¥ÀÌÅÍ: ÃÖ´ë¹ÙÀÌÆ®¼ö 65508 byte (64Kbyte) : ipv4 (65536-20(IP header)-8(UDP header)=65505)
-		byte[] buf = "UDP-µ¥ÀÌÅÍ±×·¥ÆĞÅ¶".getBytes();
+		//#0. ì†¡ì‹ ë°ì´í„°: ìµœëŒ€ë°”ì´íŠ¸ìˆ˜ 65508 byte (64Kbyte) : ipv4 (65536-20(IP header)-8(UDP header)=65505)
+		byte[] buf = "UDP-ë°ì´í„°ê·¸ë¨íŒ¨í‚·".getBytes();
 		
-		//#1. DatagramPacket °´Ã¼ »ı¼º
+		//#1. DatagramPacket ê°ì²´ ìƒì„±
 		
-		//@1-1. ¼ö½ÅÁö ÁÖ¼Ò°¡ ¾ø´Â DatagramPacket
-		DatagramPacket dp1 = new DatagramPacket(buf, buf.length); //UDP-µ¥ÀÌÅÍ±×·¥ÆĞÅ¶
-		DatagramPacket dp2 = new DatagramPacket(buf, 4, buf.length-4); //µ¥ÀÌÅÍ±×·¥ÆĞÅ¶ (´Ü, getData()´Â ÀüÃ¼ Æ÷ÇÔ)
+		//@1-1. ìˆ˜ì‹ ì§€ ì£¼ì†Œê°€ ì—†ëŠ” DatagramPacket
+		DatagramPacket dp1 = new DatagramPacket(buf, buf.length); //UDP-ë°ì´í„°ê·¸ë¨íŒ¨í‚·
+		DatagramPacket dp2 = new DatagramPacket(buf, 4, buf.length-4); //ë°ì´í„°ê·¸ë¨íŒ¨í‚· (ë‹¨, getData()ëŠ” ì „ì²´ í¬í•¨)
 
 		
-		//@1-2. ¼ö½ÅÃø ÁÖ¼Ò°¡ InetAddress¿Í port·Î Æ÷ÇÔµÇ¾î ÀÖ´Â °æ¿ì
+		//@1-2. ìˆ˜ì‹ ì¸¡ ì£¼ì†Œê°€ InetAddressì™€ portë¡œ í¬í•¨ë˜ì–´ ìˆëŠ” ê²½ìš°
 		DatagramPacket dp3=null, dp4=null;
 		try {
-			dp3 = new DatagramPacket(buf, buf.length, InetAddress.getByName("localhost"), 10000); //data=UDP-µ¥ÀÌÅÍ±×·¥ÆĞÅ¶
-			dp4 = new DatagramPacket(buf, 4, buf.length-4, InetAddress.getByName("localhost"), 10000); //data=µ¥ÀÌÅÍ±×·¥ÆĞÅ¶
+			dp3 = new DatagramPacket(buf, buf.length, InetAddress.getByName("localhost"), 10000); //data=UDP-ë°ì´í„°ê·¸ë¨íŒ¨í‚·
+			dp4 = new DatagramPacket(buf, 4, buf.length-4, InetAddress.getByName("localhost"), 10000); //data=ë°ì´í„°ê·¸ë¨íŒ¨í‚·
 		} catch (UnknownHostException e) {}
 		
-		//@1-3. ¼ö½ÅÃø ÁÖ¼Ò°¡ SocketAddress·Î Æ÷ÇÔµÇ¾î ÀÖ´Â °æ¿ì
+		//@1-3. ìˆ˜ì‹ ì¸¡ ì£¼ì†Œê°€ SocketAddressë¡œ í¬í•¨ë˜ì–´ ìˆëŠ” ê²½ìš°
 		DatagramPacket dp5=null, dp6=null;
 		dp5 = new DatagramPacket(buf, buf.length, new InetSocketAddress("localhost", 10000));
 		dp6 = new DatagramPacket(buf, 4, buf.length-4, new InetSocketAddress("localhost", 10000));
 		
-		//#2. DatagramPacket ÁÖ¿ä ¸Ş¼­µå
+		//#2. DatagramPacket ì£¼ìš” ë©”ì„œë“œ
 		
 		//@2-1. getAddress(), getPort(), getSocketAddress()
-		System.out.println("¿ø°İÁö IP   : " + dp1.getAddress()); //null
-		System.out.println("¿ø°İÁö Port : " + dp1.getPort()); //-1
-		//System.out.println("¿ø°İÁö SocketAddress : " + dp1.getSocketAddress()); //IllegalArgumentException ¹ß»ı
-		System.out.println("¿ø°İÁö IP   : " + dp3.getAddress()); //localhost/127.0.0.1
-		System.out.println("¿ø°İÁö Port : " + dp3.getPort()); //10000
-		System.out.println("¿ø°İÁö SocketAddress : " + dp3.getSocketAddress()); //localhost/127.0.0.1:10000
+		System.out.println("ì›ê²©ì§€ IP   : " + dp1.getAddress()); //null
+		System.out.println("ì›ê²©ì§€ Port : " + dp1.getPort()); //-1
+		//System.out.println("ì›ê²©ì§€ SocketAddress : " + dp1.getSocketAddress()); //IllegalArgumentException ë°œìƒ
+		System.out.println("ì›ê²©ì§€ IP   : " + dp3.getAddress()); //localhost/127.0.0.1
+		System.out.println("ì›ê²©ì§€ Port : " + dp3.getPort()); //10000
+		System.out.println("ì›ê²©ì§€ SocketAddress : " + dp3.getSocketAddress()); //localhost/127.0.0.1:10000
 		System.out.println();
 		
 		//@2-2. getData(). setData(), getOffset(), getLength()
-		System.out.println("Æ÷ÇÔµ¥ÀÌÅÍ : "+new String(dp1.getData())); //UDP-µ¥ÀÌÅÍ±×·¥ÆĞÅ¶
-		System.out.println("Æ÷ÇÔµ¥ÀÌÅÍ : "+new String(dp2.getData())); //UDP-µ¥ÀÌÅÍ±×·¥ÆĞÅ¶ ½ÇÁ¦ µ¥ÀÌÅÍ´Â Ã¹¹øÂ° ¸Å°³º¯¼ö¸¦ ¸®ÅÏÇÔ (Áï ÀüÃ¼ µ¥ÀÌÅÍ)		
-		System.out.println("Æ÷ÇÔµ¥ÀÌÅÍ : "+new String(dp2.getData(),dp2.getOffset(),dp2.getLength())); //µ¥ÀÌÅÍ±×·¥ÆĞÅ¶		
-		dp1.setData("¾È³çÇÏ¼¼¿ä".getBytes());
-		System.out.println("Æ÷ÇÔµ¥ÀÌÅÍ : "+new String(dp1.getData())); //¾È³çÇÏ¼¼¿ä
+		System.out.println("í¬í•¨ë°ì´í„° : "+new String(dp1.getData())); //UDP-ë°ì´í„°ê·¸ë¨íŒ¨í‚·
+		System.out.println("í¬í•¨ë°ì´í„° : "+new String(dp2.getData())); //UDP-ë°ì´í„°ê·¸ë¨íŒ¨í‚· ì‹¤ì œ ë°ì´í„°ëŠ” ì²«ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¥¼ ë¦¬í„´í•¨ (ì¦‰ ì „ì²´ ë°ì´í„°)		
+		System.out.println("í¬í•¨ë°ì´í„° : "+new String(dp2.getData(),dp2.getOffset(),dp2.getLength())); //ë°ì´í„°ê·¸ë¨íŒ¨í‚·		
+		dp1.setData("ì•ˆë…•í•˜ì„¸ìš”".getBytes());
+		System.out.println("í¬í•¨ë°ì´í„° : "+new String(dp1.getData())); //ì•ˆë…•í•˜ì„¸ìš”
 			
 	}
 }

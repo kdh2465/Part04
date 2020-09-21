@@ -1,15 +1,15 @@
-package pack01_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX02_OptionalPrimitiveMethods;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
-/*Optional+XXX Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå*/
+/*Optional+XXX í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ*/
 
 public class EX02_OptionalPrimitiveMethods {
 	public static void main(String[] args) {
 		
-		//#. OptionalXXX ¸Ş¼­µå (isPrsent(), ifPresent(), orElse(), getAsXXX()
+		//#. OptionalXXX ë©”ì„œë“œ (isPrsent(), ifPresent(), orElse(), getAsXXX()
 		//#1. isPrsent()
 		System.out.println(IntStream.of().min().isPresent()); //false
 		

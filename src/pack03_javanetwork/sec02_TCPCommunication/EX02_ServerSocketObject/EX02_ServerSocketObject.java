@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX02_ServerSocketObject;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX02_ServerSocketObject;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -6,12 +6,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-/*TCP Åë½ÅÀ» À§ÇÑ ServerSocket Å¬·¡½ºÀÇ È°¿ë*/
+/*TCP í†µì‹ ì„ ìœ„í•œ ServerSocket í´ë˜ìŠ¤ì˜ í™œìš©*/
 
 public class EX02_ServerSocketObject {
 	public static void main(String[] args) {
 		
-		//#1. ServerSocket °´Ã¼ »ı¼º
+		//#1. ServerSocket ê°ì²´ ìƒì„±
 		ServerSocket serverSocket1 = null;
 		ServerSocket serverSocket2 = null;
 
@@ -22,7 +22,7 @@ public class EX02_ServerSocketObject {
 		} catch (IOException e) {}		
 		
 		
-		//#2. ServerSocket ¸Ş¼­µå		
+		//#2. ServerSocket ë©”ì„œë“œ		
 		//@bind
 		System.out.println(serverSocket1.isBound());//false
 		System.out.println(serverSocket2.isBound());//true
@@ -35,18 +35,18 @@ public class EX02_ServerSocketObject {
 		System.out.println(serverSocket2.isBound());//true
 		
 		System.out.println();
-		//@ »ç¿ëÁßÀÎ TCP Æ÷Æ® È®ÀÎÇÏ±â (cmd: netstat -a)
+		//@ ì‚¬ìš©ì¤‘ì¸ TCP í¬íŠ¸ í™•ì¸í•˜ê¸° (cmd: netstat -a)
 		for(int i=0; i<65536; i++) {
 			try {
 				ServerSocket serverSocket = new ServerSocket(i);
 			} catch (IOException e) {
-				System.err.println(i+"¹øÂ° Æ÷Æ® »ç¿ëÁß ...");
+				System.err.println(i+"ë²ˆì§¸ í¬íŠ¸ ì‚¬ìš©ì¤‘ ...");
 			} 
 		}
 		System.out.println();
 		
 		//@ accept() / setSoTimeout() / getSoTimeout() 
-		//Client·Î ºÎÅÍ TCP Á¢¼Ó ´ë±â (ÀÏ¹İÀûÀ¸·Î ¾²·¹µå »ç¿ë)				
+		//Clientë¡œ ë¶€í„° TCP ì ‘ì† ëŒ€ê¸° (ì¼ë°˜ì ìœ¼ë¡œ ì“°ë ˆë“œ ì‚¬ìš©)				
 		try {
 			serverSocket1.setSoTimeout(2000);
 		} catch (SocketException e) {e.printStackTrace();}
@@ -55,7 +55,7 @@ public class EX02_ServerSocketObject {
 			Socket socket = serverSocket1.accept();			
 		} catch (IOException e) {
 			try {
-				System.out.println(serverSocket1.getSoTimeout() + "ms ½Ã°£ÀÌ Áö³ª listeningÀ» Á¾·á");
+				System.out.println(serverSocket1.getSoTimeout() + "ms ì‹œê°„ì´ ì§€ë‚˜ listeningì„ ì¢…ë£Œ");
 			} catch (IOException e1) {}
 		}		
 		

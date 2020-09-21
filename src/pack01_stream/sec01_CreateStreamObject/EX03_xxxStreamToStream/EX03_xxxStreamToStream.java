@@ -1,4 +1,4 @@
-package pack01_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
+ï»¿package pack01_stream.sec01_CreateStreamObject.EX03_xxxStreamToStream;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-/*±âº»ÀÚ·áÇü½ºÆ®¸²(Int/Long/DoubleStream)À¸·ÎºÎÅÍ Stream<E> °´Ã¼ »ı¼º*/
+/*ê¸°ë³¸ìë£Œí˜•ìŠ¤íŠ¸ë¦¼(Int/Long/DoubleStream)ìœ¼ë¡œë¶€í„° Stream<E> ê°ì²´ ìƒì„±*/
 
 public class EX03_xxxStreamToStream {
 	public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class EX03_xxxStreamToStream {
 		DoubleStream doubleStream = Arrays.stream(doubleArray);
 		Stream<Double> stream3=doubleStream.boxed();
 		
-		//#. ¿¬°áÇ¥Çö
+		//#. ì—°ê²°í‘œí˜„
 		Stream<Integer> stream4=Arrays.stream(intArray).boxed();
 		Stream<Long> stream5=Arrays.stream(longArray).boxed();
 		Stream<Double> stream6=Arrays.stream(doubleArray).boxed();

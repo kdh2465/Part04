@@ -1,4 +1,4 @@
-package pack02_javaio.sec04_FilterInputOutputStream.EX02_DataInputOutputStream;
+ï»¿package pack02_javaio.sec04_FilterInputOutputStream.EX02_DataInputOutputStream;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -9,35 +9,35 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*Data(Input/Output)Stream Å¬·¡½º¸¦ È°¿ëÇÑ ´Ù¾çÇÑ Å¸ÀÔÀÇ ÀÔÃâ·Â ±¸Çö*/
+/*Data(Input/Output)Stream í´ëž˜ìŠ¤ë¥¼ í™œìš©í•œ ë‹¤ì–‘í•œ íƒ€ìž…ì˜ ìž…ì¶œë ¥ êµ¬í˜„*/
 
 public class EX02_DataInputOutputStream {
 	public static void main(String[] args) throws IOException {
-		//ÆÄÀÏ »ý¼º
+		//íŒŒì¼ ìƒì„±
 		File dataFile = new File("src/pack03_javaio/sec04_files/file1.data");
 		if(!dataFile.exists()) dataFile.createNewFile();
 
-		//µ¥ÀÌÅÍ ¾²±â (FilterStream = DataOutputStream)
+		//ë°ì´í„° ì“°ê¸° (FilterStream = DataOutputStream)
 		try(OutputStream os = new FileOutputStream(dataFile);
 		    DataOutputStream dos = new DataOutputStream(os);) {
 			
 			dos.writeInt(35);
 		    dos.writeDouble(5.8);
 		    dos.writeChar('A');
-		    dos.writeUTF("¾È³çÇÏ¼¼¿ä");
+		    dos.writeUTF("ì•ˆë…•í•˜ì„¸ìš”");
 		    dos.flush();
 
 		}catch(IOException e) {}
 		
 		
-		//µ¥ÀÌÅÍ ÀÐ±â (FilterStream = DataInputStream)
+		//ë°ì´í„° ì½ê¸° (FilterStream = DataInputStream)
 		try(InputStream is = new FileInputStream(dataFile);
 		    DataInputStream dis = new DataInputStream(is);){
 
 		        System.out.println(dis.readInt()); //->35
 		        System.out.println(dis.readDouble()); //->5.8
 		        System.out.println(dis.readChar()); //->A
-		        System.out.println(dis.readUTF()); //->¾È³çÇÏ¼¼¿ä
+		        System.out.println(dis.readUTF()); //->ì•ˆë…•í•˜ì„¸ìš”
 
 		}catch(IOException e) {}
 

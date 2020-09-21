@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX01_SocketObject;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX01_SocketObject;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -7,11 +7,11 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-/*TCP Åë½ÅÀ» À§ÇÑ Socket Å¬·¡½ºÀÇ È°¿ë*/
+/*TCP í†µì‹ ì„ ìœ„í•œ Socket í´ë˜ìŠ¤ì˜ í™œìš©*/
 
 public class EX01_SocketObject {
 	public static void main(String[] args) {
-		//#1. Socket °´Ã¼ »ı¼º 
+		//#1. Socket ê°ì²´ ìƒì„± 
 		Socket socket1 = new Socket();
 		Socket socket2 = null;
 		Socket socket3 = null;
@@ -26,8 +26,8 @@ public class EX01_SocketObject {
 		catch (UnknownHostException e) {} 
 		catch (IOException e) {}
 		
-		//#2. Socket ¸Ş¼­µå
-		//@connect/¿ø°İÁö ÁÖ¼ÒÁ¤º¸
+		//#2. Socket ë©”ì„œë“œ
+		//@connect/ì›ê²©ì§€ ì£¼ì†Œì •ë³´
 		System.out.println(socket1.getInetAddress()+":"+socket1.getPort()); //null:0
 		try {
 			socket1.connect(new InetSocketAddress("www.naver.com",80));
@@ -36,14 +36,14 @@ public class EX01_SocketObject {
 		System.out.println(socket2.getInetAddress()+":"+socket2.getPort()); //www.naver.com/125.209.222.141
 		System.out.println();
 		
-		//@·ÎÄÃ ÁÖ¼Ò Á¤º¸ (·ÎÄÃÁÖ¼Ò Á¤º¸¸¦ ÁöÁ¤ÇÏÁö ¾ÊÀº °æ¿ì + ÁöÁ¤ÇÑ °æ¿ì)
+		//@ë¡œì»¬ ì£¼ì†Œ ì •ë³´ (ë¡œì»¬ì£¼ì†Œ ì •ë³´ë¥¼ ì§€ì •í•˜ì§€ ì•Šì€ ê²½ìš° + ì§€ì •í•œ ê²½ìš°)
 		System.out.println(socket2.getLocalAddress()+":"+socket2.getLocalPort());
 		System.out.println(socket2.getLocalSocketAddress());
 		System.out.println(socket3.getLocalAddress()+":"+socket3.getLocalPort());
 		System.out.println(socket3.getLocalSocketAddress());
 		System.out.println();
 		
-		//@send/receive ¹öÆÛ »çÀÌÁî
+		//@send/receive ë²„í¼ ì‚¬ì´ì¦ˆ
 		try {
 			System.out.println(socket2.getSendBufferSize() + ", "+ socket2.getReceiveBufferSize()); //65536, 65536
 		} catch (SocketException e) {}

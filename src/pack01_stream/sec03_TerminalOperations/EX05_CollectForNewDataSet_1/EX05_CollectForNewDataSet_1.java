@@ -1,4 +1,4 @@
-package pack01_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX05_CollectForNewDataSet_1;
 
 import java.util.List;
 import java.util.Map;
@@ -6,34 +6,34 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/*½ºÆ®¸²À¸·ÎºÎÅÍÀÇ »õ·Î¿î ¼öÁı(collect) Á¶ÇÕ ±¸¼º : collect() #1*/
+/*ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œë¶€í„°ì˜ ìƒˆë¡œìš´ ìˆ˜ì§‘(collect) ì¡°í•© êµ¬ì„± : collect() #1*/
 
 public class EX05_CollectForNewDataSet_1 {
 	public static void main(String[] args) {
 		
-		//Case#1 Collection Type ±¸¼º (List,Set,Map)
+		//Case#1 Collection Type êµ¬ì„± (List,Set,Map)
 		//@1-1. Collectors.toList()
 		List<Integer> intList = Stream.of(1,2,3,4,5).collect(Collectors.toList());
 		System.out.println(intList);
 		//@1-2.Collectors.toSet()
-		Set<String> strSet = Stream.of("¾È³ç","¹æ°¡","¶¯Å¥","¾È³ç").collect(Collectors.toSet());
+		Set<String> strSet = Stream.of("ì•ˆë…•","ë°©ê°€","ë•¡í","ì•ˆë…•").collect(Collectors.toSet());
 		System.out.println(strSet);
 		//@1-3.Collectors.toMap(keyMapper, valueMapper)
-		Map<Integer, String> strMap = Stream.of("¾È³ç","¹æ°¡¿ö","¶Ç¸¸³ª¿ä").collect(Collectors.toMap(s->s.length(), s->s));
+		Map<Integer, String> strMap = Stream.of("ì•ˆë…•","ë°©ê°€ì›Œ","ë˜ë§Œë‚˜ìš”").collect(Collectors.toMap(s->s.length(), s->s));
 		System.out.println(strMap);
 		
 		
-		//Case#2 Stirng streamÀÇ ¿ä¼ÒÀÇ °áÇÕ String ¼öÁı Á¶ÇÕ
+		//Case#2 Stirng streamì˜ ìš”ì†Œì˜ ê²°í•© String ìˆ˜ì§‘ ì¡°í•©
 		//@2-1.joining()
-		String str1 = Stream.of("¶¯Å¥","º£¸®","°¨»ç").collect(Collectors.joining());
+		String str1 = Stream.of("ë•¡í","ë² ë¦¬","ê°ì‚¬").collect(Collectors.joining());
 		System.out.println(str1);
 		//@2-1.joining(delimiter, prefix, suffix)
-		String str2 = Stream.of("¶¯Å¥","º£¸®","°¨»ç").collect(Collectors.joining(":","[","]"));
+		String str2 = Stream.of("ë•¡í","ë² ë¦¬","ê°ì‚¬").collect(Collectors.joining(":","[","]"));
 		System.out.println(str2);
 
 		
-		//Case#3. ¿ä¼Ò°ªÀÇ ±âº»¿¬»ê °á°ú ¼öÁı Á¶ÇÕ (cf. xxxStreamÀÇ °æ¿ì Á÷Á¢ average(), sum() »ç¿ë°¡´É)
-		//@3-1. counting() //cf. count()´Â xxxStream, Stream<T>¿¡¼­ ¸ğµÎ »ç¿ë°¡´É
+		//Case#3. ìš”ì†Œê°’ì˜ ê¸°ë³¸ì—°ì‚° ê²°ê³¼ ìˆ˜ì§‘ ì¡°í•© (cf. xxxStreamì˜ ê²½ìš° ì§ì ‘ average(), sum() ì‚¬ìš©ê°€ëŠ¥)
+		//@3-1. counting() //cf. count()ëŠ” xxxStream, Stream<T>ì—ì„œ ëª¨ë‘ ì‚¬ìš©ê°€ëŠ¥
 		long count = Stream.of(1,2,3,4).collect(Collectors.counting()); System.out.println(count);		
 		//@3-2. averagingXXX()
 		double avg1 = Stream.of(1,2,3,4).collect(Collectors.averagingInt(s->s));

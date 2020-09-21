@@ -1,11 +1,11 @@
-package pack01_stream.sec02_IntermediateOperations.EX02_Sorting;
+ï»¿package pack01_stream.sec02_IntermediateOperations.EX02_Sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
-/*´ë¼Òºñ±³ ±âÁØ Á¦°ø ¹× ÀÌ¸¦ ÀÌ¿ëÇÑ ¿À¸§/³»¸²Â÷¼ø Á¤·Ä(sorting)*/
+/*ëŒ€ì†Œë¹„êµ ê¸°ì¤€ ì œê³µ ë° ì´ë¥¼ ì´ìš©í•œ ì˜¤ë¦„/ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬(sorting)*/
 
 class Member1 implements Comparable<Member1> {
 	private int age;
@@ -64,29 +64,29 @@ public class EX02_Sorting {
 	public static void main(String[] args) {
 		
 		//#1-1. sorting: sorted() : Integer, String
-		//@¿À¸§Â÷¼ø
+		//@ì˜¤ë¦„ì°¨ìˆœ
 		Stream.of(1,5,4,2,8,7).sorted().forEach(s->System.out.print(s+" "));
 		System.out.println();
-		Stream.of("¾È³ç","¹æ°¡","°¨»ç","¶¯Å¥").sorted().forEach(s->System.out.print(s+" "));
+		Stream.of("ì•ˆë…•","ë°©ê°€","ê°ì‚¬","ë•¡í").sorted().forEach(s->System.out.print(s+" "));
 		System.out.println();
-		//@³»¸²Â÷¼ø
+		//@ë‚´ë¦¼ì°¨ìˆœ
 		Stream.of(1,5,4,2,8,7).sorted(Comparator.reverseOrder()).forEach(s->System.out.print(s+" "));
 		System.out.println();
-		Stream.of("¾È³ç","¹æ°¡","°¨»ç","¶¯Å¥").sorted(Comparator.reverseOrder()).forEach(s->System.out.print(s+" "));
+		Stream.of("ì•ˆë…•","ë°©ê°€","ê°ì‚¬","ë•¡í").sorted(Comparator.reverseOrder()).forEach(s->System.out.print(s+" "));
 		System.out.println(); System.out.println();
 		
-		//#1-2. sorting: sorted() : ComparableÀ» »ó¼ÓÇÑ ÀÓÀÇÀÇ Å¬·¡½º
-		//@¿À¸§Â÷¼ø
-		List<Member1> list1 = Arrays.asList(new Member1(20,"ÀÌ¸§1"),new Member1(22,"ÀÌ¸§2"),new Member1(18,"ÀÌ¸§3"));
-		//@¿À¸§Â÷¼ø
+		//#1-2. sorting: sorted() : Comparableì„ ìƒì†í•œ ì„ì˜ì˜ í´ë˜ìŠ¤
+		//@ì˜¤ë¦„ì°¨ìˆœ
+		List<Member1> list1 = Arrays.asList(new Member1(20,"ì´ë¦„1"),new Member1(22,"ì´ë¦„2"),new Member1(18,"ì´ë¦„3"));
+		//@ì˜¤ë¦„ì°¨ìˆœ
 		list1.stream().sorted().forEach(s->System.out.println(s.getAge()+"-"+s.getName()+" "));
-		//@³»¸²Â÷¼ø
+		//@ë‚´ë¦¼ì°¨ìˆœ
 		list1.stream().sorted(Comparator.reverseOrder()).forEach(s->System.out.println(s.getAge()+"-"+s.getName()+" "));
 
 		
 		//#2. sorting: sorted(Comparator<T> c)
-		List<Member2> list2 = Arrays.asList(new Member2(20,"ÀÌ¸§1"),new Member2(22,"ÀÌ¸§2"),new Member2(18,"ÀÌ¸§3"));
-		//@¿À¸§Â÷¼ø
+		List<Member2> list2 = Arrays.asList(new Member2(20,"ì´ë¦„1"),new Member2(22,"ì´ë¦„2"),new Member2(18,"ì´ë¦„3"));
+		//@ì˜¤ë¦„ì°¨ìˆœ
 		list2.stream().sorted(new Comparator<Member2>() {
 				@Override
 				public int compare(Member2 o1, Member2 o2) {
@@ -96,8 +96,8 @@ public class EX02_Sorting {
 				}})
 		.forEach(s->System.out.println(s.getAge()+"-"+s.getName()+" "));
 		
-		//@³»¸²Â÷¼ø
-		List<Member2> list3 = Arrays.asList(new Member2(20,"ÀÌ¸§1"),new Member2(22,"ÀÌ¸§2"),new Member2(18,"ÀÌ¸§3"));		
+		//@ë‚´ë¦¼ì°¨ìˆœ
+		List<Member2> list3 = Arrays.asList(new Member2(20,"ì´ë¦„1"),new Member2(22,"ì´ë¦„2"),new Member2(18,"ì´ë¦„3"));		
 		list3.stream().sorted(new Comparator<Member2>() {
 				@Override
 				public int compare(Member2 o1, Member2 o2) {

@@ -1,17 +1,17 @@
-package pack02_javaio.sec03_ConsoleInputOutput.EX04_ConsoleOutputObject_1;
+ï»¿package pack02_javaio.sec03_ConsoleInputOutput.EX04_ConsoleOutputObject_1;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-/*write(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ÄÜ¼Ö(Console)·Î µ¥ÀÌÅÍ Ãâ·ÂÇÏ±â(¿µ¹®µ¥ÀÌÅÍ Ãâ·Â)*/
+/*write(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ì½˜ì†”(Console)ë¡œ ë°ì´í„° ì¶œë ¥í•˜ê¸°(ì˜ë¬¸ë°ì´í„° ì¶œë ¥)*/
 
 public class EX04_ConsoleOutputObject_1 {
 	public static void main(String[] args) throws IOException {
 
-		//# OutputStream »ı¼º(ÄÜ¼Ö)
+		//# OutputStream ìƒì„±(ì½˜ì†”)
 		OutputStream os = System.out;
 
-		//#1. 1-byte ´ÜÀ§ ¾²±â		
+		//#1. 1-byte ë‹¨ìœ„ ì“°ê¸°		
 		os.write('J');
 		os.write('A');
 		os.write('V');
@@ -21,13 +21,13 @@ public class EX04_ConsoleOutputObject_1 {
 
 		os.flush();
 		
-		//#2-1. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ³¡°¡Áö¸¦ Ãâ·Â) 
+		//#2-1. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ëê°€ì§€ë¥¼ ì¶œë ¥) 
 		byte[] byteArray1 = "Hello!".getBytes();
 		os.write(byteArray1);
 		os.write('\n');
 		os.flush();
 
-		//#3-1. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ offset À§Ä¡¿¡¼­ºÎÅÍ length°³¼ö¸¦ ÀĞ¾î¿Í Ãâ·Â) 
+		//#3-1. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ offset ìœ„ì¹˜ì—ì„œë¶€í„° lengthê°œìˆ˜ë¥¼ ì½ì–´ì™€ ì¶œë ¥) 
 		byte[] byteArray2 = "Better the last smile than the first laughter.".getBytes();
 		os.write(byteArray2, 7, 8);
 		os.flush();

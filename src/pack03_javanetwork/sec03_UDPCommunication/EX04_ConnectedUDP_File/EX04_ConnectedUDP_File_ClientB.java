@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
+ï»¿package pack03_javanetwork.sec03_UDPCommunication.EX04_ConnectedUDP_File;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -10,20 +10,20 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
-/*UDP Åë½Å¿¹Á¦ 2 : Å¬¶óÀÌ¾ğÆ®°£ ÅØ½ºÆ®(file) Àü¼Û (¿¬°áÅë½Å) [Client B]*/
+/*UDP í†µì‹ ì˜ˆì œ 2 : í´ë¼ì´ì–¸íŠ¸ê°„ í…ìŠ¤íŠ¸(file) ì „ì†¡ (ì—°ê²°í†µì‹ ) [Client B]*/
 
 public class EX04_ConnectedUDP_File_ClientB {
 	public static void main(String[] args) {
 		System.out.println("<<ClientB>> - File");
 		
-		//#1. DatagramSocket »ı¼º(binding Æ÷ÇÔ) + ¼ÒÄÏ°£ ¿¬°á
+		//#1. DatagramSocket ìƒì„±(binding í¬í•¨) + ì†Œì¼“ê°„ ì—°ê²°
 		DatagramSocket ds = null;
 		try {
 			ds = new DatagramSocket(20000);
 			ds.connect(new InetSocketAddress("127.0.0.1",10000));
 		} catch (SocketException e) {}
 		
-		//#2. ÆÄÀÏÀúÀåÀ» À§ÇÑ ÆÄÀÏ Ãâ·Â ½ºÆ®¸² »ı¼º
+		//#2. íŒŒì¼ì €ì¥ì„ ìœ„í•œ íŒŒì¼ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 		File file = new File("src/pack04_javanetwork/common_files/receivedImageUsingUDP.jpg");			
 		FileOutputStream fos=null;
 		try {
@@ -32,7 +32,7 @@ public class EX04_ConnectedUDP_File_ClientB {
 		BufferedOutputStream bos = new BufferedOutputStream(fos);
 		
 		
-		//#3. µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶ ¼ö½Å (½ÃÀÛÅÂ±×¿Í ³¡ÅÂ±×¸¦ ±âÁØÀ¸·Î ÆÄÀÏ ¼ö½Å)		
+		//#3. ë°ì´í„°ê·¸ë¨ íŒ¨í‚· ìˆ˜ì‹  (ì‹œì‘íƒœê·¸ì™€ ëíƒœê·¸ë¥¼ ê¸°ì¤€ìœ¼ë¡œ íŒŒì¼ ìˆ˜ì‹ )		
 		String startSign = "/start";
 		String endSign = "/end";
 				
@@ -41,7 +41,7 @@ public class EX04_ConnectedUDP_File_ClientB {
 		try {			
 			ds.receive(receivedPacket);
 			if(new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim().equals(startSign)) {
-				System.out.println(file.getName() + " ÀÌ¸§À¸·Î ÆÄÀÏ ¼ö½Å ½ÃÀÛ");
+				System.out.println(file.getName() + " ì´ë¦„ìœ¼ë¡œ íŒŒì¼ ìˆ˜ì‹  ì‹œì‘");
 				while(true) {
 					ds.receive(receivedPacket);
 					if(new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim().equals(endSign))
@@ -55,9 +55,9 @@ public class EX04_ConnectedUDP_File_ClientB {
 			bos.close();
 		} catch (IOException e1) {}
 		
-		//#4. Àü¼Ûµ¥ÀÌÅÍ »ı¼º + Datagrampacket »ı¼º(¼ö½ÅÁö ÁÖ¼Ò Æ÷ÇÔ)		
-		System.out.println("ÆÄÀÏ ¼ö½Å ¿Ï·á");
-		byte[] sendData = "ÆÄÀÏÀü¼Û¿Ï·á".getBytes();
+		//#4. ì „ì†¡ë°ì´í„° ìƒì„± + Datagrampacket ìƒì„±(ìˆ˜ì‹ ì§€ ì£¼ì†Œ í¬í•¨)		
+		System.out.println("íŒŒì¼ ìˆ˜ì‹  ì™„ë£Œ");
+		byte[] sendData = "íŒŒì¼ì „ì†¡ì™„ë£Œ".getBytes();
 		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length);
 		
 		try {

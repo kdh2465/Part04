@@ -1,4 +1,4 @@
-package pack01_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX01_StatisticsOfPrimitiveStream;
 
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
@@ -6,7 +6,7 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
-/*±âº»ÀÚ·áÇü ½ºÆ®¸²ÀÇ ±âº» Åë°è µ¥ÀÌÅÍ °³º° ÃßÃâ*/
+/*ê¸°ë³¸ìžë£Œí˜• ìŠ¤íŠ¸ë¦¼ì˜ ê¸°ë³¸ í†µê³„ ë°ì´í„° ê°œë³„ ì¶”ì¶œ*/
 
 public class EX01_StatisticsOfPrimitiveStream {
 	public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class EX01_StatisticsOfPrimitiveStream {
 		System.out.println(avg.getAsDouble()); //OptionalDouble->double
 		
 		
-		//#3. OptionalXXX ¸Þ¼­µå (isPrsent(), ifPresent(), orElse, getAsXXX()
+		//#3. OptionalXXX ë©”ì„œë“œ (isPrsent(), ifPresent(), orElse, getAsXXX()
 		System.out.println(IntStream.of().min().isPresent()); //false
 		DoubleStream.of(5.8, 7.6).max().ifPresent(s->System.out.println(s)); //7.6
 		

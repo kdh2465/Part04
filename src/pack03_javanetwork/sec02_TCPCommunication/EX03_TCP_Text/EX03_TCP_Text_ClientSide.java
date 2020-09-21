@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,7 +9,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-/*TCP Åë½Å¿¹Á¦ 1 : Å¬¶óÀÌ¾ğÆ®¿Í ¼­¹ö°£ÀÇ ÅØ½ºÆ®(text) Àü¼Û [ClientSide]*/
+/*TCP í†µì‹ ì˜ˆì œ 1 : í´ë¼ì´ì–¸íŠ¸ì™€ ì„œë²„ê°„ì˜ í…ìŠ¤íŠ¸(text) ì „ì†¡ [ClientSide]*/
 
 public class EX03_TCP_Text_ClientSide {
 	public static void main(String[] args) {
@@ -17,13 +17,13 @@ public class EX03_TCP_Text_ClientSide {
 		Socket socket=null;
 		try {
 			socket = new Socket(InetAddress.getByName("localhost"),10000);
-			System.out.println("Server¿¡ Á¢¼Ó¿Ï·á");
-			System.out.println("Á¢¼Ó server ÁÖ¼Ò:"+socket.getInetAddress()+":"+socket.getPort());
+			System.out.println("Serverì— ì ‘ì†ì™„ë£Œ");
+			System.out.println("ì ‘ì† server ì£¼ì†Œ:"+socket.getInetAddress()+":"+socket.getPort());
 			
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
 			
-			dos.writeUTF("¾È³çÇÏ¼¼¿ä");
+			dos.writeUTF("ì•ˆë…•í•˜ì„¸ìš”");
 			dos.flush();
 			String str=dis.readUTF();
 			System.out.println("server: "+str);			

@@ -1,16 +1,16 @@
-package pack01_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX07_AnyAllNoneMatching;
 
 import java.util.stream.Stream;
 
-/*½ºÆ®¸² ¿ä¼Ò °ªÀÇ ¸ÅÄª(Matching)¿©ºÎ È®ÀÎ : any/all/none+Match()*/
+/*ìŠ¤íŠ¸ë¦¼ ìš”ì†Œ ê°’ì˜ ë§¤ì¹­(Matching)ì—¬ë¶€ í™•ì¸ : any/all/none+Match()*/
 
 public class EX07_AnyAllNoneMatching {
 	public static void main(String[] args) {
 		
 		//#. Matching (anyMatch(), allMatch(), noneMatch()
-		boolean anyMatch = Stream.of("¾È³ç","¹æ°¡","¶¯Å¥","°¡ÀÚ").anyMatch(s->s.contains("°¡"));
-		boolean allMatch = Stream.of("¾È³ç","¹æ°¡","¶¯Å¥","°¡ÀÚ").allMatch(s->s.contains("°¡"));
-		boolean noneMatch = Stream.of("¾È³ç","¹æ°¡","¶¯Å¥","°¡ÀÚ").noneMatch(s->s.contains("°¡"));
+		boolean anyMatch = Stream.of("ì•ˆë…•","ë°©ê°€","ë•¡í","ê°€ìž").anyMatch(s->s.contains("ê°€"));
+		boolean allMatch = Stream.of("ì•ˆë…•","ë°©ê°€","ë•¡í","ê°€ìž").allMatch(s->s.contains("ê°€"));
+		boolean noneMatch = Stream.of("ì•ˆë…•","ë°©ê°€","ë•¡í","ê°€ìž").noneMatch(s->s.contains("ê°€"));
 		System.out.println(anyMatch); //true
 		System.out.println(allMatch); //false
 		System.out.println(noneMatch);//false

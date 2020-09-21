@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec04_MulticastCommunication.EX03_Multicast_File;
+ï»¿package pack03_javanetwork.sec04_MulticastCommunication.EX03_Multicast_File;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -10,26 +10,26 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
 
-/*Multicast Åë½Å¿¹Á¦ 2 : Å¬¶óÀÌ¾ğÆ®°£ÀÇ ÆÄÀÏ(file) Àü¼Û [Client A]*/
+/*Multicast í†µì‹ ì˜ˆì œ 2 : í´ë¼ì´ì–¸íŠ¸ê°„ì˜ íŒŒì¼(file) ì „ì†¡ [Client A]*/
 
 public class EX03_Multicast_File_ClientA {
 	public static void main(String[] args) {
 		
 		System.out.println("<<ClientA>> - File");
-		//#1. ¸ÖÆ¼Ä³½ºÆ® ÁÖ¼ÒÁö »ı¼º
+		//#1. ë©€í‹°ìºìŠ¤íŠ¸ ì£¼ì†Œì§€ ìƒì„±
 		InetAddress multicastAddress = null;
 		try {
 			multicastAddress = InetAddress.getByName("234.234.234.234");
 		} catch (UnknownHostException e) {}
-		int multicastPort = 10000; //UDP Æ÷Æ®
+		int multicastPort = 10000; //UDP í¬íŠ¸
 		
-		//#2. ¸ÖÆ¼Ä³½ºÆ® ¼ÒÄÏ »ı¼º (°¡»ó°ø°£ÀÇ ¸ÖÆ¼Ä³½ºÆ®ÁÖ¼Ò·Î ÆĞÅ¶À» Àü¼ÛÇÏ±â À§ÇØ¼­´Â ¸ÖÆ¼Ä³½ºÆ®¼ÒÄÏÀ» »ı¼ºÇÏ¿© send)
+		//#2. ë©€í‹°ìºìŠ¤íŠ¸ ì†Œì¼“ ìƒì„± (ê°€ìƒê³µê°„ì˜ ë©€í‹°ìºìŠ¤íŠ¸ì£¼ì†Œë¡œ íŒ¨í‚·ì„ ì „ì†¡í•˜ê¸° ìœ„í•´ì„œëŠ” ë©€í‹°ìºìŠ¤íŠ¸ì†Œì¼“ì„ ìƒì„±í•˜ì—¬ send)
 		MulticastSocket mcs = null;
 		try {
 			mcs = new MulticastSocket(multicastPort); 
 		} catch (IOException e) {}
 		
-		//#3. ÆÄÀÏ ·Îµù
+		//#3. íŒŒì¼ ë¡œë”©
 		File file = new File("src/pack04_javanetwork/common_files/sendImageUsingMulticast.jpg");
 		FileInputStream fis=null;
 		try {
@@ -37,9 +37,9 @@ public class EX03_Multicast_File_ClientA {
 		} catch (FileNotFoundException e1) {}
 		BufferedInputStream bis = new BufferedInputStream(fis);
 
-		//#4. 2048 »çÀÌÁî·Î ³ª´©¾î µ¥ÀÌÅÍ±×·¥ÆĞÅ¶ ¿¬¼Ó Àü¼Û
-		//@4-1. ÆÄÀÏÀü¼Û ½ÃÀÛ »çÀÎ Àü¼Û
-		System.out.println(file.getName() + " ÆÄÀÏ Àü¼Û ½ÃÀÛ");
+		//#4. 2048 ì‚¬ì´ì¦ˆë¡œ ë‚˜ëˆ„ì–´ ë°ì´í„°ê·¸ë¨íŒ¨í‚· ì—°ì† ì „ì†¡
+		//@4-1. íŒŒì¼ì „ì†¡ ì‹œì‘ ì‚¬ì¸ ì „ì†¡
+		System.out.println(file.getName() + " íŒŒì¼ ì „ì†¡ ì‹œì‘");
 		String startSign = "/start";
 		DatagramPacket sendPacket = new DatagramPacket(startSign.getBytes(), startSign.length(), multicastAddress, multicastPort);
 		try {
@@ -47,9 +47,9 @@ public class EX03_Multicast_File_ClientA {
 			mcs.send(sendPacket);
 		} catch (IOException e1) {}
 		
-		//@4-2. ½ÇÁ¦ ÆÄÀÏ µ¥ÀÌÅÍ Àü¼Û
+		//@4-2. ì‹¤ì œ íŒŒì¼ ë°ì´í„° ì „ì†¡
 		int len;
-		byte[] filedata = new byte[2048]; // ÃÖ´ë´Â 65508byteÀÌÁö¸¸ ¾ÈÁ¤Àû ³×Æ®¿öÅ© Åë½ÅÀ» À§ÇØ¼­ 2048byte¾¿ Àß¶ó¼­ Àü¼Û
+		byte[] filedata = new byte[2048]; // ìµœëŒ€ëŠ” 65508byteì´ì§€ë§Œ ì•ˆì •ì  ë„¤íŠ¸ì›Œí¬ í†µì‹ ì„ ìœ„í•´ì„œ 2048byteì”© ì˜ë¼ì„œ ì „ì†¡
 		try {
 			while ((len = bis.read(filedata)) != -1) {
 				sendPacket = new DatagramPacket(filedata, len, multicastAddress, multicastPort);
@@ -57,34 +57,34 @@ public class EX03_Multicast_File_ClientA {
 			}
 		} catch (IOException e) {}
 		
-		//@4-3. ÆÄÀÏÀü¼Û Á¾·á »çÀÎ Àü¼Û
+		//@4-3. íŒŒì¼ì „ì†¡ ì¢…ë£Œ ì‚¬ì¸ ì „ì†¡
 		String endSign = "/end";
 		sendPacket = new DatagramPacket(endSign.getBytes(), endSign.length(), multicastAddress, multicastPort);
 		try {
 			mcs.send(sendPacket);
 		} catch (IOException e1) {}
 		
-		//#5. ¸ÖÆ¼Ä³½ºÆ® ±×·ì¿¡ Á¶ÀÎ (ÀÌÈÄ Æ÷Æ®¹øÈ£°¡ ¸ÂÀ¸¸é µ¥ÀÌÅÍ ¼ö½Å)	
+		//#5. ë©€í‹°ìºìŠ¤íŠ¸ ê·¸ë£¹ì— ì¡°ì¸ (ì´í›„ í¬íŠ¸ë²ˆí˜¸ê°€ ë§ìœ¼ë©´ ë°ì´í„° ìˆ˜ì‹ )	
 		try {
-			mcs.joinGroup(multicastAddress); //°³³äÀûÀ¸·Î °¡»óÀÇ ¸ÖÆ¼Ä³½ºÆ®·Î µµÂøÇÏ´Â ÆĞÅ¶ Áß Æ÷Æ®°¡ 10000ÀÎ °Ç ³ªµµ ¹Ş°Ú´Ù.
+			mcs.joinGroup(multicastAddress); //ê°œë…ì ìœ¼ë¡œ ê°€ìƒì˜ ë©€í‹°ìºìŠ¤íŠ¸ë¡œ ë„ì°©í•˜ëŠ” íŒ¨í‚· ì¤‘ í¬íŠ¸ê°€ 10000ì¸ ê±´ ë‚˜ë„ ë°›ê² ë‹¤.
 		} catch (IOException e) {}
 		
-		//#6. ¼ö½Å ¹ŞÀº µ¥ÀÌÅÍ±×·¥À» ÀúÀåÇÒ ºñ¾îÀÖ´Â µ¥ÀÌÅÍÅ©·¥ °´Ã¼ »ı¼º (ÃÖ´ë Å©±â)
+		//#6. ìˆ˜ì‹  ë°›ì€ ë°ì´í„°ê·¸ë¨ì„ ì €ì¥í•  ë¹„ì–´ìˆëŠ” ë°ì´í„°í¬ë¨ ê°ì²´ ìƒì„± (ìµœëŒ€ í¬ê¸°)
 		byte[] receivedData = new byte[65508];
 		DatagramPacket receivedPacket = new DatagramPacket(receivedData, receivedData.length);
 		
-		//#7. receive() ¸Ş¼­µå·Î µ¥ÀÌÅÍ ¼ö½Å
+		//#7. receive() ë©”ì„œë“œë¡œ ë°ì´í„° ìˆ˜ì‹ 
 		try {
 			mcs.receive(receivedPacket);
 		} catch (IOException e) {}				
-		System.out.println("¼ö½Åµ¥ÀÌÅÍ: "+ new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim());
+		System.out.println("ìˆ˜ì‹ ë°ì´í„°: "+ new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim());
 						
-		//#8. ¸ÖÆ¼Ä³½ºÆ® ±×·ì ³ª°¡±â
+		//#8. ë©€í‹°ìºìŠ¤íŠ¸ ê·¸ë£¹ ë‚˜ê°€ê¸°
 		try {
-			mcs.leaveGroup(multicastAddress); //leave¸¦ ÇÏÁö ¾ÊÀ¸¸é ÀÚ½ÅÀÌ º¸³½ ¸Ş¼¼Áö¸¦ ´Ù½Ã ÀÚ½Åµµ ¹ŞÀ½
+			mcs.leaveGroup(multicastAddress); //leaveë¥¼ í•˜ì§€ ì•Šìœ¼ë©´ ìì‹ ì´ ë³´ë‚¸ ë©”ì„¸ì§€ë¥¼ ë‹¤ì‹œ ìì‹ ë„ ë°›ìŒ
 		} catch (IOException e1) {}
 		
-		//#9. ¼ÒÄÏ ´İ±â
+		//#9. ì†Œì¼“ ë‹«ê¸°
 		mcs.close();		
 	}
 }

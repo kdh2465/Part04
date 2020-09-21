@@ -1,18 +1,18 @@
-package pack02_javaio.sec02_FileInputOutputStream.EX02_FileInputStream_2;
+ï»¿package pack02_javaio.sec02_FileInputOutputStream.EX02_FileInputStream_2;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/*FileInputStreamÀÇ read(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ ÀĞ±â (¿µ¹®ÆÄÀÏ ÀĞ±â)*/
+/*FileInputStreamì˜ read(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ë°ì´í„° ì½ê¸° (ì˜ë¬¸íŒŒì¼ ì½ê¸°)*/
 
 public class EX02_FileInputStream_2 {
 	public static void main(String[] args) throws IOException {
-		//ÀÔ·ÂÆÄÀÏ »ı¼º
+		//ì…ë ¥íŒŒì¼ ìƒì„±
 		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream1.txt ");
 
-		//#1. 1-byte ´ÜÀ§ ÀĞ±â
+		//#1. 1-byte ë‹¨ìœ„ ì½ê¸°
 		InputStream is1 = new FileInputStream(inFile);
 		int data;
 		while((data=is1.read())!= -1 ) { 
@@ -21,7 +21,7 @@ public class EX02_FileInputStream_2 {
 		System.out.println(); System.out.println();
 		
 		
-		//#2-1. n-byte ´ÜÀ§ ÀĞ±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ÀĞÀº µ¥ÀÌÅÍ ÀúÀå) 
+		//#2-1. n-byte ë‹¨ìœ„ ì½ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ì½ì€ ë°ì´í„° ì €ì¥) 
 		byte[] byteArray1 = new byte[9];
 		InputStream is2 = new FileInputStream(inFile);
 		int count1;
@@ -33,7 +33,7 @@ public class EX02_FileInputStream_2 {
 		System.out.println(); System.out.println();
 
 		
-		//#3-1. n-byte ´ÜÀ§ ÀÔ·Â (length¸¸Å­ÀÇ ±æÀÌ¸¦ ÀĞ¾î¿Í byte[]ÀÇ offset À§Ä¡¿¡¼­ ºÎÅÍ ÀúÀå) 
+		//#3-1. n-byte ë‹¨ìœ„ ì…ë ¥ (lengthë§Œí¼ì˜ ê¸¸ì´ë¥¼ ì½ì–´ì™€ byte[]ì˜ offset ìœ„ì¹˜ì—ì„œ ë¶€í„° ì €ì¥) 
 		byte[] byteArray2 = new byte[9];
 		InputStream is3 = new FileInputStream(inFile);
 		int offset=3; int length=6;
@@ -41,7 +41,7 @@ public class EX02_FileInputStream_2 {
 		for(int i=0; i<offset+count2; i++)
 			System.out.print((char)byteArray2[i]);		
 		
-		//#InputStream ÀÚ¿ø ¹İ³³
+		//#InputStream ìì› ë°˜ë‚©
 		is1.close();
 		is2.close();
 		is3.close();

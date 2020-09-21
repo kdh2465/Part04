@@ -1,4 +1,4 @@
-package pack02_javaio.sec02_FileInputOutputStream.EX05_FileOutputStream_2;
+ï»¿package pack02_javaio.sec02_FileInputOutputStream.EX05_FileOutputStream_2;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,27 +6,27 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
-/*FileOutputStreamÀÇ write(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ ¾²±â (ÇÑ±ÛÆÄÀÏ ¾²±â)*/
+/*FileOutputStreamì˜ write(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ë°ì´í„° ì“°ê¸° (í•œê¸€íŒŒì¼ ì“°ê¸°)*/
 
 public class EX05_FileOutputStream_2 {
 	public static void main(String[] args) throws IOException {
 		
-		//ÀÔ·ÂÆÄÀÏ »ı¼º
+		//ì…ë ¥íŒŒì¼ ìƒì„±
 		File outFile = new File("src/pack03_javaio/sec02_files/FileOutputStream2.txt");
 		if(!outFile.exists()) outFile.createNewFile();
 		
-		//#2-2. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ³¡°¡Áö¸¦ Ãâ·Â) 
-		byte[] byteArray1 = "¾È³çÇÏ¼¼¿ä".getBytes(Charset.forName("MS949"));
-		OutputStream os2 = new FileOutputStream(outFile, false);//³»¿ë ¿¬°á
+		//#2-2. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ëê°€ì§€ë¥¼ ì¶œë ¥) 
+		byte[] byteArray1 = "ì•ˆë…•í•˜ì„¸ìš”".getBytes(Charset.forName("MS949"));
+		OutputStream os2 = new FileOutputStream(outFile, false);//ë‚´ìš© ì—°ê²°
 		os2.write(byteArray1);
 		os2.write('\n');
 		
 		os2.flush();
 		os2.close();
 		
-		//#3-2. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ offset À§Ä¡¿¡¼­ºÎÅÍ length°³¼ö¸¦ ÀĞ¾î¿Í Ãâ·Â) 
-		byte[] byteArray2 = "¹İ°©½À´Ï´Ù.".getBytes(Charset.defaultCharset());
-		OutputStream os3 = new FileOutputStream(outFile, true); //³»¿ë ¿¬°á
+		//#3-2. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ offset ìœ„ì¹˜ì—ì„œë¶€í„° lengthê°œìˆ˜ë¥¼ ì½ì–´ì™€ ì¶œë ¥) 
+		byte[] byteArray2 = "ë°˜ê°‘ìŠµë‹ˆë‹¤.".getBytes(Charset.defaultCharset());
+		OutputStream os3 = new FileOutputStream(outFile, true); //ë‚´ìš© ì—°ê²°
 		os3.write(byteArray2, 2, 4);
 
 		os3.flush();

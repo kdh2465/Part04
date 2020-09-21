@@ -1,30 +1,30 @@
-package pack01_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
+ï»¿package pack01_stream.sec03_TerminalOperations.EX03_PrimitiveSummaryStaticsOfPrimitiveStream;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
-/*±âº»ÀÚ·áÇü ½ºÆ®¸²ÀÇ ±âº» Åë°è µ¥ÀÌÅÍ ÀÏ°ı ÃßÃâ*/
+/*ê¸°ë³¸ìë£Œí˜• ìŠ¤íŠ¸ë¦¼ì˜ ê¸°ë³¸ í†µê³„ ë°ì´í„° ì¼ê´„ ì¶”ì¶œ*/
 
 public class EX03_PrimitiveSummaryStaticsOfPrimitiveStream {
 	public static void main(String[] args) {
 		
 		//#1. IntSummaryStatics
 		IntSummaryStatistics iss = IntStream.of().summaryStatistics();
-		System.out.println(iss.getCount());//¿ä¼öÀÇ ¼ö (¿ä¼Ò°¡ ¾ø´Â °æ¿ì 0)
-		System.out.println(iss.getSum());//¿ä¼öÀÇ ÇÕ (¿ä¼Ò°¡ ¾ø´Â °æ¿ì 0)
-		System.out.println(iss.getMin());//¿ä¼öÀÇ ÃÖ¼Ò°ª (¿ä¼Ò°¡ ¾ø´Â °æ¿ì +Integer.MAX_VALUE)
-		System.out.println(iss.getMax());//¿ä¼öÀÇ ÃÖ´ë°ª (¿ä¼Ò°¡ ¾ø´Â °æ¿ì -Integer.MAX_VALUE)
-		System.out.println(iss.getAverage());//¿ä¼öÀÇ Æò±Õ  (¿ä¼Ò°¡ ¾ø´Â °æ¿ì0.0)
+		System.out.println(iss.getCount());//ìš”ìˆ˜ì˜ ìˆ˜ (ìš”ì†Œê°€ ì—†ëŠ” ê²½ìš° 0)
+		System.out.println(iss.getSum());//ìš”ìˆ˜ì˜ í•© (ìš”ì†Œê°€ ì—†ëŠ” ê²½ìš° 0)
+		System.out.println(iss.getMin());//ìš”ìˆ˜ì˜ ìµœì†Œê°’ (ìš”ì†Œê°€ ì—†ëŠ” ê²½ìš° +Integer.MAX_VALUE)
+		System.out.println(iss.getMax());//ìš”ìˆ˜ì˜ ìµœëŒ€ê°’ (ìš”ì†Œê°€ ì—†ëŠ” ê²½ìš° -Integer.MAX_VALUE)
+		System.out.println(iss.getAverage());//ìš”ìˆ˜ì˜ í‰ê·   (ìš”ì†Œê°€ ì—†ëŠ” ê²½ìš°0.0)
 
 		//#2. DoubleSummaryStatics
 		DoubleSummaryStatistics dss = DoubleStream.of(1.2, 3.4, 5.6).summaryStatistics();
-		System.out.println(dss.getCount());//¿ä¼öÀÇ ¼ö
-		System.out.println(dss.getSum());//¿ä¼öÀÇ ÇÕ
-		System.out.println(dss.getMin());//¿ä¼öÀÇ ÃÖ¼Ò°ª
-		System.out.println(dss.getMax());//¿ä¼öÀÇ ÃÖ´ë°ª
-		System.out.println(dss.getAverage());//¿ä¼öÀÇ Æò±Õ
+		System.out.println(dss.getCount());//ìš”ìˆ˜ì˜ ìˆ˜
+		System.out.println(dss.getSum());//ìš”ìˆ˜ì˜ í•©
+		System.out.println(dss.getMin());//ìš”ìˆ˜ì˜ ìµœì†Œê°’
+		System.out.println(dss.getMax());//ìš”ìˆ˜ì˜ ìµœëŒ€ê°’
+		System.out.println(dss.getAverage());//ìš”ìˆ˜ì˜ í‰ê· 
 
 	}
 }

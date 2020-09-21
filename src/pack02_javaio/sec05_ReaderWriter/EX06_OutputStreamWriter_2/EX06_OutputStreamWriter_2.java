@@ -1,18 +1,18 @@
-package pack02_javaio.sec05_ReaderWriter.EX06_OutputStreamWriter_2;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX06_OutputStreamWriter_2;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-/*MS949 ¹®ÀÚ¼Â°ú UTF-8¹®ÀÚ¼ÂÀ» ÀÌ¿ëÇÏ¿© ÄÜ¼Ö(console)¿¡ °¢°¢ Ãâ·ÂÇÏ±â*/
+/*MS949 ë¬¸ìì…‹ê³¼ UTF-8ë¬¸ìì…‹ì„ ì´ìš©í•˜ì—¬ ì½˜ì†”(console)ì— ê°ê° ì¶œë ¥í•˜ê¸°*/
 
 public class EX06_OutputStreamWriter_2 {
 	public static void main(String[] args) throws IOException {
 		
-		//#1.ÄÜ¼Ö Ãâ·Â: OutputStreamWriter¸¦ »ç¿ëÇÏ¿© ¹®ÀÚ´ÜÀ§ ÄÜ¼Ö Ãâ·ÂÇÏ±â (MS949 Å¸ÀÔ Ãâ·Â) Windows ±âÁØ
+		//#1.ì½˜ì†” ì¶œë ¥: OutputStreamWriterë¥¼ ì‚¬ìš©í•˜ì—¬ ë¬¸ìë‹¨ìœ„ ì½˜ì†” ì¶œë ¥í•˜ê¸° (MS949 íƒ€ì… ì¶œë ¥) Windows ê¸°ì¤€
 		try{ //MS949
 		    OutputStreamWriter osw = new OutputStreamWriter(System.out, "MS949");
-		    osw.write("OutputStreamWriter¸¦ ÀÌ¿ëÇÑ\n".toCharArray());
-		    osw.write("ÄÜ¼ÖÃâ·Â ¿¹Á¦ÀÔ´Ï´Ù.\nÇÑ±Û°ú ¿µ¹®ÀÌ ¸ğµÎ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+		    osw.write("OutputStreamWriterë¥¼ ì´ìš©í•œ\n".toCharArray());
+		    osw.write("ì½˜ì†”ì¶œë ¥ ì˜ˆì œì…ë‹ˆë‹¤.\ní•œê¸€ê³¼ ì˜ë¬¸ì´ ëª¨ë‘ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		    osw.write('\n');
 		    osw.write("Good Bye!!!\n");
 		    osw.flush();
@@ -20,11 +20,11 @@ public class EX06_OutputStreamWriter_2 {
 		} catch(IOException e) {}
 		
 
-		//#2. ÄÜ¼Ö Ãâ·Â: OutputStreamWriter¸¦ »ç¿ëÇÏ¿© ¹®ÀÚ´ÜÀ§ ÄÜ¼Ö Ãâ·ÂÇÏ±â (UTF-8 Å¸ÀÔ Ãâ·Â) ÇÑ±Û±úÁü
+		//#2. ì½˜ì†” ì¶œë ¥: OutputStreamWriterë¥¼ ì‚¬ìš©í•˜ì—¬ ë¬¸ìë‹¨ìœ„ ì½˜ì†” ì¶œë ¥í•˜ê¸° (UTF-8 íƒ€ì… ì¶œë ¥) í•œê¸€ê¹¨ì§
 		try{ //UTF-8
 		    OutputStreamWriter osw = new OutputStreamWriter(System.out, "UTF-8");
-		    osw.write("OutputStreamWriter¸¦ ÀÌ¿ëÇÑ\n".toCharArray());
-		    osw.write("ÄÜ¼ÖÃâ·Â ¿¹Á¦ÀÔ´Ï´Ù.\nÇÑ±Û°ú ¿µ¹®ÀÌ ¸ğµÎ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+		    osw.write("OutputStreamWriterë¥¼ ì´ìš©í•œ\n".toCharArray());
+		    osw.write("ì½˜ì†”ì¶œë ¥ ì˜ˆì œì…ë‹ˆë‹¤.\ní•œê¸€ê³¼ ì˜ë¬¸ì´ ëª¨ë‘ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		    osw.write('\n');
 		    osw.write("Good Bye!!!\n");
 		    osw.flush();

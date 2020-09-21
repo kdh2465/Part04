@@ -1,24 +1,24 @@
-package pack02_javaio.sec01_FileAndCharset.EX02_FileMethods;
+ï»¿package pack02_javaio.sec01_FileAndCharset.EX02_FileMethods;
 
 import java.io.File;
 
-/*ÆÄÀÏ Å¬·¡½ºÀÇ ÁÖ¿ä ¸Ş¼­µå*/
+/*íŒŒì¼ í´ë˜ìŠ¤ì˜ ì£¼ìš” ë©”ì„œë“œ*/
 
 public class EX02_FileMethods {
 	public static void main(String[] args) {
-		//#. C µå¶óÀÌºê³»¿¡ temp Æú´õ°¡ ¾ø´Â °æ¿ì »ı¼º
+		//#. C ë“œë¼ì´ë¸Œë‚´ì— temp í´ë”ê°€ ì—†ëŠ” ê²½ìš° ìƒì„±
 		File tempDir = new File("C:/temp");
 		if(!tempDir.exists()) tempDir.mkdir();
 		
-		//#. ÆÄÀÏ°´Ã¼ »ı¼º
+		//#. íŒŒì¼ê°ì²´ ìƒì„±
 		File file = new File("C:/Windows");
 		
-		//#. ÆÄÀÏ ¸Ş¼­µå 
-		System.out.println("Àı´ë°æ·Î: "+file.getAbsolutePath());
-		System.out.println("Æú´õ(?): "+file.isDirectory());
-		System.out.println("ÆÄÀÏ(?): "+file.isFile());
-		System.out.println("ÆÄÀÏÀÌ¸§: "+file.getName()); //¶Ç´Â Æú´õÀÌ¸§
-		System.out.println("ºÎ¸ğÆú´õ: "+file.getParent());
+		//#. íŒŒì¼ ë©”ì„œë“œ 
+		System.out.println("ì ˆëŒ€ê²½ë¡œ: "+file.getAbsolutePath());
+		System.out.println("í´ë”(?): "+file.isDirectory());
+		System.out.println("íŒŒì¼(?): "+file.isFile());
+		System.out.println("íŒŒì¼ì´ë¦„: "+file.getName()); //ë˜ëŠ” í´ë”ì´ë¦„
+		System.out.println("ë¶€ëª¨í´ë”: "+file.getParent());
 		
 		File newfile1 = new File("C:/temp/abc");
 		System.out.println(newfile1.mkdir()); //true		
@@ -29,7 +29,7 @@ public class EX02_FileMethods {
 				
 		File[] fnames = file.listFiles();
 		for(File fname : fnames)
-			System.out.println((fname.isDirectory()?"Æú´õ: ":"ÆÄÀÏ: ")+fname.getName());
+			System.out.println((fname.isDirectory()?"í´ë”: ":"íŒŒì¼: ")+fname.getName());
 		
 	}
 }

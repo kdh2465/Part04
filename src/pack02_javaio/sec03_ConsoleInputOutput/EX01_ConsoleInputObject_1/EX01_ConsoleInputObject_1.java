@@ -1,22 +1,22 @@
-package pack02_javaio.sec03_ConsoleInputOutput.EX01_ConsoleInputObject_1;
+ï»¿package pack02_javaio.sec03_ConsoleInputOutput.EX01_ConsoleInputObject_1;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-/*ÄÜ¼Ö(Console) ÀÔ·ÂÀ» À§ÇÑ System.in È°¿ë°ú available(), close() ¸Ş¼­µåÀÇ È°¿ë*/
+/*ì½˜ì†”(Console) ì…ë ¥ì„ ìœ„í•œ System.in í™œìš©ê³¼ available(), close() ë©”ì„œë“œì˜ í™œìš©*/
 
 public class EX01_ConsoleInputObject_1 {
 	public static void main(String[] args) throws IOException {
-		//InputStream »ı¼º 
+		//InputStream ìƒì„± 
 		InputStream is = System.in;
 		int data;
 		while((data=is.read())!='\r') {
-		  System.out.println("ÀĞÀº µ¥ÀÌÅÍ : "+ (char)data + " ³²Àº ¹ÙÀÌÆ®¼ö: "+ is.available());
+		  System.out.println("ì½ì€ ë°ì´í„° : "+ (char)data + " ë‚¨ì€ ë°”ì´íŠ¸ìˆ˜: "+ is.available());
 		}
 		System.out.println(data); //\r(13)
 		System.out.println(is.read()); //\n(10)
 
-		//InputStream ÀÚ¿ø¹İ³³
+		//InputStream ìì›ë°˜ë‚©
 		is.close();
 	}
 }

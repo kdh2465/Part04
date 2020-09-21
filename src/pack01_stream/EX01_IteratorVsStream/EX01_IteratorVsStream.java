@@ -1,16 +1,16 @@
-package pack01_stream.EX01_IteratorVsStream;
+ï»¿package pack01_stream.EX01_IteratorVsStream;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
-/*¿ÜºÎ¹İº¹ÀÚ(iterator)¿Í ³»ºÎ¹İº¹ÀÚ(stream)ÀÇ ÄÚµå ºñ±³*/
+/*ì™¸ë¶€ë°˜ë³µì(iterator)ì™€ ë‚´ë¶€ë°˜ë³µì(stream)ì˜ ì½”ë“œ ë¹„êµ*/
 
 public class EX01_IteratorVsStream {
 	public static void main(String[] args) {
 		
-		//#1. ¿ÜºÎ¹İº¹ÀÚ (iterator)
+		//#1. ì™¸ë¶€ë°˜ë³µì (iterator)
 		List<Integer> list1 = Arrays.asList(2,1,3,5);
 		Iterator<Integer> iterator = list1.iterator();
 		while(iterator.hasNext()) {
@@ -18,7 +18,7 @@ public class EX01_IteratorVsStream {
 		}
 		System.out.println();
 		
-		//#2. ³»ºÎ¹İº¹ÀÚ (stream)
+		//#2. ë‚´ë¶€ë°˜ë³µì (stream)
 		List<Integer> list2 = Arrays.asList(2,1,3,5);
 		Stream<Integer> stream = list2.stream();
 		stream.forEach(i->System.out.print(i+" ")); //2,1,3,5		

@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec04_MulticastCommunication.EX01_MulticastSocketObject;
+ï»¿package pack03_javanetwork.sec04_MulticastCommunication.EX01_MulticastSocketObject;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -7,21 +7,21 @@ import java.net.InetSocketAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
 
-/*Multicast Åë½ÅÀ» À§ÇÑ MulticastSocket Å¬·¡½ºÀÇ È°¿ë*/
+/*Multicast í†µì‹ ì„ ìœ„í•œ MulticastSocket í´ë˜ìŠ¤ì˜ í™œìš©*/
 
 public class EX01_MulticastSocketObject {
 	public static void main(String[] args) {
-		//# ¸ÖÆ¼Ä³½ºÆ® (224.0.0.0~239.255.255.255) : multicastSocket Å¬·¡½º
+		//# ë©€í‹°ìºìŠ¤íŠ¸ (224.0.0.0~239.255.255.255) : multicastSocket í´ë˜ìŠ¤
 		
-		//#1. MulticastSocket °´Ã¼ »ı¼º
+		//#1. MulticastSocket ê°ì²´ ìƒì„±
 		MulticastSocket mcs1 = null;
 		MulticastSocket mcs2 = null;
 		MulticastSocket mcs3 = null;
 		
 		try {
-			mcs1 = new MulticastSocket(); //ºñ¾îÀÖ´Â Æ÷Æ®·Î ÀÚµ¿ ¹ÙÀÎµù
+			mcs1 = new MulticastSocket(); //ë¹„ì–´ìˆëŠ” í¬íŠ¸ë¡œ ìë™ ë°”ì¸ë”©
 			mcs2 = new MulticastSocket(10000);
-			mcs3 = new MulticastSocket(new InetSocketAddress("localhost",20000)); //ÀÏ¹İÀûÀ¸·Î ¸ÖÆ¼Ä³½ºÆ®¿¡¼­´Â Æ÷Æ®¸¸ ÁöÁ¤
+			mcs3 = new MulticastSocket(new InetSocketAddress("localhost",20000)); //ì¼ë°˜ì ìœ¼ë¡œ ë©€í‹°ìºìŠ¤íŠ¸ì—ì„œëŠ” í¬íŠ¸ë§Œ ì§€ì •
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -34,9 +34,9 @@ public class EX01_MulticastSocketObject {
 		System.out.println();
 		
 		
-		//#2. MulticastSocket ÁÖ¿ä ¸Ş¼­µå
+		//#2. MulticastSocket ì£¼ìš” ë©”ì„œë“œ
 		
-		//@2-1. getTimeToLive(), setTimeToLive(); 0~255±îÁö °¡´É (ÀÌ¿Ü IllegalArgumentException ¹ß»ı) : ¼ıÀÚÀÇ ÀÇ¹Ì (Åë°úÇÏ´Â ´Ü¸»(½ºÀ§Ä¡, ¶ó¿ìÅÍ µî) : 1ÀÎ °æ¿ì´Â Àı´ë ·ÎÄÃ ³×Æ®¿öÅ©¸¦ ºüÁ®³ª°¥ ¼ö ¾ø´Ù.
+		//@2-1. getTimeToLive(), setTimeToLive(); 0~255ê¹Œì§€ ê°€ëŠ¥ (ì´ì™¸ IllegalArgumentException ë°œìƒ) : ìˆ«ìì˜ ì˜ë¯¸ (í†µê³¼í•˜ëŠ” ë‹¨ë§(ìŠ¤ìœ„ì¹˜, ë¼ìš°í„° ë“±) : 1ì¸ ê²½ìš°ëŠ” ì ˆëŒ€ ë¡œì»¬ ë„¤íŠ¸ì›Œí¬ë¥¼ ë¹ ì ¸ë‚˜ê°ˆ ìˆ˜ ì—†ë‹¤.
 		try {
 			System.out.println("TimeToLive: " + mcs1.getTimeToLive()); //1
 			mcs1.setTimeToLive(50);
@@ -44,14 +44,14 @@ public class EX01_MulticastSocketObject {
 		} catch (IOException e1) {}
 		System.out.println();
 		
-		//@2-2. joinGroup(InetAddress), leaveGroup(InetAddress) : InetAddress: (224.0.0.0~239.255.255.255) : ¸ÖÆ¼Ä³½ºÆ® ³»¿ëÀ» ¼ö½ÅÇÏ±â À§ÇØ ±×·ì¿¡ Á¶ÀÎÇÏ°Å³ª Å»Åğ
-		//      send(DatagramPacket), receive(DatagramPacket) : ¸ÖÆ¼Ä³½ºÆ® ±×·ìÀ¸·Î µ¥ÀÌÅÍ±×·¥ ÆĞÅ¶ÀÇ Àü¼Û ¹× ¼ö½Å
+		//@2-2. joinGroup(InetAddress), leaveGroup(InetAddress) : InetAddress: (224.0.0.0~239.255.255.255) : ë©€í‹°ìºìŠ¤íŠ¸ ë‚´ìš©ì„ ìˆ˜ì‹ í•˜ê¸° ìœ„í•´ ê·¸ë£¹ì— ì¡°ì¸í•˜ê±°ë‚˜ íƒˆí‡´
+		//      send(DatagramPacket), receive(DatagramPacket) : ë©€í‹°ìºìŠ¤íŠ¸ ê·¸ë£¹ìœ¼ë¡œ ë°ì´í„°ê·¸ë¨ íŒ¨í‚·ì˜ ì „ì†¡ ë° ìˆ˜ì‹ 
 		try {
 			
 			mcs1.joinGroup(InetAddress.getByName("234.234.234.234"));
 			mcs2.joinGroup(InetAddress.getByName("234.234.234.234"));
 						
-			byte[] sendData = "¾È³çÇÏ¼¼¿ä".getBytes();
+			byte[] sendData = "ì•ˆë…•í•˜ì„¸ìš”".getBytes();
 
 			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, InetAddress.getByName("234.234.234.234"), 10000);			
 			mcs1.send(sendPacket);
@@ -60,7 +60,7 @@ public class EX01_MulticastSocketObject {
 			DatagramPacket receivedPacket = new DatagramPacket(receivedData, receivedData.length);//, InetAddress.getByName("234.234.234.234"), 10000);
 			mcs2.setSoTimeout(1000);
 			mcs2.receive(receivedPacket);
-			System.out.println("¼ö½Åµ¥ÀÌÅÍ: "+ new String(receivedPacket.getData()).trim() + "  ¼Û½ÅÁö ÁÖ¼Ò: "+receivedPacket.getSocketAddress());
+			System.out.println("ìˆ˜ì‹ ë°ì´í„°: "+ new String(receivedPacket.getData()).trim() + "  ì†¡ì‹ ì§€ ì£¼ì†Œ: "+receivedPacket.getSocketAddress());
 			
 			mcs1.leaveGroup(InetAddress.getByName("234.234.234.234"));
 			mcs2.leaveGroup(InetAddress.getByName("234.234.234.234"));
@@ -69,7 +69,7 @@ public class EX01_MulticastSocketObject {
 		catch (UnknownHostException e1) {e1.printStackTrace();} 
 		catch (IOException e) {e.printStackTrace();}
 								
-//		//@2-3. setInterface(), getInterface() ¿©·¯ÀåÀÇ lanÄ«µå¸¦ »ç¿ëÇÏ´Â °æ¿ì Æ¯Á¤ lanÄ«µå·ÎÀÇ ¹ÙÀÎµù ÁöÁ¤À» À§ÇØ »ç¿ë
+//		//@2-3. setInterface(), getInterface() ì—¬ëŸ¬ì¥ì˜ lanì¹´ë“œë¥¼ ì‚¬ìš©í•˜ëŠ” ê²½ìš° íŠ¹ì • lanì¹´ë“œë¡œì˜ ë°”ì¸ë”© ì§€ì •ì„ ìœ„í•´ ì‚¬ìš©
 //		try {			
 //			mcs1.setInterface(InetAddress.getByName("localhost"));
 //			System.out.println(mcs1.getInterface()); //127.0.0.1

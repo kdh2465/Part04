@@ -1,25 +1,25 @@
-package pack02_javaio.sec03_ConsoleInputOutput.EX05_ConsoleOutputObject_2;
+ï»¿package pack02_javaio.sec03_ConsoleInputOutput.EX05_ConsoleOutputObject_2;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
-/*write(.) ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ÄÜ¼Ö(Console)·Î µ¥ÀÌÅÍ Ãâ·ÂÇÏ±â(ÇÑ±Ûµ¥ÀÌÅÍ Ãâ·Â)*/
+/*write(.) ë©”ì„œë“œë¥¼ ì´ìš©í•œ ì½˜ì†”(Console)ë¡œ ë°ì´í„° ì¶œë ¥í•˜ê¸°(í•œê¸€ë°ì´í„° ì¶œë ¥)*/
 
 public class EX05_ConsoleOutputObject_2 {
 	public static void main(String[] args) throws IOException {
 
-		//# OutputStream »ı¼º(ÄÜ¼Ö)
+		//# OutputStream ìƒì„±(ì½˜ì†”)
 		OutputStream os = System.out;
 
-		//#2-2. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ Ã³À½ À§Ä¡¿¡¼­ ºÎÅÍ ³¡°¡Áö¸¦ Ãâ·Â) 
-		byte[] byteArray1 = "¾È³çÇÏ¼¼¿ä".getBytes(Charset.forName("MS949"));
+		//#2-2. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ ì²˜ìŒ ìœ„ì¹˜ì—ì„œ ë¶€í„° ëê°€ì§€ë¥¼ ì¶œë ¥) 
+		byte[] byteArray1 = "ì•ˆë…•í•˜ì„¸ìš”".getBytes(Charset.forName("MS949"));
 		os.write(byteArray1);
 		os.write('\n');
 		os.flush();
 
-		//#3-2. n-byte ´ÜÀ§ ¾²±â (byte[]ÀÇ offset À§Ä¡¿¡¼­ºÎÅÍ length°³¼ö¸¦ ÀĞ¾î¿Í Ãâ·Â) 
-		byte[] byteArray2 = "¹İ°©½À´Ï´Ù".getBytes(Charset.defaultCharset());
+		//#3-2. n-byte ë‹¨ìœ„ ì“°ê¸° (byte[]ì˜ offset ìœ„ì¹˜ì—ì„œë¶€í„° lengthê°œìˆ˜ë¥¼ ì½ì–´ì™€ ì¶œë ¥) 
+		byte[] byteArray2 = "ë°˜ê°‘ìŠµë‹ˆë‹¤".getBytes(Charset.defaultCharset());
 		os.write(byteArray2, 4, 4);
 		os.flush();
 		

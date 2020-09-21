@@ -1,37 +1,37 @@
-package pack03_javanetwork.sec01_ManagingAddress.EX01_InetAddress;
+ï»¿package pack03_javanetwork.sec01_ManagingAddress.EX01_InetAddress;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.util.Arrays;
 
-/*InetAddress Å¬·¡½º¸¦ ÀÌ¿ëÇÑ IPÁÖ¼Ò(È£½ºÆ®ÀÌ¸§)ÀÇ ÀúÀå ¹× °ü¸®*/
+/*InetAddress í´ë˜ìŠ¤ë¥¼ ì´ìš©í•œ IPì£¼ì†Œ(í˜¸ìŠ¤íŠ¸ì´ë¦„)ì˜ ì €ì¥ ë° ê´€ë¦¬*/
 
 public class EX01_InetAddress {
 	public static void main(String[] args) throws IOException {
-		//# InetAddress °´Ã¼ »ı¼º¹æ¹ı (IP/HostName °ü¸® (Æ÷Æ®¹øÈ£ °ü¸® ¸øÇÔ)) : 
-		//# InetAddress + Æ÷Æ®¹øÈ£°ü¸® = InetSocketAddress
+		//# InetAddress ê°ì²´ ìƒì„±ë°©ë²• (IP/HostName ê´€ë¦¬ (í¬íŠ¸ë²ˆí˜¸ ê´€ë¦¬ ëª»í•¨)) : 
+		//# InetAddress + í¬íŠ¸ë²ˆí˜¸ê´€ë¦¬ = InetSocketAddress
 		
-		//#1. InetAddress °´Ã¼ »ı¼º =================================
-		//@1-1. ¿ø°İÁö IP 
+		//#1. InetAddress ê°ì²´ ìƒì„± =================================
+		//@1-1. ì›ê²©ì§€ IP 
 		InetAddress ia1 = InetAddress.getByName("www.google.com"); //www.google.com/172.217.26.132
 		//InetAddress ia1 = InetAddress.getByName("www.naver.com"); //www.google.com/172.217.26.132
 		InetAddress ia2 = InetAddress.getByAddress(new byte[] {(byte)172,(byte)217,(byte)26,(byte)132}); //172.217.161.132
-		InetAddress ia3 = InetAddress.getByAddress("www.google.com", new byte[] {(byte)172,(byte)217,(byte)26,(byte)132}); //www.google.com/172.217.161.132 : È£½ºÆ®ÀÌ¸§À» ¹Ù²Ù¾îµµ ±×´ë·Î ÀúÀå
+		InetAddress ia3 = InetAddress.getByAddress("www.google.com", new byte[] {(byte)172,(byte)217,(byte)26,(byte)132}); //www.google.com/172.217.161.132 : í˜¸ìŠ¤íŠ¸ì´ë¦„ì„ ë°”ê¾¸ì–´ë„ ê·¸ëŒ€ë¡œ ì €ì¥
 		System.out.println(ia1);
 		System.out.println(ia2);
 		System.out.println(ia3);
-		//@1-2. ·ÎÄÃ/·çÇÁ¹é IP
+		//@1-2. ë¡œì»¬/ë£¨í”„ë°± IP
 		InetAddress ia4 = InetAddress.getLocalHost(); //DHKIM/192.168.123.159
 		InetAddress ia5 = InetAddress.getLoopbackAddress(); //localhost/127.0.0.1
 		System.out.println(ia4);
 		System.out.println(ia5);
-		//@1-3. ÇÏ³ªÀÇ È£½ºÆ®°¡ ¿©·¯°³ÀÇ IP¸¦ °¡Áö°í ÀÖ´Â °æ¿ì
+		//@1-3. í•˜ë‚˜ì˜ í˜¸ìŠ¤íŠ¸ê°€ ì—¬ëŸ¬ê°œì˜ IPë¥¼ ê°€ì§€ê³  ìˆëŠ” ê²½ìš°
 		InetAddress[] ia6 = InetAddress.getAllByName("www.naver.com");
 		System.out.println(Arrays.toString(ia6));		
 		System.out.println();
 		
-		//#2. InetAddress ¸Ş¼­µå
-		//@2-1. È£½ºÆ®¿Í IP ¾Ë¾Æ³»±â
+		//#2. InetAddress ë©”ì„œë“œ
+		//@2-1. í˜¸ìŠ¤íŠ¸ì™€ IP ì•Œì•„ë‚´ê¸°
 		byte[] address = ia1.getAddress();
 		System.out.println(Arrays.toString(address)); //[-84, -39, -95, -124]	
 		System.out.println(ia1.getHostAddress()); //172.217.161.132

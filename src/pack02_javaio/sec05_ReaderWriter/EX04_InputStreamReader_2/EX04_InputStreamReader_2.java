@@ -1,14 +1,14 @@
-package pack02_javaio.sec05_ReaderWriter.EX04_InputStreamReader_2;
+ï»¿package pack02_javaio.sec05_ReaderWriter.EX04_InputStreamReader_2;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*ÄÜ¼ÖÀÔ·ÂµÈ ¹®ÀÚ¿­À» MS949 ¹®ÀÚ¼Â°ú UTF-8 ¹®ÀÚ¼ÂÀ¸·Î °¢°¢ ÀĞ¾î¿À±â*/
+/*ì½˜ì†”ì…ë ¥ëœ ë¬¸ìì—´ì„ MS949 ë¬¸ìì…‹ê³¼ UTF-8 ë¬¸ìì…‹ìœ¼ë¡œ ê°ê° ì½ì–´ì˜¤ê¸°*/
 
 public class EX04_InputStreamReader_2 {
 	public static void main(String[] args) {
 		
-		//#1.ÄÜ¼Ö ÀÔ·Â: InputStreamReader¸¦ »ç¿ëÇÏ¿© ÄÜ¼Ö ÀÔ·Â ÀĞ¾î¿À±â (MS949 Å¸ÀÔÀ¸·Î ÀĞ±â)
+		//#1.ì½˜ì†” ì…ë ¥: InputStreamReaderë¥¼ ì‚¬ìš©í•˜ì—¬ ì½˜ì†” ì…ë ¥ ì½ì–´ì˜¤ê¸° (MS949 íƒ€ì…ìœ¼ë¡œ ì½ê¸°)
 		try{ //MS949
 			InputStreamReader isr = new InputStreamReader(System.in, "MS949");
 		    int data;
@@ -16,7 +16,7 @@ public class EX04_InputStreamReader_2 {
 		    System.out.println("\n"+isr.getEncoding());//MS949
 		} catch(IOException e) {}		
 		
-		//#2.ÄÜ¼Ö ÀÔ·Â: InputStreamReader¸¦ »ç¿ëÇÏ¿© ÄÜ¼Ö ÀÔ·Â ÀĞ¾î¿À±â (UTF-8 Å¸ÀÔÀ¸·Î ÀĞ±â) : ÇÑ±Û±úÁü
+		//#2.ì½˜ì†” ì…ë ¥: InputStreamReaderë¥¼ ì‚¬ìš©í•˜ì—¬ ì½˜ì†” ì…ë ¥ ì½ì–´ì˜¤ê¸° (UTF-8 íƒ€ì…ìœ¼ë¡œ ì½ê¸°) : í•œê¸€ê¹¨ì§
 		try{
 			InputStreamReader isr = new InputStreamReader(System.in, "UTF-8");
         	int data;

@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,7 +11,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-/*TCP Åë½Å¿¹Á¦ 2 : Å¬¶óÀÌ¾ğÆ®¿Í ¼­¹ö°£ÀÇ ÆÄÀÏ(file) Àü¼Û [ClientSide]*/
+/*TCP í†µì‹ ì˜ˆì œ 2 : í´ë¼ì´ì–¸íŠ¸ì™€ ì„œë²„ê°„ì˜ íŒŒì¼(file) ì „ì†¡ [ClientSide]*/
 
 public class EX04_TCP_File_ClientSide {
 	public static void main(String[] args) {
@@ -19,8 +19,8 @@ public class EX04_TCP_File_ClientSide {
 		Socket socket=null;
 		try {
 			socket = new Socket(InetAddress.getByName("localhost"),10000);
-			System.out.println("Server¿¡ Á¢¼Ó¿Ï·á");
-			System.out.println("Á¢¼Ó server ÁÖ¼Ò:"+socket.getInetAddress()+":"+socket.getPort());
+			System.out.println("Serverì— ì ‘ì†ì™„ë£Œ");
+			System.out.println("ì ‘ì† server ì£¼ì†Œ:"+socket.getInetAddress()+":"+socket.getPort());
 			
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
@@ -28,17 +28,17 @@ public class EX04_TCP_File_ClientSide {
 			File file = new File("src/pack04_javanetwork/common_files/sendImageUsingTCP.jpg");			
 			FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fis);
-			System.out.println("ÆÄÀÏÀü¼Û: "+file.getName());
-			dos.writeUTF(file.getName()); //ÆÄÀÏÀÌ¸§Àü¼Û
+			System.out.println("íŒŒì¼ì „ì†¡: "+file.getName());
+			dos.writeUTF(file.getName()); //íŒŒì¼ì´ë¦„ì „ì†¡
 			
 			byte[] data = new byte[2048];
 			int len;
 			while((len = bis.read(data))!=-1) {
-				dos.writeInt(len); //Àü¼Ûµ¥ÀÌÅÍÀÇ ±æÀÌ
-				dos.write(data,0,len); //Àü¼Ûµ¥ÀÌÅÍ
+				dos.writeInt(len); //ì „ì†¡ë°ì´í„°ì˜ ê¸¸ì´
+				dos.write(data,0,len); //ì „ì†¡ë°ì´í„°
 				dos.flush();
 			}
-			dos.writeInt(-1); //µ¥ÀÌÅÍ Àü¼Û¿Ï·á ¾Ë¸²
+			dos.writeInt(-1); //ë°ì´í„° ì „ì†¡ì™„ë£Œ ì•Œë¦¼
 			dos.flush();
 			
 			String str = dis.readUTF();			

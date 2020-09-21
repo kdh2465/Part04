@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX03_TCP_Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/*TCP Åë½Å¿¹Á¦ 1 : Å¬¶óÀÌ¾ğÆ®¿Í ¼­¹ö°£ÀÇ ÅØ½ºÆ®(text) Àü¼Û [ServerSide]*/
+/*TCP í†µì‹ ì˜ˆì œ 1 : í´ë¼ì´ì–¸íŠ¸ì™€ ì„œë²„ê°„ì˜ í…ìŠ¤íŠ¸(text) ì „ì†¡ [ServerSide]*/
 
 public class EX03_TCP_Text_ServerSide {
 	public static void main(String[] args) {
@@ -17,23 +17,23 @@ public class EX03_TCP_Text_ServerSide {
 		try {
 			serverSocket = new ServerSocket(10000);
 		} catch (IOException e) {
-			System.out.println("ÇØ´çÆ÷Æ®¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("í•´ë‹¹í¬íŠ¸ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 		
-		System.out.println("Client Á¢¼Ó ´ë±â...");
+		System.out.println("Client ì ‘ì† ëŒ€ê¸°...");
 		try {
 			Socket socket = serverSocket.accept();
 
-			System.out.println("Client ¿¬°á ¼ö¶ô");
-			System.out.println("Á¢¼Ó client ÁÖ¼Ò:"+socket.getInetAddress()+":"+socket.getPort());
+			System.out.println("Client ì—°ê²° ìˆ˜ë½");
+			System.out.println("ì ‘ì† client ì£¼ì†Œ:"+socket.getInetAddress()+":"+socket.getPort());
 				
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
 			
 			String str=dis.readUTF();
 			System.out.println("client: " + str);			
-			dos.writeUTF("¾î¼­¿À¼¼¿ä!");
+			dos.writeUTF("ì–´ì„œì˜¤ì„¸ìš”!");
 			dos.flush();
 			
 		} catch (IOException e) {}

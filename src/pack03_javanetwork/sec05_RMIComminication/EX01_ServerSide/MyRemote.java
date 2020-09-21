@@ -1,16 +1,16 @@
-package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
+ï»¿package pack03_javanetwork.sec05_RMIComminication.EX01_ServerSide;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-/*RMI Åë½Å¿¹Á¦ : RMI ¿ø°İ¼­¹ö °´Ã¼ÀÇ ¸Ş¼­µå È£Ãâ [ServerSide]*/
+/*RMI í†µì‹ ì˜ˆì œ : RMI ì›ê²©ì„œë²„ ê°ì²´ì˜ ë©”ì„œë“œ í˜¸ì¶œ [ServerSide]*/
 
-//#1. °øÅë ÀÎÅÍÆäÀÌ½º »ı¼º
-//@1-1. public + Remote ÀÎÅÍÆäÀÌ½º »ó¼Ó (Remote Interface´Â Mark¿ë ÀÎÅÍÆäÀÌ½º(³»ºÎ¿¡ Ãß»ó ¸Ş¼­µå ¾øÀ½))	
-//@1-2. ¿ø°İ Á¦°øÀ» ¸ñÀûÀ¸·Î ÇÏ´Â ³»ºÎÀÇ Ãß»ó¸Ş¼­µå Á¤ÀÇ ¹× ¿¹¿Ü Àü°¡ ÀÛ¼º (throws RemoteException)
-//@1-3. Á÷·ÄÈ­(serializable) °¡´ÉÇÑ ¸Å°³º¯¼ö ¹× ¸®ÅÏ°ª¸¸À» »ç¿ë		
+//#1. ê³µí†µ ì¸í„°í˜ì´ìŠ¤ ìƒì„±
+//@1-1. public + Remote ì¸í„°í˜ì´ìŠ¤ ìƒì† (Remote InterfaceëŠ” Markìš© ì¸í„°í˜ì´ìŠ¤(ë‚´ë¶€ì— ì¶”ìƒ ë©”ì„œë“œ ì—†ìŒ))	
+//@1-2. ì›ê²© ì œê³µì„ ëª©ì ìœ¼ë¡œ í•˜ëŠ” ë‚´ë¶€ì˜ ì¶”ìƒë©”ì„œë“œ ì •ì˜ ë° ì˜ˆì™¸ ì „ê°€ ì‘ì„± (throws RemoteException)
+//@1-3. ì§ë ¬í™”(serializable) ê°€ëŠ¥í•œ ë§¤ê°œë³€ìˆ˜ ë° ë¦¬í„´ê°’ë§Œì„ ì‚¬ìš©		
 
 public interface MyRemote extends Remote{
-	//¿ø°İÀ¸·Î Á¦°øÇÒ ¸Ş¼­µå
+	//ì›ê²©ìœ¼ë¡œ ì œê³µí•  ë©”ì„œë“œ
 	public abstract String myRemoteMethod(String str) throws RemoteException; 
 }

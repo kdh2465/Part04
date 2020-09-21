@@ -1,4 +1,4 @@
-package pack03_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
+ï»¿package pack03_javanetwork.sec02_TCPCommunication.EX04_TCP_File;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/*TCP Åë½Å¿¹Á¦ 2 : Å¬¶óÀÌ¾ğÆ®¿Í ¼­¹ö°£ÀÇ ÆÄÀÏ(file) Àü¼Û [ServerSide]*/
+/*TCP í†µì‹ ì˜ˆì œ 2 : í´ë¼ì´ì–¸íŠ¸ì™€ ì„œë²„ê°„ì˜ íŒŒì¼(file) ì „ì†¡ [ServerSide]*/
 
 public class EX04_TCP_File_ServerSide {
 	public static void main(String[] args) {
@@ -19,16 +19,16 @@ public class EX04_TCP_File_ServerSide {
 		try {
 			serverSocket = new ServerSocket(10000);
 		} catch (IOException e) {
-			System.out.println("ÇØ´çÆ÷Æ®¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("í•´ë‹¹í¬íŠ¸ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 		
-		System.out.println("Client Á¢¼Ó ´ë±â...");
+		System.out.println("Client ì ‘ì† ëŒ€ê¸°...");
 		try {
 			Socket socket = serverSocket.accept();
 
-			System.out.println("Client ¿¬°á ¼ö¶ô");
-			System.out.println("Á¢¼Ó client ÁÖ¼Ò:"+socket.getInetAddress()+":"+socket.getPort());
+			System.out.println("Client ì—°ê²° ìˆ˜ë½");
+			System.out.println("ì ‘ì† client ì£¼ì†Œ:"+socket.getInetAddress()+":"+socket.getPort());
 				
 			DataInputStream dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
@@ -38,7 +38,7 @@ public class EX04_TCP_File_ServerSide {
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 						
 			String str=dis.readUTF();
-			System.out.println("ÆÄÀÏ¼ö½Å: "+str + "\nÆÄÀÏÀúÀå: " + file.getName());
+			System.out.println("íŒŒì¼ìˆ˜ì‹ : "+str + "\níŒŒì¼ì €ì¥: " + file.getName());
 			
 			byte[] data = new byte[2048];
 			int len;
@@ -47,8 +47,8 @@ public class EX04_TCP_File_ServerSide {
 				bos.write(data,0,len);	
 				bos.flush();
 			}						
-			System.out.println("ÆÄÀÏ ¼ö½Å ¿Ï·á");
-			dos.writeUTF("ÆÄÀÏ Àü¼Û ¿Ï·á");
+			System.out.println("íŒŒì¼ ìˆ˜ì‹  ì™„ë£Œ");
+			dos.writeUTF("íŒŒì¼ ì „ì†¡ ì™„ë£Œ");
 			dos.flush();
 			
 		} catch (IOException e) {}
