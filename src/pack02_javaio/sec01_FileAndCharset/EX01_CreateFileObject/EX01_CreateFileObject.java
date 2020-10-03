@@ -10,7 +10,7 @@ public class EX01_CreateFileObject {
 		
 		//#1-0. C 드라이브내에 temp 폴더가 없는 경우 생성
 		File tempDir = new File("C:/temp");
-		if(!tempDir.exists()) tempDir.mkdir();
+		if(!tempDir.exists()) tempDir.mkdir(); //temp 폴더가 없는 temp 폴더 생성
 		
 		//#1-1. 파일객체 생성
 		File newFile = new File("C:/temp/newFile.txt");
