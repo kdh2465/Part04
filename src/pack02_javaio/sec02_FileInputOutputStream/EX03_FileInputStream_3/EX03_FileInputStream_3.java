@@ -34,6 +34,7 @@ public class EX03_FileInputStream_3 {
 		int count2 = is3.read(byteArray2, offset, length);//offset:2 length:6		
 		
 		String str = new String(byteArray2, 0, offset+count2, Charset.defaultCharset());
+		//String str = new String(byteArray2, offset, count2, Charset.defaultCharset()); //안녕하
 		System.out.println(str);
 		
 		//#InputStream 자원 반납
