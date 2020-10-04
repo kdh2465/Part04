@@ -24,7 +24,7 @@ public class EX02_DataInputOutputStream {
 			dos.writeInt(35);
 		    dos.writeDouble(5.8);
 		    dos.writeChar('A');
-		    dos.writeUTF("안녕하세요");
+		    dos.writeUTF("안녕하세요"); //디폴트 Charset과 관계없이 항상 UTF8로 생성
 		    dos.flush();
 
 		}catch(IOException e) {}

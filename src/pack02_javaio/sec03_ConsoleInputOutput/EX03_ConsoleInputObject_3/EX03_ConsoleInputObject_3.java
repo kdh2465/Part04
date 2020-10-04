@@ -25,6 +25,7 @@ public class EX03_ConsoleInputObject_3 {
 		byte[] byteArray2 = new byte[100];		
 		int count2 = is.read(byteArray2, offset, length);//offset:2 length:4
 		String str2 = new String(byteArray2,0,offset+count2, Charset.defaultCharset());
+		//String str2 = new String(byteArray2, offset, count2, Charset.defaultCharset()); //반갑
 		System.out.println(str2);
 		
 	}
