@@ -21,7 +21,7 @@ public class EX05_FileOutputStream_2 {
 		os2.write(byteArray1);
 		os2.write('\n');
 		
-		os2.flush();
+		os2.flush(); //FileOutputStream은 내부적으로 메모리 버퍼를 사용하지 않아 생략해도 가능
 		os2.close();
 		
 		//#3-2. n-byte 단위 쓰기 (byte[]의 offset 위치에서부터 length개수를 읽어와 출력) 
@@ -29,7 +29,7 @@ public class EX05_FileOutputStream_2 {
 		OutputStream os3 = new FileOutputStream(outFile, true); //내용 연결
 		os3.write(byteArray2, 2, 4);
 
-		os3.flush();
+		os3.flush(); //FileOutputStream은 내부적으로 메모리 버퍼를 사용하지 않아 생략해도 가능
 		os3.close();
 		
 	}
