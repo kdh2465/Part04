@@ -12,10 +12,10 @@ public class EX04_PrintStream {
 	public static void main(String[] args) throws IOException {
 		
 		//#File 객체 생성 및 OutputStream 객체 생성 (PrintStream)
-		File outFile1 = new File("src/pack03_javaio/sec04_files/PrintStream1.txt");
-		File outFile2 = new File("src/pack03_javaio/sec04_files/PrintStream2.txt");
-		if(!outFile1.exists()) outFile1.createNewFile();
-		if(!outFile2.exists()) outFile2.createNewFile();
+		File outFile1 = new File("src/pack02_javaio/sec04_files/PrintStream1.txt");
+		File outFile2 = new File("src/pack02_javaio/sec04_files/PrintStream2.txt");
+		//if(!outFile1.exists()) outFile1.createNewFile();
+		//if(!outFile2.exists()) outFile2.createNewFile();
 
 		//#1. PrintStream(FileOutputStream(File))
 		try(OutputStream os1 = new FileOutputStream(outFile1);

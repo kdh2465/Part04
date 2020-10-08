@@ -1,33 +1,46 @@
-﻿package pack02_javaio.sec01_FileAndCharset.EX03_Charset;
+﻿package pack02_javaio.sec01_FileAndCharset.EX03_EUCKRvsMS949;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 
-/*자바의 문자셋 (EUC-KR vs. MS949, UTF-16 vs. UTF-8, Charset 객체 생성)*/
+/*자바의 문자셋 (EUC-KR vs. MS949)*/
 
-public class EX03_Charset {
+public class EX03_EUCKRvsMS949 {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
 		//#1. EUC-KR vs. MS949
-		System.out.println(new String("봵".getBytes("EUC-KR")));
-		System.out.println(new String("봵".getBytes("MS949")));
+		byte[] b1 = "a".getBytes("EUC-KR");
+		byte[] b2 = "a".getBytes("MS949");
 		
-		//#2. UTF-16 vs. UTF-8
-		System.out.println(new String("abc".getBytes("UTF-16"))); //UTF-16은 BOM(Byte Order Mark,0xFE Little Endian, 0x00 Big Endian) 1byte 포함
-		System.out.println(new String("abc".getBytes("UTF-8")));
+		System.out.println(b1.length);
+		System.out.println(b2.length);
 		
-		//#3-1. Charset 객체 생성
-		Charset cs1 = Charset.defaultCharset(); //x-windows-949		
-		Charset cs2 = Charset.forName("MS949");
-		Charset cs3 = Charset.forName("UTF-8");
-				
-		System.out.println(cs1);
-		System.out.println(cs2);
-		System.out.println(cs3);
+		System.out.println(new String(b1, "EUC-KR"));
+		System.out.println(new String(b2, "MS949"));
+		System.out.println();
 		
-		//#3-2. JVM 문자셋 지원여부
-		System.out.println(Charset.isSupported("MS949"));
-		System.out.println(Charset.isSupported("UTF-8"));
 		
+		byte[] b3 = "가".getBytes("EUC-KR");
+		byte[] b4 = "가".getBytes("MS949");
+		
+		System.out.println(b3.length);
+		System.out.println(b4.length);
+		
+		System.out.println(new String(b3, "EUC-KR"));
+		System.out.println(new String(b4, "MS949"));
+		System.out.println();
+		
+		
+		byte[] b5 = "봵".getBytes("EUC-KR");
+		byte[] b6 = "봵".getBytes("MS949");
+		
+		System.out.println(b5.length);
+		System.out.println(b6.length);
+		
+		System.out.println(new String(b5, "EUC-KR"));
+		System.out.println(new String(b6, "MS949"));
+		System.out.println();
+						
 	}
 }

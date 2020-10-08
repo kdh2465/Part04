@@ -11,7 +11,7 @@ import java.nio.charset.Charset;
 public class EX03_FileInputStream_3 {
 	public static void main(String[] args) throws IOException {
 		//입력파일 생성
-		File inFile = new File("src/pack03_javaio/sec02_files/FileInputStream2.txt ");
+		File inFile = new File("src/pack02_javaio/sec02_files/FileInputStream2.txt ");
 				
 		//#2-2. n-byte 단위 읽기 (byte[]의 처음 위치에서 부터 읽은 데이터 저장) 
 		byte[] byteArray1 = new byte[8];
@@ -33,8 +33,8 @@ public class EX03_FileInputStream_3 {
 		int offset=2; int length=6;
 		int count2 = is3.read(byteArray2, offset, length);//offset:2 length:6		
 		
-		String str = new String(byteArray2, 0, offset+count2, Charset.defaultCharset());
-		//String str = new String(byteArray2, offset, count2, Charset.defaultCharset()); //안녕하
+		//String str = new String(byteArray2, 0, offset+count2, Charset.defaultCharset());
+		String str = new String(byteArray2, offset, count2, Charset.forName("MS949")); //안녕하
 		System.out.println(str);
 		
 		//#InputStream 자원 반납

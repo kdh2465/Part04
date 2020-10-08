@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
-encoding/<project>=UTF-8
+encoding//src/pack02_javaio=UTF-8
+encoding//src/pack02_javaio/sec01_FileAndCharset/EX05_CreateCharsetObject=MS949
+encoding//src/pack02_javaio/sec01_FileAndCharset/EX05_CreateCharsetObject/EX05_CreateCharsetObject.java=UTF-8
